@@ -1,0 +1,104 @@
+[
+    {
+        "id": "1",
+        "img": "https://i.ibb.co/mrK1JpM/young-boy-working-drawing-pad-network-graphic-overlay.jpg",
+        "name": "Drawing Basics",
+        "Details": "Best course to learn the basics of drawing.The course is broken down into 23 videos. Each video involves about 5 to 10 minutes of work. Concepts are taught through video lectures only.",
+        "Level": "Beginner",
+        "Instructor": "Pritiraj Partho",
+        "rating": "4.5",
+        "price": "35",
+        "Syllabus": [
+            "Drawing Supplies.",
+            "How to Hold and Control Your Pencil.",
+            "The Basic Elements - Shape Value Color Edge.",
+            "Shading Light and Form - Basics.",
+            "How to Shade a Drawing."
+        ]
+    },
+    {
+        "id": "2",
+        "img": "https://i.ibb.co/85ktWwv/z689-syev-220118.jpg",
+        "name": "Perspective Drawing",
+        "Details": "Best course to learn perspective drawing.The course is broken down into 22 videos. Each video involves about 6 to 10 minutes of work. Concepts are taught through video lectures only.",
+        "Level": "Beginner",
+        "Instructor": "Najmul Sakib",
+        "rating": "4.5",
+        "price": "40",
+        "Syllabus": [
+            "What is the Horizon Line?",
+            "What are Vanishing Points?",
+            "One Point Perspective",
+            "Two Points Perspective",
+            "Three Points Perspective"
+        ]
+    },
+    {
+        "id": "3",
+        "img": "https://i.ibb.co/vCFDKJ1/portrait-girl-playing.jpg",
+        "name": " Drawing Nature, Science and Culture",
+        "Details": "Best university course to learn to draw nature.The course is broken down into 6 weeks. Each module involves about 3 to 6 hours of work. Concepts are taught through a combination of videos.",
+        "Level": "Beginner",
+        "Instructor": "Fahimur Rahman",
+        "rating": "5.0",
+        "price": "45",
+        "Syllabus": [
+            "Observational drawing.",
+            "Field sketching and recording techniques.",
+            "The structure of flowers and leaves.",
+            "The structure of mammals and birds.",
+            "Rendering Creating finished artworks."
+        ]
+    },
+    {
+        "id": "4",
+        "img": "https://i.ibb.co/vVRYyMf/5067.jpg",
+        "name": " New How to Draw Series ",
+        "Details": "Best course to learn to draw manga.The course is broken down into 7 videos. Each video involves about 15 to 20 minutes of work. Concepts are taught through video lectures only.",
+        "Level": "Beginner",
+        "Instructor": "Badhon Sarker",
+        "rating": "4.5",
+        "price": "47",
+        "Syllabus": [
+            "How to Draw Faces for Beginners.",
+            "How to Draw Eyes for Beginners.",
+            "How to Draw Bodies.",
+            "How to Draw Anime Face PROFILE SIDE VIEW.",
+            "How to Draw Faces 3/4 View For Beginners"
+        ]
+    },
+    {
+        "id": "5",
+        "img": "https://i.ibb.co/DG0CQJ6/rjjo-3rz2-220316.jpg",
+        "name": "Art of Caricature",
+        "Details": "Best course to learn to draw caricatures.The course is broken down into 52 videos. Each video involves about 5 to 20 minutes of work. Concepts are taught through video lectures only.",
+        "Level": "Beginner",
+        "Instructor": "Ashraful Amin",
+        "rating": "5.0",
+        "price": "38",
+        "Syllabus": [
+            "Caricature 101 - How to Exaggerate.",
+            "The Thumbnail Sketch - Caricature Drawing.",
+            "Caricature of Taylor Swift.",
+            "Playing with Head Shapes .",
+            "Enhancing the Likeness."
+        ]
+    },
+    {
+        "id": "6",
+        "img": "https://i.ibb.co/0rJXFKX/ey53-17n7-211008.jpg",
+        "name": "Realistic Drawing",
+        "Details": "Best course to learn realistic portraits and objects.The course is broken down into 29 videos. Each video involves about 7 to 10 minutes of work. Concepts are taught through video lectures only.",
+        "Level": "Beginner",
+        "Instructor": "Shipon Dev",
+        "rating": "5.0",
+        "price": "49",
+        "Syllabus": [
+            "How To GRID a REALISTIC PORTRAIT DRAWING!",
+            "How To REALISTICALLY Render & DRAW.",
+            "Understanding PENCIL GRADES.",
+            "How To SHADE using PENCILS.",
+            "DRAWING SUPPLIES & EQUIPMENT."
+        ]
+    }
+]
