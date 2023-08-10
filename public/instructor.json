@@ -1,0 +1,73 @@
+[{
+    "id": 1,
+    "name": "Jane Smith",
+    "img": "https://i.ibb.co/6nhMqhm/person-1.jpg",
+    "email": "jane.smith@example.com",
+    "course": "Mastering Charcoal Portraits",
+    "student": 1500
+  },
+  {
+    "id": 2,
+    "name": "John Doe",
+    "img": "https://i.ibb.co/PMr3Z7r/person-2.jpg",
+    "email": "john.doe@example.com",
+    "course": "Watercolor Landscapes",
+    "student": 1200
+  },
+  {
+    "id": 3,
+    "name": "Emily Johnson",
+    "img": "https://i.ibb.co/y8x3GKn/person-5.jpg",
+    "email": "emily.johnson@example.com",
+    "course": "Ink Sketching Techniques",
+    "student": 800
+  },
+  {
+    "id": 4,
+    "name": "Michael Williams",
+    "img": "https://i.ibb.co/Yc9DtGn/person-6.jpg",
+    "email": "michael.williams@example.com",
+    "course": "Digital Art Fundamentals",
+    "student": 2500
+  },
+  {
+    "id": 5,
+    "name": "Sophia Lee",
+    "img": "https://i.ibb.co/N9kGLy6/person-7.jpg",
+    "email": "sophia.lee@example.com",
+    "course": "Realistic Portrait Drawing",
+    "student": 1800
+  },
+  {
+    "id": 6,
+    "name": "David Chen",
+    "img": "https://i.ibb.co/3rr40J4/person-4.jpg",
+    "email": "david.chen@example.com",
+    "course": "Anime and Manga Art",
+    "student": 3000
+  },
+  {
+    "id": 7,
+    "name": "Olivia Rodriguez",
+    "img": "https://i.ibb.co/mXhCffd/person-3.jpg",
+    "email": "olivia.rodriguez@example.com",
+    "course": "Color Theory for Artists",
+    "student": 1100
+  },
+  {
+    "id": 8,
+    "name": "Daniel Kim",
+    "img": "https://i.ibb.co/mXhCffd/person-3.jpg",
+    "email": "daniel.kim@example.com",
+    "course": "Perspective Drawing",
+    "student": 900
+  },
+  {
+    "id": 9,
+    "name": "Ava Martinez",
+    "img": "https://i.ibb.co/mXhCffd/person-3.jpg",
+    "email": "ava.martinez@example.com",
+    "course": "Mixed Media Artistry",
+    "student": 700
+  }
+]
