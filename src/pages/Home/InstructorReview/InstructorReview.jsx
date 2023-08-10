@@ -8,10 +8,11 @@ const InstructorReview = ({instructor}) => {
             <img src={img} alt="Shoes" className="rounded-xl" />
         </figure>
         <div className="card-body items-center text-center">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <h2 className="card-title text-2xl">{course}</h2>
+            <h2 className="card-title  font-mono text-pink-600">{name}</h2>
+            <p><strong className='mr-2'>Email:</strong>{email}</p>
             <div className="card-actions">
-            <button className="btn btn-primary">Buy Now</button>
+            <button className="btn btn-primary mt-4">Buy Course</button>
             </div>
         </div>
         </div>
