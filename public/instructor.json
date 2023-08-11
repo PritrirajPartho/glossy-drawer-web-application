@@ -45,29 +45,5 @@
     "email": "david.chen@example.com",
     "course": "Anime and Manga Art",
     "student": 3000
-  },
-  {
-    "id": 7,
-    "name": "Olivia Rodriguez",
-    "img": "https://i.ibb.co/mXhCffd/person-3.jpg",
-    "email": "olivia.rodriguez@example.com",
-    "course": "Color Theory for Artists",
-    "student": 1100
-  },
-  {
-    "id": 8,
-    "name": "Daniel Kim",
-    "img": "https://i.ibb.co/mXhCffd/person-3.jpg",
-    "email": "daniel.kim@example.com",
-    "course": "Perspective Drawing",
-    "student": 900
-  },
-  {
-    "id": 9,
-    "name": "Ava Martinez",
-    "img": "https://i.ibb.co/mXhCffd/person-3.jpg",
-    "email": "ava.martinez@example.com",
-    "course": "Mixed Media Artistry",
-    "student": 700
   }
 ]
