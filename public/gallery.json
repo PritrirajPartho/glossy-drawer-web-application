@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "drawing_name": "drawing 1",
+        "instructor_name": "jhon smith",
+        "instructor_img":"https://i.ibb.co/Y7psccD/man-isolated-showing-emotions-end-gestures.jpg",
+        "course_name": "Realstic",
+        "rating": 4.5,
+        "price": 19,
+        "photoURL": "https://i.ibb.co/cxRwzNn/img6.jpg",
+        "email": "instructor1@example.com",
+        "available_seat": 600
+    },
+    {
+        "id": 2,
+        "drawing_name": "drawing 2",
+        "instructor_name": "johnson  ",
+        "instructor_img":"https://i.ibb.co/5RsbCdz/bohemian-man-with-his-arms-crossed.jpg",
+        "course_name": "cartooning ",
+        "rating": 4.2,
+        "price": 29,
+        "photoURL": "https://i.ibb.co/m4CjLDs/img5.jpg",
+        "email": "instructor2@example.com",
+        "available_seat": 500
+    },
+    {
+        "id": 3,
+        "drawing_name": "drawing 3",
+        "instructor_name": "david",
+        "instructor_img":"https://i.ibb.co/nfc1ggy/successful-handsome-business-man-office.jpg",
+        "course_name": "Abstract ",
+        "rating": 3.8,
+        "price": 11,
+        "photoURL": "https://i.ibb.co/YcFpVKJ/img4.png",
+        "email": "instructor3@example.com",
+        "available_seat": 510
+    },
+    {
+        "id": 4,
+        "drawing_name": "drawing 4",
+        "instructor_name": "surah davis",
+        "instructor_img":"https://i.ibb.co/W5vp3xy/Background.png",
+        "course_name": "Landscape ",
+        "rating": 3.8,
+        "price": 12,
+        "photoURL": "https://i.ibb.co/7Chv9ff/img3.jpg",
+        "email": "instructor4@example.com",
+        "available_seat": 520
+    },
+    {
+        "id": 5,
+        "drawing_name": "drawing 5",
+        "instructor_name": "michel ",
+        "instructor_img":"https://i.ibb.co/6gfv2h7/Background-1.png",
+        "course_name": "portrait ",
+        "rating": 3.8,
+        "price": 13,
+        "photoURL": "https://i.ibb.co/b50Syp5/img2.jpg",
+        "email": "instructor5@example.com",
+        "available_seat": 530
+    },
+    {
+        "id": 6,
+        "drawing_name": "drawing 6",
+        "instructor_name": "jafor",
+        "instructor_img":"https://i.ibb.co/b7xk8qT/Background-2.png",
+        "course_name": "Sketeching",
+        "rating": 3.8,
+        "price": 14,
+        "photoURL": "https://i.ibb.co/zfQRh2C/img1.jpg",
+        "email": "instructor6@example.com",
+        "available_seat": 550
+    }
+]
