@@ -1,0 +1,53 @@
+[
+     {
+          "image": "https://media.licdn.com/dms/image/C4D03AQHUaXFqmshexg/profile-displayphoto-shrink_800_800/0/1542238938795?e=2147483647&v=beta&t=4y_0PXCD3dnNXO0QtYa6HuNvkLdjVdf2NA6wSX86xdI",
+          "student_name": "Emily Smith",
+          "review": "I absolutely love this drawing app! It's so intuitive and easy to use. It has helped me improve my sketching skills tremendously.",
+          "course_name": "Intro to Digital Art",
+          "rating": 5
+        }
+        ,
+        {
+          "image": "https://media.licdn.com/dms/image/C4E03AQFPJjUhNmKgxw/profile-displayphoto-shrink_800_800/0/1517243607230?e=2147483647&v=beta&t=lmla7dYfMkujouow6_McXKRTyVL_2_l_ylkKAcomXWA",
+          "student_name": "Alex Johnson",
+          "review": "The drawing tools are fantastic, and the variety of brushes is impressive. However, the app could use more tutorials to guide beginners.",
+          "course_name": "Mastering Digital Sketching",
+          "rating": 4
+        }
+        ,
+        {
+          "image": "https://collegechampionships.usaultimate.org/wp-content/uploads/2018/04/DanielLee_Square-300x300.jpg",
+          "student_name": "Daniel Lee",
+          "review": "This app has revolutionized the way I create art. The features are advanced, and the online community is inspiring. Highly recommended!",
+          "course_name": "Advanced Art Techniques",
+          "rating": 5
+        }
+        ,
+        {
+          "image": "https://media.licdn.com/dms/image/D5603AQE8v1Xlb4ioCg/profile-displayphoto-shrink_800_800/0/1687909036024?e=2147483647&v=beta&t=mtk1X7NKGxtHfL3bU0VNGAGyTr8EGVnS1z5OQo5IOxY",
+          "student_name": "Sophia Rodriguez",
+          "review": "The app's user interface is clean and intuitive, but it lacks some crucial blending tools. If those are added, it would be perfect.",
+          "course_name": "Digital Illustration Fundamentals",
+          "rating": 4
+        }
+        ,
+        {
+          "image": "https://media.licdn.com/dms/image/C4E03AQEeFYP8_lhatg/profile-displayphoto-shrink_800_800/0/1637438264152?e=2147483647&v=beta&t=Ge2Go_0U2G7h3c964FsgrK2QiBPHKcAJtVvP5HKQRA0",
+          "student_name": "Michael Brown",
+          "review": "I'm disappointed with the limited color palettes available. The application is smooth, but more color options would make it much better.",
+          "course_name": "Color Theory for Artists",
+          "rating": 3
+        },
+        {
+          "image": "https://media.licdn.com/dms/image/D4E03AQHw3m5FK26UnQ/profile-displayphoto-shrink_800_800/0/1665533353494?e=2147483647&v=beta&t=0O9zWB7rweL8-1JAafc3zHx3mFUNeIJmzKHVtO3e-n4",
+          "student_name": "Ava Martinez",
+          "review": "The drawing exercises in the course were challenging and fun. The app encouraged me to step out of my comfort zone and explore new techniques.",
+          "course_name": "Creative Drawing Bootcamp",
+          "rating": 5
+        }
+        
+
+        
+   ]
+ 
+ 
