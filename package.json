@@ -10,12 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "@smastrom/react-rating": "^1.3.1",
+=======
+    "@heroicons/react": "^2.0.18",
+>>>>>>> f19b1efc88c515f65a12900fec15c58865fe406a
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2",
-    "sort-by": "^1.2.0"
+    "sort-by": "^1.2.0",
+    "swiper": "^10.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
