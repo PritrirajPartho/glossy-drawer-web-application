@@ -11,9 +11,10 @@ const Home = () => {
         <section>
             <Slider></Slider>
             <Course></Course>
-            <Gallery></Gallery>
             <Instructor></Instructor>
             <Review></Review>
+            <Gallery></Gallery>
+            <h1>d</h1>
         </section>
     );
 };
