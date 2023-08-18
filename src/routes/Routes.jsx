@@ -3,6 +3,7 @@ import {
   } from "react-router-dom";
 import Root from "../layout/Root";
 import Home from "../pages/Home/Home";
+import MyCourses from "../pages/MyCourses/MyCourses";
 
 
 
@@ -16,6 +17,10 @@ import Home from "../pages/Home/Home";
           path: "/",
           element: <Home></Home>,
         },
+        {
+          path: "/mycourses",
+          element:<MyCourses></MyCourses>
+        }
       ],
     },
   ]);

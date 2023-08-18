@@ -36,6 +36,9 @@ const Header = () => {
                         <Link className="block px-4 py-2 hover:bg-slate-800 hover:text-white">
                             Sketch
                         </Link>
+                        <Link to="/mycourses" className="block px-4 py-2 hover:bg-slate-800 hover:text-white">
+                            Courses
+                        </Link>
                         <Link className="block px-4 py-2 hover:bg-slate-800 hover:text-white">
                             Gallery
                         </Link>
@@ -57,6 +60,9 @@ const Header = () => {
                         </Link>
                         <Link className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
                             <li>Sketch</li>
+                        </Link>
+                        <Link to="/mycourses" className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
+                            <li>Courses</li>
                         </Link>
                         <Link className=" font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
                             <li>Gallery</li>
