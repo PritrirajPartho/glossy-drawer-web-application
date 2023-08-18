@@ -50,7 +50,7 @@ const MyCoursesCard = ({ detail }) => {
                         href="/"
                         className="inline-flex mb-10 items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
                     >
-                        Select
+                        Add
                     </a>
                 </div>
             </div>
