@@ -48,6 +48,12 @@ const Header = () => {
                         <Link className="block px-4 py-2 hover:bg-slate-800 hover:text-white">
                             Gallery
                         </Link>
+                        <Link className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
+                        <li>Courses</li>
+                    </Link>
+                    <Link className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
+                        <li>Instructors</li>
+                    </Link>
                         
                     </ul>
                 </div>
