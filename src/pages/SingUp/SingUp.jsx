@@ -236,10 +236,10 @@ const SingUp = () => {
                                     <p className='px-6 text-sm text-center text-gray-400'>
                                         Already have an account?{' '}
                                         <Link
-                                            to='/'
+                                            to='/logIn'
                                             className='hover:underline hover:text-purple-700 text-purple-400'
                                         >
-                                            Login
+                                            LogIn
                                         </Link>
                                         .
                                     </p>
