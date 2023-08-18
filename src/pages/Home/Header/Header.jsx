@@ -65,7 +65,6 @@ const Header = () => {
             </div>
 
 
-<<<<<<< HEAD
                 {/* Desktop menu items */}
                 <div className='hidden lg:block ml-[-500px]'>
                     <ul className="flex justify-center items-center ">
@@ -78,37 +77,12 @@ const Header = () => {
                         <Link className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
                             <li>Sketch</li>
                         </Link>
-                        <Link to="/mycourses" className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Courses</li>
-                        </Link>
                         <Link className=" font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
                             <li>Gallery</li>
                         </Link>
                     </ul>
                 </div>
-=======
-            {/* Desktop menu items */}
-            <div className='hidden lg:block ml-[-500px]'>
-                <ul className="flex justify-center items-center ">
-                    <Link className="mr-8 font-bold sm:hover:bg-slate-800 hover:text-white px-4 py-3">
-                        <li>Home</li>
-                    </Link>
-                    <Link className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                        <li>Courses</li>
-                    </Link>
-                    <Link to={'/instructors'} className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                        <li>Instructors</li>
-                    </Link>
-                    <Link to='/singUp' className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                        <li>Registration</li>
-                    </Link>
-                    <Link to={'/dashboard'} className=" font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                        <li>Dashboard</li>
-                    </Link>
-                </ul>
-            </div>
 
->>>>>>> main
 
 
             <div className="navbar-end  text-white">
