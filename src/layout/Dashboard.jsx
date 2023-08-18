@@ -9,7 +9,8 @@ const Dashboard = () => {
     // console.log(isAdmin);
     // const[isInstructor] = useInstructor();
     // console.log(isInstructor)
-    const isAdmin = true;
+    // const isAdmin = true;
+    const isInstructor = true;
     return (
         <div>
         <div className="drawer lg:drawer-open">
@@ -22,8 +23,34 @@ const Dashboard = () => {
                 <div className="drawer-side -ml-40">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
                     <ul className="menu p-4 w-80 h-full bg-[#e879f9] text-base-content">
+            {/* {
+                isAdmin && 
+                <>
+                                <li><NavLink to="/"><FaHome></FaHome> Admin Home</NavLink></li>
+                                <li><NavLink to="/dashboard/manageclasses"><FaAddressCard></FaAddressCard> Manage Courses</NavLink></li>
+                                <li><NavLink to="/dashboard/manageusers"><FaUsers></FaUsers> Manage Users</NavLink></li>            
+                </>
+                } */}
+                { isInstructor && 
+                <>
+                                    <li><NavLink to="/instructors"><FaHome></FaHome> Instructor Home</NavLink></li>
+                                    <li><NavLink to="/dashboard/addcourses"> <FaAdn></FaAdn> Add A Course</NavLink></li>
+                                    <li><NavLink to="/"><FaBook></FaBook> Manage Course</NavLink></li>
+                                    <li><NavLink to="/dashboard/myclasses"> <FaBox></FaBox> My Courses</NavLink></li>
+                </>
+                }
+                {!isInstructor && 
+                <>
+                                    <li><NavLink to="/dashboard/userhome"><FaHome></FaHome> User Home</NavLink></li>
+                                    <li><NavLink to="/dashboard/myenrolledclasses"><FaBookReader></FaBookReader> My Enrolled Courses</NavLink></li>
+                                    <li><NavLink to="/dashboard/paymenthistory"><FaWallet></FaWallet> Payment History</NavLink></li>
+                                    <li>
+                                        <NavLink to="/dashboard/myselectedclasses"><FaShoppingCart></FaShoppingCart>My Selected Course</NavLink>
+                                    </li>
+                </>
+                }
 
-                    {
+                    {/* {
                             isAdmin ? <>
                                 <li><NavLink to="/"><FaHome></FaHome> Admin Home</NavLink></li>
                                 <li><NavLink to="/dashboard/manageclasses"><FaAddressCard></FaAddressCard> Manage Courses</NavLink></li>
@@ -35,7 +62,7 @@ const Dashboard = () => {
                                 isInstructor?
                                 <>
                                     <li><NavLink to="/instructors"><FaHome></FaHome> Instructor Home</NavLink></li>
-                                    <li><NavLink to="/dashboard/addclass"> <FaAdn></FaAdn> Add A Course</NavLink></li>
+                                    <li><NavLink to="/dashboard/addcourses"> <FaAdn></FaAdn> Add A Course</NavLink></li>
                                     <li><NavLink to="/"><FaBook></FaBook> Manage Course</NavLink></li>
                                     <li><NavLink to="/dashboard/myclasses"> <FaBox></FaBox> My Courses</NavLink></li>
                                 </>
@@ -50,7 +77,7 @@ const Dashboard = () => {
                                 </>
                                }
                             </>
-                        }
+                        } */}
 
                         <div className="divider"></div>
                         <li><NavLink to="/"><FaHome></FaHome> Home</NavLink> </li>

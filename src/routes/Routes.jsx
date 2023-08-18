@@ -8,6 +8,7 @@ import Dashboard from "../layout/Dashboard";
 import Login from "../pages/Login/Login";
 import SingUp from "../pages/SingUp/SingUp";
 import Instructors from "../pages/Instructors/Instructors";
+import AddCourse from "../pages/Dashboard/AddCourse/AddCourse";
 
 
 
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
     path: 'dashboard',
     element: <Dashboard></Dashboard>,
     children: [
+        {
+          path: 'addcourses',
+          element: <AddCourse></AddCourse>
+        },
       // {
       //   path: 'userhome',
       //   element: <StudentRoute><UserHome></UserHome></StudentRoute>
