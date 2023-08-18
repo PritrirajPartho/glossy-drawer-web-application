@@ -11,6 +11,7 @@ const Dashboard = () => {
     // console.log(isInstructor)
     // const isAdmin = true;
     const isInstructor = true;
+    const user = true;
     return (
         <div>
         <div className="drawer lg:drawer-open">
