@@ -46,32 +46,32 @@ const Header = () => {
             </div>
 
 
-                {/* Desktop menu items */}
-                <div className='hidden lg:block ml-[-500px]'>
-                    <ul className="flex justify-center items-center ">
-                        <Link className="mr-8 font-bold sm:hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Home</li>
-                        </Link>
-                        <Link className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Courses</li>
-                        </Link>
-                        <Link className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Instructors</li>
-                        </Link>
-                        <Link className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Registration</li>
-                        </Link>
-                        <Link to={'/dashboard'} className=" font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Dashboard</li>
-                        </Link>
-                    </ul>
-                </div>
+            {/* Desktop menu items */}
+            <div className='hidden lg:block ml-[-500px]'>
+                <ul className="flex justify-center items-center ">
+                    <Link className="mr-8 font-bold sm:hover:bg-slate-800 hover:text-white px-4 py-3">
+                        <li>Home</li>
+                    </Link>
+                    <Link className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
+                        <li>Courses</li>
+                    </Link>
+                    <Link className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
+                        <li>Instructors</li>
+                    </Link>
+                    <Link to='/singUp' className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
+                        <li>Registration</li>
+                    </Link>
+                    <Link to={'/dashboard'} className=" font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
+                        <li>Dashboard</li>
+                    </Link>
+                </ul>
+            </div>
 
-          
+
 
             <div className="navbar-end  text-white">
 
-                <Link className="mr-3 font-bold ">Login</Link>
+                <Link to={'/login'} className="mr-3 font-bold ">Login</Link>
                 <div className="dropdown dropdown-end ">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
