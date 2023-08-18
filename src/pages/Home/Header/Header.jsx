@@ -53,13 +53,16 @@ const Header = () => {
                             <li>Home</li>
                         </Link>
                         <Link className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Draw</li>
+                            <li>Courses</li>
                         </Link>
                         <Link className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Sketch</li>
+                            <li>Instructors</li>
                         </Link>
-                        <Link className=" font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Gallery</li>
+                        <Link className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
+                            <li>Registration</li>
+                        </Link>
+                        <Link to={'/dashboard'} className=" font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
+                            <li>Dashboard</li>
                         </Link>
                     </ul>
                 </div>
@@ -68,11 +71,11 @@ const Header = () => {
 
             <div className="navbar-end  text-white">
 
-                <Link className="mr-3 font-bold ">Sign Up</Link>
+                <Link className="mr-3 font-bold ">Login</Link>
                 <div className="dropdown dropdown-end ">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            {/* <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" /> */}
                         </div>
                     </label>
                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content rounded-box w-52 bg-blue-950">
