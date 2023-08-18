@@ -7,6 +7,7 @@ import ErrorPage from "../pages/Errorpage/ErrorPage";
 import Dashboard from "../layout/Dashboard";
 import Login from "../pages/Login/Login";
 import SingUp from "../pages/SingUp/SingUp";
+import Instructors from "../pages/Instructors/Instructors";
 
 
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/singUp",
         element: <SingUp></SingUp>,
+      },
+      {
+        path: "/instructors",
+        element: <Instructors></Instructors>,
       },
     ],
   },
