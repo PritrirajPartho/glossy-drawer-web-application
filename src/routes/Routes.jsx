@@ -3,12 +3,16 @@ import {
 } from "react-router-dom";
 import Root from "../layout/Root";
 import Home from "../pages/Home/Home";
+<<<<<<< HEAD
+import MyCourses from "../pages/MyCourses/MyCourses";
+=======
 import ErrorPage from "../pages/Errorpage/ErrorPage";
 import Dashboard from "../layout/Dashboard";
 import Login from "../pages/Login/Login";
 import SingUp from "../pages/SingUp/SingUp";
 import Instructors from "../pages/Instructors/Instructors";
 import AddCourse from "../pages/Dashboard/AddCourse/AddCourse";
+>>>>>>> main
 
 
 
@@ -44,6 +48,15 @@ const router = createBrowserRouter([
           path: 'addcourses',
           element: <AddCourse></AddCourse>
         },
+<<<<<<< HEAD
+        {
+          path: "/mycourses",
+          element:<MyCourses></MyCourses>
+        }
+      ],
+    },
+  ]);
+=======
       // {
       //   path: 'userhome',
       //   element: <StudentRoute><UserHome></UserHome></StudentRoute>
@@ -83,5 +96,6 @@ const router = createBrowserRouter([
     ]
   }
 ]);
+>>>>>>> main
 
 export default router;
