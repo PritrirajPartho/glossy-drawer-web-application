@@ -1,94 +1,43 @@
-import React from 'react';
-import { FaAddressCard, FaAdjust, FaAdn, FaBook, FaBookReader, FaBox, FaCalendarAlt, FaElementor, FaHome, FaShoppingCart, FaUserAlt, FaUsers, FaUtensils, FaWallet } from 'react-icons/fa';
-import { NavLink, Outlet } from 'react-router-dom';
-// import useAdmin from '../hooks/useAdmin';
-// import useInstructor from '../hooks/useInstructor';
+// import { useState } from "react";
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
+import Header from "../pages/Dashboard/Dashboard/DashboardHeader/Header";
+import Sidebar from "../pages/Dashboard/Dashboard/Sidebar/Sidebar";
+// import Header from "../Dashboard/Header/Header";
+// import Sidebar from "../Dashboard/Sidebar/Sidebar";
 
-const Dashboard = () => {
-    // const [isAdmin] = useAdmin();
-    // console.log(isAdmin);
-    // const[isInstructor] = useInstructor();
-    // console.log(isInstructor)
-    // const isAdmin = true;
-    const isInstructor = true;
-    const user = true;
-    return (
-        <div>
-        <div className="drawer lg:drawer-open">
-                <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col items-center justify-center ">
-                    {/* Page content here */}
-                    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
-                    <Outlet></Outlet>
-                </div> 
-                <div className="drawer-side -ml-40">
-                    <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
-                    <ul className="menu p-4 w-80 h-full bg-[#e879f9] text-base-content">
-            {/* {
-                isAdmin && 
-                <>
-                                <li><NavLink to="/"><FaHome></FaHome> Admin Home</NavLink></li>
-                                <li><NavLink to="/dashboard/manageclasses"><FaAddressCard></FaAddressCard> Manage Courses</NavLink></li>
-                                <li><NavLink to="/dashboard/manageusers"><FaUsers></FaUsers> Manage Users</NavLink></li>            
-                </>
-                } */}
-                { isInstructor && 
-                <>
-                                    <li><NavLink to="/instructors"><FaHome></FaHome> Instructor Home</NavLink></li>
-                                    <li><NavLink to="/dashboard/addcourses"> <FaAdn></FaAdn> Add A Course</NavLink></li>
-                                    <li><NavLink to="/"><FaBook></FaBook> Manage Course</NavLink></li>
-                                    <li><NavLink to="/dashboard/myclasses"> <FaBox></FaBox> My Courses</NavLink></li>
-                </>
-                }
-                {!isInstructor && 
-                <>
-                                    <li><NavLink to="/dashboard/userhome"><FaHome></FaHome> User Home</NavLink></li>
-                                    <li><NavLink to="/dashboard/myenrolledclasses"><FaBookReader></FaBookReader> My Enrolled Courses</NavLink></li>
-                                    <li><NavLink to="/dashboard/paymenthistory"><FaWallet></FaWallet> Payment History</NavLink></li>
-                                    <li>
-                                        <NavLink to="/dashboard/myselectedclasses"><FaShoppingCart></FaShoppingCart>My Selected Course</NavLink>
-                                    </li>
-                </>
-                }
+const DashboardLayout = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-                    {/* {
-                            isAdmin ? <>
-                                <li><NavLink to="/"><FaHome></FaHome> Admin Home</NavLink></li>
-                                <li><NavLink to="/dashboard/manageclasses"><FaAddressCard></FaAddressCard> Manage Courses</NavLink></li>
-                                <li><NavLink to="/dashboard/manageusers"><FaUsers></FaUsers> Manage Users</NavLink></li>            
-                            </>
-                             : 
-                             <>
-                              {
-                                isInstructor?
-                                <>
-                                    <li><NavLink to="/instructors"><FaHome></FaHome> Instructor Home</NavLink></li>
-                                    <li><NavLink to="/dashboard/addcourses"> <FaAdn></FaAdn> Add A Course</NavLink></li>
-                                    <li><NavLink to="/"><FaBook></FaBook> Manage Course</NavLink></li>
-                                    <li><NavLink to="/dashboard/myclasses"> <FaBox></FaBox> My Courses</NavLink></li>
-                                </>
-                                :
-                                <>
-                                    <li><NavLink to="/dashboard/userhome"><FaHome></FaHome> User Home</NavLink></li>
-                                    <li><NavLink to="/dashboard/myenrolledclasses"><FaBookReader></FaBookReader> My Enrolled Courses</NavLink></li>
-                                    <li><NavLink to="/dashboard/paymenthistory"><FaWallet></FaWallet> Payment History</NavLink></li>
-                                    <li>
-                                        <NavLink to="/dashboard/myselectedclasses"><FaShoppingCart></FaShoppingCart>My Selected Course</NavLink>
-                                    </li>
-                                </>
-                               }
-                            </>
-                        } */}
+  return (
+    <>
+      <div className="bg-white text-black dark:bg-boxDark-2 dark:text-bodyDark">
+        {/* <!-- ===== Page Wrapper Start ===== --> */}
+        <div className="flex h-screen overflow-hidden">
+          {/* <!-- ===== Sidebar Start ===== --> */}
+          <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+          {/* <!-- ===== Sidebar End ===== --> */}
 
-                        <div className="divider"></div>
-                        <li><NavLink to="/"><FaHome></FaHome> Home</NavLink> </li>
-                        <li><NavLink to="/classes"><FaElementor></FaElementor>Classes</NavLink></li>
-                        <li><NavLink to="/signup"><FaUserAlt></FaUserAlt>Sign up</NavLink></li>
-                  </ul>
-                </div>
-                </div>
+          {/* <!-- ===== Content Area Start ===== --> */}
+          <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
+            {/* <!-- ===== Header Start ===== --> */}
+            <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+            {/* <!-- ===== Header End ===== --> */}
+
+            {/* <!-- ===== Main Content Start ===== --> */}
+            <main>
+              <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
+                <Outlet />
+              </div>
+            </main>
+            {/* <!-- ===== Main Content End ===== --> */}
+          </div>
+          {/* <!-- ===== Content Area End ===== --> */}
         </div>
-    );
+        {/* <!-- ===== Page Wrapper End ===== --> */}
+      </div>
+    </>
+  );
 };
 
-export default Dashboard;
+export default DashboardLayout;

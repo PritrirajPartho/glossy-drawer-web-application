@@ -1,8 +1,8 @@
 import React from 'react';
 import Instructor from './Instructor/Instructor';
+import Review from './Review/Review';
 import Course from './Course/Course';
 import Slider from './Slider/Slider';
-import Review from './Review/Review';
 import Gallery from './Gallery/Gallery';
 
 
@@ -12,9 +12,9 @@ const Home = () => {
             <Slider></Slider>
             <Course></Course>
             <Instructor></Instructor>
+            <Review></Review>  
             <Review></Review>
             <Gallery></Gallery>
-            <h1>d</h1>
         </section>
     );
 };
