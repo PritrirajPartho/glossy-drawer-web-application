@@ -80,6 +80,9 @@ const Header = () => {
                         <Link className=" font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
                             <li>Gallery</li>
                         </Link>
+                        <Link to="/dashboard" className=" font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
+                            <li>Dashboard</li>
+                        </Link>
                     </ul>
                 </div>
 

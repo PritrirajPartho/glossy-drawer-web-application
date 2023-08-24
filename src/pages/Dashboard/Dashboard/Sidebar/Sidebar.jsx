@@ -12,8 +12,8 @@ import Logo from "../../../../assets/images/logo/logo-icon.svg";
 import User from "./User/User";
 
 
-const isAdmin = true;
-const isInstructor = false;
+const isAdmin = false;
+const isInstructor = true;
 
 
 // eslint-disable-next-line react/prop-types
@@ -110,16 +110,29 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                 isInstructor?
                                 <>
                                     {/* <!-- My Booking --> */}
+                                
                                     <li>
                                       <NavLink
-                                        to="/myCart"
+                                        to="/addcourse"
                                         className={`sidebar-menu-item ${
                                           pathname.includes("calendar") &&
                                           "bg-slate-300 dark:bg-meta-4"
                                         }`}
                                       >
                                         <BsBuildingFillAdd className="w-5 h-5" />
-                                        My Booking
+                                        Add Courses
+                                      </NavLink>
+                                    </li>
+                                    <li>
+                                      <NavLink
+                                        to="/insaddedcourses"
+                                        className={`sidebar-menu-item ${
+                                          pathname.includes("calendar") &&
+                                          "bg-slate-300 dark:bg-meta-4"
+                                        }`}
+                                      >
+                                        <BsBuildingFillAdd className="w-5 h-5" />
+                                        My Added Courses
                                       </NavLink>
                                     </li>
                                 </>
