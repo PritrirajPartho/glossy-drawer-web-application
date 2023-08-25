@@ -13,7 +13,7 @@ import User from "./User/User";
 
 
 const isAdmin = false;
-const isInstructor = true;
+const isInstructor = false;
 
 
 // eslint-disable-next-line react/prop-types
@@ -25,9 +25,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
     <aside
       className={`absolute left-0 top-0 z-10 flex h-screen w-72 flex-col overflow-y-hidden 
       
-      dark:bg-boxDark shadow-lg duration-300 ease-linear  lg:static lg:translate-x-0 ${
-        sidebarOpen ? "translate-x-0" : "-translate-x-full"
-      }`}
+      dark:bg-boxDark shadow-lg duration-300 ease-linear  lg:static lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
     >
       {/* <!-- SIDEBAR HEADER --> */}
       <div className="flex items-center justify-between gap-2 px-6 py-6 lg:py-6 ms-6 mb-1">
@@ -62,7 +61,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       {/* <!-- SIDEBAR HEADER --> */}
       {/* I use a user components */}
       <div>
-          <User></User>
+        <User></User>
       </div>
       <div className="sidebar-head ">
         {/* <!-- Sidebar Menu --> */}
@@ -72,171 +71,161 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
           </h3>
           {/* <!-- Menu Group --> */}
           <div>
-             <ul className="mb-6 flex flex-col gap-1.5">
+            <ul className="mb-6 flex flex-col gap-1.5">
               {/* <!-- Dashboard submenu All--> */}
+              {
+                isAdmin ? <>
+                  {/* <!-- User Home --> */}
+                  <li>
+                    <NavLink
+                      to="/dashboard/userHome"
+                      className={`sidebar-menu-item ${pathname.includes("userHome") &&
+                        "bg-slate-300 dark:bg-meta-4"
+                        }`}
+                    >
+                      <AiFillHome className="w-5 h-5" />
+                      User Home
+                    </NavLink>
+                  </li>
+                  {/* <!-- User Home --> */}
+                  {/* <!-- Review --> */}
+                  <li>
+                    <NavLink
+                      to="/dashboard/payment"
+                      className={`sidebar-menu-item ${pathname.includes("review") && "bg-slate-300 dark:bg-meta-4"
+                        }`}
+                    >
+                      <MdReviews className="w-5 h-5" />
+                      Add Review
+                    </NavLink>
+                  </li>
+                  {/* <!-- Review --> */}
+                </>
+                  :
+                  <>
                     {
-                            isAdmin ? <>
-                                {/* <!-- User Home --> */}
-                                <li>
-                                  <NavLink
-                                    to="/dashboard/userHome"
-                                    className={`sidebar-menu-item ${
-                                      pathname.includes("userHome") &&
-                                      "bg-slate-300 dark:bg-meta-4"
-                                    }`}
-                                  >
-                                    <AiFillHome className="w-5 h-5" />
-                                    User Home
-                                  </NavLink>
-                                </li>
-                               {/* <!-- User Home --> */}
-                               {/* <!-- Review --> */}
-                                <li>
-                                  <NavLink
-                                    to="/dashboard/payment"
-                                    className={`sidebar-menu-item ${
-                                      pathname.includes("review") && "bg-slate-300 dark:bg-meta-4"
-                                    }`}
-                                  >
-                                    <MdReviews className="w-5 h-5" />
-                                    Add Review
-                                  </NavLink>
-                                </li>
-                                {/* <!-- Review --> */}
-                            </>
-                             : 
-                             <>
-                              {
-                                isInstructor?
-                                <>
-                                    {/* <!-- My Booking --> */}
-                                
-                                    <li>
-                                      <NavLink
-                                        to="/addcourse"
-                                        className={`sidebar-menu-item ${
-                                          pathname.includes("calendar") &&
-                                          "bg-slate-300 dark:bg-meta-4"
-                                        }`}
-                                      >
-                                        <BsBuildingFillAdd className="w-5 h-5" />
-                                        Add Courses
-                                      </NavLink>
-                                    </li>
-                                    <li>
-                                      <NavLink
-                                        to="/insaddedcourses"
-                                        className={`sidebar-menu-item ${
-                                          pathname.includes("calendar") &&
-                                          "bg-slate-300 dark:bg-meta-4"
-                                        }`}
-                                      >
-                                        <BsBuildingFillAdd className="w-5 h-5" />
-                                        My Added Courses
-                                      </NavLink>
-                                    </li>
-                                </>
-                                :
-                                <>
-                                    {/* <!-- Payment History --> */}
-                                      <li>
-                                        <NavLink
-                                          to="/dashboard/payment"
-                                          className={`sidebar-menu-item ${
-                                            pathname.includes("payment") &&
-                                            "bg-slate-300 dark:bg-meta-4"
-                                          }`}
-                                        >
-                                          <MdPayment className="w-5 h-5" />
-                                          Payment History
-                                        </NavLink>
-                                      </li>
-                                      {/* <!-- Payment History --> */}
-                                      
-                                      {/* <!-- My Cart --> */}
-                                      <li>
-                                        <NavLink
-                                          to="/dashboard/myCart"
-                                          className={`sidebar-menu-item ${
-                                            pathname.includes("myCart") && "bg-slate-300 dark:bg-meta-4"
-                                          }`}
-                                        >
-                                          <BsFillCartFill className="w-5 h-5" />
-                                          My Cart
-                                        </NavLink>
-                                      </li>
-                                      {/* <!-- My Cart --> */}
-                                </>
-                               }
-                            </>
-                        }
+                      isInstructor ?
+                        <>
+                          {/* <!-- My Booking --> */}
 
-                {/* <!-- Others Group --> */}
-                    <div>
-                      <h3 className="mb-4 ml-4 text-sm font-semibold text-bodyDark2">
-                        OTHERS
-                      </h3>
+                          <li>
+                            <NavLink
+                              to="/addcourse"
+                              className={`sidebar-menu-item ${pathname.includes("calendar") &&
+                                "bg-slate-300 dark:bg-meta-4"
+                                }`}
+                            >
+                              <BsBuildingFillAdd className="w-5 h-5" />
+                              Add Courses
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/insaddedcourses"
+                              className={`sidebar-menu-item ${pathname.includes("calendar") &&
+                                "bg-slate-300 dark:bg-meta-4"
+                                }`}
+                            >
+                              <BsBuildingFillAdd className="w-5 h-5" />
+                              My Added Courses
+                            </NavLink>
+                          </li>
+                        </>
+                        :
+                        <>
+                          {/* <!-- Payment History --> */}
+                          <li>
+                            <NavLink
+                              to="/dashboard/payment"
+                              className={`sidebar-menu-item ${pathname.includes("payment") &&
+                                "bg-slate-300 dark:bg-meta-4"
+                                }`}
+                            >
+                              <MdPayment className="w-5 h-5" />
+                              Payment History
+                            </NavLink>
+                          </li>
+                          {/* <!-- Payment History --> */}
 
-                      <ul className="mb-6 flex flex-col gap-1.5">
-                        {/* <!-- Home Item --> */}
-                        <li>
-                          <NavLink
-                            to="/"
-                            className={`sidebar-menu-item ${
-                              pathname.includes("home") && "bg-slate-300 dark:bg-meta-4"
-                            }`}
-                          >
-                            <AiFillHome className="w-5 h-5" />
-                            Home
-                          </NavLink>
-                        </li>
-                        {/* <!-- Home Item --> */}
+                          {/* <!-- My Cart --> */}
+                          <li>
+                            <NavLink
+                              to="/dashboard/myCart"
+                              className={`sidebar-menu-item ${pathname.includes("myCart") && "bg-slate-300 dark:bg-meta-4"
+                                }`}
+                            >
+                              <BsFillCartFill className="w-5 h-5" />
+                              My Cart
+                            </NavLink>
+                          </li>
+                          {/* <!-- My Cart --> */}
+                        </>
+                    }
+                  </>
+              }
 
-                        {/* <!-- Menu Item --> */}
-                        <li>
-                          <NavLink
-                            to="/menu"
-                            className={`sidebar-menu-item ${
-                              pathname.includes("menu") && "bg-slate-300 dark:bg-meta-4"
-                            }`}
-                          >
-                            <BiMenuAltRight className="w-5 h-5" />
-                            Menu
-                          </NavLink>
-                        </li>
-                        {/* <!-- Menu Item --> */}
+              {/* <!-- Others Group --> */}
+              <div>
+                <h3 className="mb-4 ml-4 text-sm font-semibold text-bodyDark2">
+                  OTHERS
+                </h3>
 
-                        {/* <!-- Shop Item --> */}
-                        <li>
-                          <NavLink
-                            to="/order/salad"
-                            className={`sidebar-menu-item ${
-                              pathname.includes("order") && "bg-slate-300 dark:bg-meta-4"
-                            }`}
-                          >
-                            <AiFillShopping className="w-5 h-5" />
-                            Shop
-                          </NavLink>
-                        </li>
-                        {/* <!-- Shop Item --> */}
+                <ul className="mb-6 flex flex-col gap-1.5">
+                  {/* <!-- Home Item --> */}
+                  <li>
+                    <NavLink
+                      to="/"
+                      className={`sidebar-menu-item ${pathname.includes("home") && "bg-slate-300 dark:bg-meta-4"
+                        }`}
+                    >
+                      <AiFillHome className="w-5 h-5" />
+                      Home
+                    </NavLink>
+                  </li>
+                  {/* <!-- Home Item --> */}
 
-                        {/* <!-- Contact Item --> */}
-                        <li>
-                          <NavLink
-                            to="/contact"
-                            className={`sidebar-menu-item ${
-                              pathname.includes("contact") &&
-                              "bg-slate-300 dark:bg-meta-4"
-                            }`}
-                          >
-                            <MdEmail className="w-5 h-5" />
-                            Contact
-                          </NavLink>
-                        </li>
-                        {/* <!-- Contact Item --> */}
-                      </ul>
-                    </div>
-             </ul>
+                  {/* <!-- Menu Item --> */}
+                  <li>
+                    <NavLink
+                      to="/menu"
+                      className={`sidebar-menu-item ${pathname.includes("menu") && "bg-slate-300 dark:bg-meta-4"
+                        }`}
+                    >
+                      <BiMenuAltRight className="w-5 h-5" />
+                      Menu
+                    </NavLink>
+                  </li>
+                  {/* <!-- Menu Item --> */}
+
+                  {/* <!-- Shop Item --> */}
+                  <li>
+                    <NavLink
+                      to="/order/salad"
+                      className={`sidebar-menu-item ${pathname.includes("order") && "bg-slate-300 dark:bg-meta-4"
+                        }`}
+                    >
+                      <AiFillShopping className="w-5 h-5" />
+                      Shop
+                    </NavLink>
+                  </li>
+                  {/* <!-- Shop Item --> */}
+
+                  {/* <!-- Contact Item --> */}
+                  <li>
+                    <NavLink
+                      to="/contact"
+                      className={`sidebar-menu-item ${pathname.includes("contact") &&
+                        "bg-slate-300 dark:bg-meta-4"
+                        }`}
+                    >
+                      <MdEmail className="w-5 h-5" />
+                      Contact
+                    </NavLink>
+                  </li>
+                  {/* <!-- Contact Item --> */}
+                </ul>
+              </div>
+            </ul>
           </div>
         </nav>
         {/* <!-- Sidebar Menu --> */}

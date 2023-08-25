@@ -10,6 +10,7 @@ import Instructors from "../pages/Instructors/Instructors";
 // import AddCourse from "../pages/Dashboard/AddCourse/AddCourse";
 import AddCourses from "../pages/Dashboard/Dashboard/AddCourses/AddCourses";
 import InsAddedCourses from "../pages/Dashboard/Dashboard/InsAddedCourses/InsAddedCourses";
+import MyCart from "../pages/Dashboard/Dashboard/MyCart/MyCart";
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
     path: "dashboard",
     element: <Dashboard></Dashboard>,
     children: [
-    
+
 
     ],
   },
@@ -56,9 +57,13 @@ const router = createBrowserRouter([
     path: "/insaddedcourses",
     element: <InsAddedCourses></InsAddedCourses>,
   },
+  {
+    path: "/dashboard/myCart",
+    element: <MyCart></MyCart>,
+  },
 
- 
-  
+
+
 ]);
 // {
 //   path: 'userhome',
