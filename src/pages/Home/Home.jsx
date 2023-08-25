@@ -4,6 +4,7 @@ import Course from './Course/Course';
 import Slider from './Slider/Slider';
 import Review from './Review/Review';
 import Gallery from './Gallery/Gallery';
+import FinalGallery from '../FinalGallery/FinalGallery';
 
 
 const Home = () => {
@@ -11,7 +12,8 @@ const Home = () => {
         <section>
             <Slider></Slider>
             <Course></Course>
-            <Gallery></Gallery>
+            <FinalGallery></FinalGallery>
+            {/* <Gallery></Gallery> */}
             <Instructor></Instructor>
             <Review></Review>
         </section>
