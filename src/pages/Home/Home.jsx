@@ -1,17 +1,18 @@
 import React from 'react';
 import Instructor from './Instructor/Instructor';
-import Review from './Review/Review';
-import Slider from './Slider/Slider'
 import Course from './Course/Course';
-
+import Slider from './Slider/Slider';
+import Review from './Review/Review';
 
 const Home = () => {
     return (
         <section>
-           <Slider></Slider>
+            <Slider></Slider>
             <Course></Course>
+            <FinalGallery></FinalGallery>
+            {/* <Gallery></Gallery> */}
             <Instructor></Instructor>
-            <Review></Review>  
+            
         </section>
     );
 };

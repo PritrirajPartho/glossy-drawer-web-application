@@ -19,7 +19,7 @@
         "course_name": "cartooning ",
         "rating": 4.2,
         "price": 29,
-        "photoURL": "https://i.ibb.co/m4CjLDs/img5.jpg",
+        "photoURL": "https://i.ibb.co/H4VGZ5b/Whats-App-Image-2023-08-18-at-10-55-52-AM.jpg",
         "email": "instructor2@example.com",
         "available_seat": 500
     },
@@ -68,6 +68,42 @@
         "rating": 3.8,
         "price": 14,
         "photoURL": "https://i.ibb.co/zfQRh2C/img1.jpg",
+        "email": "instructor6@example.com",
+        "available_seat": 550
+    },
+    {
+        "id": 7,
+        "drawing_name": "drawing 6",
+        "instructor_name": "jafor",
+        "instructor_img":"https://i.ibb.co/b7xk8qT/Background-2.png",
+        "course_name": "Sketeching",
+        "rating": 3.8,
+        "price": 14,
+        "photoURL": "https://i.ibb.co/bmdR9tQ/Whats-App-Image-2023-08-18-at-10-55-54-AM.jpg        ",
+        "email": "instructor6@example.com",
+        "available_seat": 550
+    },
+    {
+        "id": 8,
+        "drawing_name": "drawing 6",
+        "instructor_name": "jafor",
+        "instructor_img":"https://i.ibb.co/b7xk8qT/Background-2.png",
+        "course_name": "Sketeching",
+        "rating": 3.8,
+        "price": 14,
+        "photoURL": "https://i.ibb.co/99dvnfN/Whats-App-Image-2023-08-18-at-10-55-53-AM.jpg",
+        "email": "instructor6@example.com",
+        "available_seat": 550
+    },
+    {
+        "id": 9,
+        "drawing_name": "drawing 6",
+        "instructor_name": "jafor",
+        "instructor_img":"https://i.ibb.co/b7xk8qT/Background-2.png",
+        "course_name": "Sketeching",
+        "rating": 3.8,
+        "price": 14,
+        "photoURL": "https://i.ibb.co/hFybQjf/Whats-App-Image-2023-08-18-at-10-55-50-AM.jpg",
         "email": "instructor6@example.com",
         "available_seat": 550
     }
