@@ -2,7 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Google from "../Google/Google";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-// import pic1 from '../../assets/cyber-security-network-padlock-icon-internet-technology-networking-businessman-protecting-data-personal-information-tablet-virtual-interface-data-protection-privacy-concept-gdpr-eu_150455-20541.avif'
+import pic1 from '../../assets/images/genrall/cyber1.jpg';
 import { TbFidgetSpinner } from 'react-icons/tb'
 
 const SingUp = () => {
