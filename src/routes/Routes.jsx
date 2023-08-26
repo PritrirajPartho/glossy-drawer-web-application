@@ -3,16 +3,13 @@ import {
 } from "react-router-dom";
 import Root from "../layout/Root";
 import Home from "../pages/Home/Home";
-<<<<<<< HEAD
 import MyCourses from "../pages/MyCourses/MyCourses";
-=======
 import ErrorPage from "../pages/Errorpage/ErrorPage";
 import Dashboard from "../layout/Dashboard";
 import Login from "../pages/Login/Login";
 import SingUp from "../pages/SingUp/SingUp";
 import Instructors from "../pages/Instructors/Instructors";
 import AddCourse from "../pages/Dashboard/AddCourse/AddCourse";
->>>>>>> main
 
 
 
@@ -41,22 +38,21 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: 'dashboard',
+    path: '/dashboard',
     element: <Dashboard></Dashboard>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
         {
           path: 'addcourses',
           element: <AddCourse></AddCourse>
         },
-<<<<<<< HEAD
         {
-          path: "/mycourses",
+          path: "mycourses",
           element:<MyCourses></MyCourses>
         }
       ],
     },
   ]);
-=======
       // {
       //   path: 'userhome',
       //   element: <StudentRoute><UserHome></UserHome></StudentRoute>
@@ -93,9 +89,8 @@ const router = createBrowserRouter([
       //   path: 'manageclasses', 
       //   element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
       // },
-    ]
-  }
-]);
->>>>>>> main
+  //   ]
+  // }
+// ]);
 
 export default router;

@@ -12,8 +12,8 @@ import Logo from "../../../../assets/images/logo/logo-icon.svg";
 import User from "./User/User";
 
 
-const isAdmin = true;
-const isInstructor = false;
+const isAdmin = false;
+const isInstructor = true;
 
 
 // eslint-disable-next-line react/prop-types
@@ -112,7 +112,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                     {/* <!-- My Booking --> */}
                                     <li>
                                       <NavLink
-                                        to="/myCart"
+                                        to="/addcourses"
                                         className={`sidebar-menu-item ${
                                           pathname.includes("calendar") &&
                                           "bg-slate-300 dark:bg-meta-4"

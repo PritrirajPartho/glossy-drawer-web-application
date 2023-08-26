@@ -14,7 +14,6 @@ const Home = () => {
             <Instructor></Instructor>
             <Review></Review>
             <Gallery></Gallery>
-            <h1>d</h1>
         </section>
     );
 };
