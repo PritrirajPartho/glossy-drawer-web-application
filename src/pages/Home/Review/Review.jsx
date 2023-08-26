@@ -22,13 +22,17 @@ const Review = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("review.json")
+    fetch("https://glossy-drawer-web-application-server.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
 
+
   return (
   <div className="w-full h-full">
+
+<h1 className='text-center text-4xl text-blue-800 mt-10 mb-6'>Review </h1>
+
        <div className="my-8 bg-auto bg-[url('https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111.jpg')] p-3 rounded shadow">
      
      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">

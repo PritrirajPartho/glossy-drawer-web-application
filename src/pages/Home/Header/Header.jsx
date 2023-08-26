@@ -36,6 +36,9 @@ const Header = () => {
                         <Link className="block px-4 py-2 hover:bg-slate-800 hover:text-white">
                             Sketch
                         </Link>
+                        <Link to="/mycourses" className="block px-4 py-2 hover:bg-slate-800 hover:text-white">
+                            Courses
+                        </Link>
                         <Link className="block px-4 py-2 hover:bg-slate-800 hover:text-white">
                             Gallery
                         </Link>

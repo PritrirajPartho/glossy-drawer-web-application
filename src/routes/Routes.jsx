@@ -3,8 +3,6 @@ import {
   } from "react-router-dom";
 import Root from "../layout/Root";
 import Home from "../pages/Home/Home";
-import ErrorPage from "../pages/Errorpage/ErrorPage";
-import Dashboard from "../layout/Dashboard";
 
 
 
@@ -18,6 +16,10 @@ import Dashboard from "../layout/Dashboard";
           path: "/",
           element: <Home></Home>,
         },
+        {
+          path: "/mycourses",
+          element:<MyCourses></MyCourses>
+        }
       ],
     },
     {
