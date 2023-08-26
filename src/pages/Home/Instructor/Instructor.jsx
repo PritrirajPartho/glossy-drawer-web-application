@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import InstructorReview from '../InstructorReview/InstructorReview';
-import Instructors from '../../Instructors/Instructors';
+
 
 const Instructor = () => {
     const [instructors, setInstructors] = useState([])

@@ -1,7 +1,59 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { StarIcon } from '@heroicons/react/24/solid'
+import Swal from 'sweetalert2';
+import { AuthContext } from '../../Provider/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 const Courses = ({ detail }) => {
-    const { img, name, Details, rating, Level, Instructor, price } = detail
+    const { _id, img, name, Details, rating, Level, Instructor, price } = detail
+    const { user } = useContext(AuthContext)
+
+
+    const handleMakeSelected = () => {
+
+
+        if (user && user.email) {
+            const selected = { classI: _id, name, price, Level, email: user.email, img }
+
+
+
+
+            fetch('http://localhost:5000/addClass', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(selected)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if (data.insertedId) {
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'success',
+                            title: 'Selected',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+
+                    }
+                })
+
+        }
+        else {
+
+            Swal.fire({
+                position: 'center',
+                icon: 'warning',
+                title: 'Plz Login First',
+                showConfirmButton: false,
+                timer: 1500
+            })
+
+        }
+    }
+
+
     return (
         <div>
 
@@ -46,10 +98,10 @@ const Courses = ({ detail }) => {
                             </div>
                             <div className="text-center">
                                 <a
-                                    href="/"
+                                    onClick={() => handleMakeSelected(detail)}
                                     className="inline-flex mb-10 items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
                                 >
-                                    Learn more
+                                    Select
                                 </a>
                             </div>
                         </div>
