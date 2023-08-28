@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import InstructorReview from '../InstructorReview/InstructorReview';
 
+
 const Instructor = () => {
     const [instructors, setInstructors] = useState([])
     useEffect(() => {
-         fetch('https://glossy-drawer-web-application-server.vercel.app/instructors')
+         fetch('/public/instructor.json')
          .then(res => res.json())
          .then(data => setInstructors(data) )
     }, [])
