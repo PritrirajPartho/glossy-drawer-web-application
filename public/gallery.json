@@ -19,8 +19,7 @@
         "course_name": "cartooning ",
         "rating": 4.2,
         "price": 29,
-        "photoURL": "https://i.ibb.co/H4VGZ5b/Whats-App-Image-2023-08-18-at-10-55-52-AM.jpg",
-
+        "photoURL": "https://i.ibb.co/m4CjLDs/img5.jpg",
         "email": "instructor2@example.com",
         "available_seat": 500
     },
@@ -106,7 +105,6 @@
         "price": 14,
         "photoURL": "https://i.ibb.co/hFybQjf/Whats-App-Image-2023-08-18-at-10-55-50-AM.jpg",
         "email": "instructor6@example.com",
-        "available_seat": 550
-
+        "available_seat": 5502
     }
 ]
