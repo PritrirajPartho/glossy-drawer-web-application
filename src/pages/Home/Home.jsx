@@ -2,6 +2,7 @@ import React from 'react';
 import Instructor from './Instructor/Instructor';
 import Course from './Course/Course';
 import Slider from './Slider/Slider';
+import Contacts from '../Contacts/Contacts';
 
 
 const Home = () => {
@@ -10,7 +11,7 @@ const Home = () => {
            <Slider></Slider>
             <Course></Course>
             <Instructor></Instructor>
-            
+            <Contacts></Contacts>
         </section>
     );
 };
