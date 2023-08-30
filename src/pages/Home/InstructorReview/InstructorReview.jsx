@@ -2,6 +2,7 @@ import React from 'react';
 
 const InstructorReview = ({instructor}) => {
     const{id,img,name,course, email,student} = instructor;
+    
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
