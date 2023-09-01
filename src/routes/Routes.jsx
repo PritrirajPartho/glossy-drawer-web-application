@@ -11,6 +11,8 @@ import InsAddedCourses from "../pages/Dashboard/Dashboard/InsAddedCourses/InsAdd
 import MyCart from "../pages/Dashboard/Dashboard/MyCart/MyCart";
 import DashboardLayout from "../layout/DashboardLayout";
 import ManageCourses from "../pages/Dashboard/MangeClasses/ManageCourses";
+import DrawingCanvas from "../pages/Canvas/DrawingCanvas";
+import Contacts from '../../src/pages/Contacts/Contacts';
 
 const router = createBrowserRouter([
   {
@@ -38,22 +40,22 @@ const router = createBrowserRouter([
         path: "/instructors",
         element: <Instructors></Instructors>,
       },
+      {
+        path: "/canvas",
+        element:<DrawingCanvas></DrawingCanvas>,
+      },
+      {
+        path: "/canvas",
+        element:<DrawingCanvas></DrawingCanvas>,
+      },
+      // {
+      //   path: "/contact",
+      //   element: <Contacts></Contacts>,
+      // },
       // {
       //   path:'/dashboard/addcourses',
       //   element: <AddCourses></AddCourses>
       // },
-      {
-        path: '/dashboard/addcourses',
-        element: <AddCourses></AddCourses>
-      },
-      {
-        path: '/dashboard/insaddedcourses',
-        element: <InsAddedCourses></InsAddedCourses>
-      },
-      {
-        path:'/dashboard/managecourses',
-        element: <ManageCourses></ManageCourses>
-      },
     ],
   },
   {

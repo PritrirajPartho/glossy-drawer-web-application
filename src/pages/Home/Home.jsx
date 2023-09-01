@@ -4,6 +4,7 @@ import Review from './Review/Review';
 import Slider from './Slider/Slider'
 import FinalGallery from '../../pages/FinalGallery/FinalGallery'
 import Features from './Features/Features';
+import Course from '../../pages/Home/Course/Course';
 
 
 const Home = () => {
