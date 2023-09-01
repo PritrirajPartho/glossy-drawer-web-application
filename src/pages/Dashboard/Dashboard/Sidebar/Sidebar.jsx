@@ -12,8 +12,8 @@ import Logo from "../../../../assets/images/logo/logo-icon.svg";
 import User from "./User/User";
 
 
-const isAdmin = false;
-const isInstructor = true;
+const isAdmin = true;
+const isInstructor = false;
 
 
 // eslint-disable-next-line react/prop-types
@@ -75,7 +75,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
               {/* <!-- Dashboard submenu All--> */}
                     {
                             isAdmin ? <>
-                                {/* <!-- User Home --> */}
+                                {/* <!-- Admin Home --> */}
                                 <li>
                                   <NavLink
                                     to="/dashboard/userHome"
@@ -85,11 +85,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                     }`}
                                   >
                                     <AiFillHome className="w-5 h-5" />
-                                    User Home
+                                    Admin Home
                                   </NavLink>
                                 </li>
-                               {/* <!-- User Home --> */}
-                               {/* <!-- Review --> */}
+                               {/* <!-- Admin Home --> */}
+                               {/* <!-- Manage Users --> */}
                                 <li>
                                   <NavLink
                                     to="/dashboard/payment"
@@ -98,10 +98,21 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                     }`}
                                   >
                                     <MdReviews className="w-5 h-5" />
-                                    Add Review
+                                   Manage Users
                                   </NavLink>
                                 </li>
-                                {/* <!-- Review --> */}
+                                {/* <!--Manage Classes --> */}
+                                <li>
+                                  <NavLink
+                                    to="/dashboard/payment"
+                                    className={`sidebar-menu-item ${
+                                      pathname.includes("review") && "bg-slate-300 dark:bg-meta-4"
+                                    }`}
+                                  >
+                                    <MdReviews className="w-5 h-5" />
+                                   Manage Classes
+                                  </NavLink>
+                                </li>
                             </>
                              : 
                              <>
@@ -111,14 +122,26 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                     {/* <!-- My Booking --> */}
                                     <li>
                                       <NavLink
-                                        to="/myCart"
+                                        to="/dashboard/addcourses"
                                         className={`sidebar-menu-item ${
                                           pathname.includes("calendar") &&
                                           "bg-slate-300 dark:bg-meta-4"
                                         }`}
                                       >
                                         <BsBuildingFillAdd className="w-5 h-5" />
-                                        My Booking
+                                        Add courses
+                                      </NavLink>
+                                    </li>
+                                    <li>
+                                      <NavLink
+                                        to="/dashboard/insaddedcourses"
+                                        className={`sidebar-menu-item ${
+                                          pathname.includes("calendar") &&
+                                          "bg-slate-300 dark:bg-meta-4"
+                                        }`}
+                                      >
+                                        <BsBuildingFillAdd className="w-5 h-5" />
+                                        Instructor Courses
                                       </NavLink>
                                     </li>
                                 </>
