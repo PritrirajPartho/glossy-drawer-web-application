@@ -1,34 +1,32 @@
 import React from 'react';
 import Instructor from './Instructor/Instructor';
-<<<<<<< HEAD
 import Review from './Review/Review';
 import Slider from './Slider/Slider'
-import Course from './Course/Course';
 import Gallery from './Gallery/Gallery';
-import Features from './Features/Features';
+// <<<<<<< devb
+// import Course from './Course/Course';
+// =======
+// import Features from './Features/Features';
+// >>>>>>> development
 
-=======
 import Course from './Course/Course';
 import Slider from './Slider/Slider';
+import Contacts from '../Contacts/Contacts';
 import Review from './Review/Review';
->>>>>>> 292350063d335ef8cb764a1ee196a6e126a6aed9
 
 const Home = () => {
     return (
         <section>
             <Slider></Slider>
             <Course></Course>
-<<<<<<< HEAD
             <Instructor></Instructor>
             <Review></Review>
             <Features></Features>
             <Gallery></Gallery>
-=======
             <FinalGallery></FinalGallery>
             {/* <Gallery></Gallery> */}
             <Instructor></Instructor>
-            
->>>>>>> 292350063d335ef8cb764a1ee196a6e126a6aed9
+            <Contacts></Contacts>
         </section>
     );
 };
