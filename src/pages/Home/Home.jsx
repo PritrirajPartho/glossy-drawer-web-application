@@ -2,8 +2,6 @@ import React from 'react';
 import Instructor from './Instructor/Instructor';
 import Review from './Review/Review';
 import Slider from './Slider/Slider'
-import Course from './Course/Course';
-import Gallery from './Gallery/Gallery';
 import FinalGallery from '../../pages/FinalGallery/FinalGallery'
 import Features from './Features/Features';
 
