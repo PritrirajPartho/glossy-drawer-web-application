@@ -12,8 +12,8 @@ import Logo from "../../../../assets/images/logo/logo-icon.svg";
 import User from "./User/User";
 
 
-const isAdmin = true;
-const isInstructor = false;
+const isAdmin = false;
+const isInstructor = true;
 
 
 // eslint-disable-next-line react/prop-types
@@ -30,7 +30,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
     >
       {/* <!-- SIDEBAR HEADER --> */}
       <div className="flex items-center justify-between gap-2 px-6 py-6 lg:py-6 ms-6 mb-1">
-        <NavLink to="/dashboard">
+        <NavLink to="dashboard">
           <div className="flex items-center gap-4">
             <img src={Logo} alt="Logo" />
             <span className="text-xl font-bold">Glossy Drawer</span>
@@ -104,7 +104,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                 {/* <!--Manage Classes --> */}
                                 <li>
                                   <NavLink
-                                    to="/dashboard/payment"
+                                    to="/dashboard/managecourses"
                                     className={`sidebar-menu-item ${
                                       pathname.includes("review") && "bg-slate-300 dark:bg-meta-4"
                                     }`}
@@ -124,7 +124,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                       <NavLink
                                         to="/dashboard/addcourses"
                                         className={`sidebar-menu-item ${
-                                          pathname.includes("calendar") &&
+                                          pathname.includes("addcourses") &&
                                           "bg-slate-300 dark:bg-meta-4"
                                         }`}
                                       >

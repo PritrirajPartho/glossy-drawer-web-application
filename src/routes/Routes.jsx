@@ -10,6 +10,7 @@ import AddCourses from "../pages/Dashboard/Dashboard/AddCourses/AddCourses";
 import InsAddedCourses from "../pages/Dashboard/Dashboard/InsAddedCourses/InsAddedCourses";
 import MyCart from "../pages/Dashboard/Dashboard/MyCart/MyCart";
 import DashboardLayout from "../layout/DashboardLayout";
+import ManageCourses from "../pages/Dashboard/MangeClasses/ManageCourses";
 
 const router = createBrowserRouter([
   {
@@ -37,14 +38,18 @@ const router = createBrowserRouter([
         path: "/instructors",
         element: <Instructors></Instructors>,
       },
-      {
-        path:'/dashboard/addcourses',
-        element: <AddCourses></AddCourses>
-      },
+      // {
+      //   path:'/dashboard/addcourses',
+      //   element: <AddCourses></AddCourses>
+      // },
       {
         path:'/dashboard/insaddedcourses',
         element: <InsAddedCourses></InsAddedCourses>
-      }
+      },
+      {
+        path:'/dashboard/managecourses',
+        element: <ManageCourses></ManageCourses>
+      },
     ],
   },
   {
@@ -52,14 +57,14 @@ const router = createBrowserRouter([
     element: <DashboardLayout></DashboardLayout>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
-        // {
-        //   path: '/addcourses',
-        //   element: <AddCourses></AddCourses>
-        // },
-        // {
-        //   path: 'mycourses',
-        //   element:<MyCourses></MyCourses>
-        // }
+        {
+          path: 'addcourses',
+          element: <AddCourses></AddCourses>
+        },
+        {
+          path: 'mycourses',
+          element:<MyCourses></MyCourses>
+        }
       ],
     },
   ]);
