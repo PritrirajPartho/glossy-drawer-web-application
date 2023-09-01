@@ -3,7 +3,11 @@ import Instructor from './Instructor/Instructor';
 import Review from './Review/Review';
 import Slider from './Slider/Slider'
 import Gallery from './Gallery/Gallery';
-import Course from './Course/Course';
+// <<<<<<< devb
+// import Course from './Course/Course';
+// =======
+// import Features from './Features/Features';
+// >>>>>>> development
 
 import Course from './Course/Course';
 import Slider from './Slider/Slider';
@@ -17,6 +21,7 @@ const Home = () => {
             <Course></Course>
             <Instructor></Instructor>
             <Review></Review>
+            <Features></Features>
             <Gallery></Gallery>
             <FinalGallery></FinalGallery>
             {/* <Gallery></Gallery> */}
