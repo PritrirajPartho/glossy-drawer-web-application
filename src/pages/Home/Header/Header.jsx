@@ -73,7 +73,7 @@ const Header = () => {
                         <Link className="mr-8 font-bold sm:hover:bg-slate-800 hover:text-white px-4 py-3">
                             <li>Home</li>
                         </Link>
-                        <Link className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
+                        <Link to={`/canvas`} className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
                             <li>Draw</li>
                         </Link>
                         <Link to={'/signup'} className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">

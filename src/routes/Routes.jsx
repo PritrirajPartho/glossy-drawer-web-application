@@ -11,6 +11,10 @@ import Instructors from "../pages/Instructors/Instructors";
 import AddCourses from "../pages/Dashboard/Dashboard/AddCourses/AddCourses";
 import InsAddedCourses from "../pages/Dashboard/Dashboard/InsAddedCourses/InsAddedCourses";
 import MyCart from "../pages/Dashboard/Dashboard/MyCart/MyCart";
+import DrawingCanvas from "../pages/Canvas/DrawingCanvas";
+// import DrawCanvas from "../pages/DrawCanvas/DrawCanvas";
+
+
 
 const router = createBrowserRouter([
   {
@@ -38,6 +42,11 @@ const router = createBrowserRouter([
         path: "/instructors",
         element: <Instructors></Instructors>,
       },
+      {
+        path:"/canvas",
+        element:<DrawingCanvas></DrawingCanvas>
+      },
+    
     ],
   },
   {
@@ -52,6 +61,9 @@ const router = createBrowserRouter([
         {
           path: "mycourses",
           element:<MyCourses></MyCourses>
+        },
+        {
+        
         }
       ],
     },

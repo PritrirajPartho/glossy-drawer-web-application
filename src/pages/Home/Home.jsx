@@ -4,6 +4,7 @@ import Review from './Review/Review';
 import Slider from './Slider/Slider';
 import Course from './Course/Course';
 import Gallery from './Gallery/Gallery';
+import Features from './Features/Features';
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <Course></Course>
             <Instructor></Instructor>
             <Review></Review>
+            <Features></Features>
             <Gallery></Gallery>
         </section>
     );
