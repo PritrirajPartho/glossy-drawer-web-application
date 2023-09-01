@@ -134,9 +134,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                         :
                         <>
                           {/* <!-- Payment History --> */}
+
                           <li>
                             <NavLink
-                              to="/dashboard/payment"
+                              to="/dashboard/paymentHistory"
                               className={`sidebar-menu-item ${pathname.includes("payment") &&
                                 "bg-slate-300 dark:bg-meta-4"
                                 }`}
