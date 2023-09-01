@@ -5,6 +5,7 @@ import Review from './Review/Review';
 import Slider from './Slider/Slider'
 import Course from './Course/Course';
 import Gallery from './Gallery/Gallery';
+import Features from './Features/Features';
 
 =======
 import Course from './Course/Course';
@@ -20,6 +21,7 @@ const Home = () => {
 <<<<<<< HEAD
             <Instructor></Instructor>
             <Review></Review>
+            <Features></Features>
             <Gallery></Gallery>
 =======
             <FinalGallery></FinalGallery>
