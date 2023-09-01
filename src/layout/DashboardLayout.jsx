@@ -4,6 +4,11 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "../pages/Dashboard/Dashboard/Sidebar/Sidebar";
 import DashboardHeader from "../pages/Dashboard/Dashboard/DashboardHeader/DashboardHeader";
 // import Sidebar from "../Dashboard/Sidebar/Sidebar";
+import React from 'react';
+import { FaAddressCard, FaAdjust, FaAdn, FaBook, FaBookReader, FaBox, FaCalendarAlt, FaElementor, FaHome, FaShoppingCart, FaUserAlt, FaUsers, FaUtensils, FaWallet } from 'react-icons/fa';
+import { NavLink, Outlet } from 'react-router-dom';
+// import useAdmin from '../hooks/useAdmin';
+// import useInstructor from '../hooks/useInstructor"ty ailam sagore';
 
 const DashboardLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
