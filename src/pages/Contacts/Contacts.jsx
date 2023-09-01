@@ -36,14 +36,15 @@ const Contacts = () => {
         <section className="py-10 px-3 text-white bg-slate-900" id="contact">
             <div className='bg-black bg-opacity-40 rounded-lg text-white h-[360px] md:h-[380px]  '>
 
-                {/* -------------------START-Plans-------------- */}
+                {/* -------------------START-Plans----------- */}
                 <div className="grid grid-cols-1 md:grid-cols-2  md:pl-36 justify-center items-center gap-4 px-3 ">
                     <div className="text-center mx-4 ">
                         <h1 className='text-xl md:text-4xl lg:text-5xl font-bold text-center py-6 md:py-10'>
                             Contact with Us
                         </h1>
                         <p className='text-sm md:text-base lg:text-lg text-center'>
-                            To make a solid investment, you have to know where you are investing. Find a plan which is best for you./                         </p>
+                            To make a solid investment, you have to know where you are investing. Find a plan which is best for you.    
+                            </p>
 
                     </div>
                     <div>
