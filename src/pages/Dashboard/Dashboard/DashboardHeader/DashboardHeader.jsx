@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import Logo from "../../../../assets/images/logo/logo-icon.svg";
 import DarkModeSwitcher from "./DarkModeSwitcher";
 import DropdownUser from "./DropdownUser";
-// import DarkModeSwitcher from "./DarkModeSwitcher";
-// import DropdownUser from "./DropdownUser";
-const Header = ({
+
+const DashboardHeader = ({
   // eslint-disable-next-line react/prop-types
   sidebarOpen,
   // eslint-disable-next-line react/prop-types
@@ -92,4 +91,4 @@ const Header = ({
   );
 };
 
-export default Header;
+export default DashboardHeader;

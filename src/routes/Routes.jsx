@@ -3,14 +3,13 @@ import Root from "../layout/Root";
 import Home from "../pages/Home/Home";
 import MyCourses from "../pages/MyCourses/MyCourses";
 import ErrorPage from "../pages/Errorpage/ErrorPage";
-import Dashboard from "../layout/Dashboard";
 import Login from "../pages/Login/Login";
 import SingUp from "../pages/SingUp/SingUp";
 import Instructors from "../pages/Instructors/Instructors";
-// import AddCourse from "../pages/Dashboard/AddCourse/AddCourse";
 import AddCourses from "../pages/Dashboard/Dashboard/AddCourses/AddCourses";
 import InsAddedCourses from "../pages/Dashboard/Dashboard/InsAddedCourses/InsAddedCourses";
 import MyCart from "../pages/Dashboard/Dashboard/MyCart/MyCart";
+import DashboardLayout from "../layout/DashboardLayout";
 
 const router = createBrowserRouter([
   {
@@ -38,11 +37,19 @@ const router = createBrowserRouter([
         path: "/instructors",
         element: <Instructors></Instructors>,
       },
+      {
+        path: '/dashboard/addcourses',
+        element: <AddCourses></AddCourses>
+      },
+      {
+        path: '/dashboard/insaddedcourses',
+        element: <InsAddedCourses></InsAddedCourses>
+      }
     ],
   },
   {
-    path: '/dashboard',
-    element: <Dashboard></Dashboard>,
+    path: 'dashboard',
+    element: <DashboardLayout></DashboardLayout>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
@@ -98,6 +105,18 @@ const router = createBrowserRouter([
 //   ]
 // }
 // ]);
+        // {
+        //   path: '/addcourses',
+        //   element: <AddCourses></AddCourses>
+        // },
+        // {
+        //   path: 'mycourses',
+        //   element:<MyCourses></MyCourses>
+        // }
+      ],
+    },
+  ]);
+
 
 
 export default router;
