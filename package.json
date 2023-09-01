@@ -12,19 +12,26 @@
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@smastrom/react-rating": "^1.3.1",
+<<<<<<< HEAD
     "@stripe/react-stripe-js": "^2.1.2",
     "@stripe/stripe-js": "^2.1.0",
+=======
+    "aos": "^2.3.4",
+>>>>>>> 36055a67cae3f5b2ac03b3b9fef7adcc23d82558
     "axios": "^1.4.0",
     "firebase": "^10.2.0",
     "heroicons": "^2.0.18",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
+    "perfect-freehand": "^1.2.0",
     "react": "^18.2.0",
+    "react-color": "^2.19.3",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.4",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.2",
     "react-toastify": "^9.1.3",
+    "roughjs": "^4.5.2",
     "sort-by": "^1.2.0",
     "sweetalert2": "^11.7.27",
     "swiper": "^10.1.0"

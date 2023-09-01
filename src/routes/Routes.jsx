@@ -11,8 +11,6 @@ import Instructors from "../pages/Instructors/Instructors";
 import AddCourses from "../pages/Dashboard/Dashboard/AddCourses/AddCourses";
 import InsAddedCourses from "../pages/Dashboard/Dashboard/InsAddedCourses/InsAddedCourses";
 import MyCart from "../pages/Dashboard/Dashboard/MyCart/MyCart";
-import Payment from "../pages/Dashboard/Dashboard/Payment/Payment";
-
 
 const router = createBrowserRouter([
   {
@@ -29,7 +27,7 @@ const router = createBrowserRouter([
         element: <Login></Login>,
       },
       {
-        path: "/singUp",
+        path: "/signup",
         element: <SingUp></SingUp>,
       },
       {
@@ -40,55 +38,45 @@ const router = createBrowserRouter([
         path: "/instructors",
         element: <Instructors></Instructors>,
       },
-      {
-        path: "/dashboard/payment",
-        element: <Payment></Payment>,
-      },
     ],
   },
   {
-    path: "dashboard",
+    path: '/dashboard',
     element: <Dashboard></Dashboard>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
+      {
+        path: 'addcourses',
+        element: <AddCourses></AddCourses>
+      },
+      {
+        path: "mycourses",
+        element: <MyCourses></MyCourses>
+      },
+      {
 
-
+      }
     ],
   },
-
-  {
-    path: "/addcourse",
-    element: <AddCourses></AddCourses>,
-  },
-  {
-    path: "/insaddedcourses",
-    element: <InsAddedCourses></InsAddedCourses>,
-  },
-  {
-    path: "/dashboard/myCart",
-    element: <MyCart></MyCart>,
-  },
-
-
-
 ]);
 // {
 //   path: 'userhome',
 //   element: <StudentRoute><UserHome></UserHome></StudentRoute>
 // },
 // {
-//   path: 'myclasses',
+//   path: 'myclasses', 
 //   element: <InstructorRoute><MyClasses></MyClasses></InstructorRoute>
 // },
 // {
-//   path: 'manageusers',
+//   path: 'manageusers', 
 //   element: <AdminRoute><MangeUsers></MangeUsers></AdminRoute>
 // },
 // {
-//   path: 'addclass',
+//   path: 'addclass', 
 //   element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
 // },
 // {
-//   path: 'myselectedclasses',
+//   path: 'myselectedclasses', 
 //   element: <StudentRoute><MySelectedClass></MySelectedClass></StudentRoute>
 // },
 // {
@@ -104,8 +92,12 @@ const router = createBrowserRouter([
 //   element: <StudentRoute><PaymentHistory></PaymentHistory></StudentRoute>
 // },
 // {
-//   path: 'manageclasses',
+//   path: 'manageclasses', 
 //   element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
 // },
+//   ]
+// }
+// ]);
+
 
 export default router;

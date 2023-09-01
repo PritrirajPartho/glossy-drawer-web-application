@@ -13,7 +13,7 @@ import User from "./User/User";
 
 
 const isAdmin = false;
-const isInstructor = false;
+const isInstructor = true;
 
 
 // eslint-disable-next-line react/prop-types
@@ -134,10 +134,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                         :
                         <>
                           {/* <!-- Payment History --> */}
-
                           <li>
                             <NavLink
-                              to="/dashboard/paymentHistory"
+                              to="/dashboard/payment"
                               className={`sidebar-menu-item ${pathname.includes("payment") &&
                                 "bg-slate-300 dark:bg-meta-4"
                                 }`}

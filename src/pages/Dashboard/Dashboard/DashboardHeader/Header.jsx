@@ -35,7 +35,7 @@ const Header = ({
           </button>
           {/* <!-- Hamburger Toggle BTN --> */}
 
-          <Link className="block flex-shrink-0 lg:hidden" to="/">
+          <Link className="block flex-shrink-0 lg:hidden" to="/dashboard">
             <div className="flex items-center gap-4">
               <img src={Logo} alt="Logo" />
               <span className="text-xl font-bold">Dashboard</span>
