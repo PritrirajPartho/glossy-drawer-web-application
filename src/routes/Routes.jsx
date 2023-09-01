@@ -43,7 +43,11 @@ const router = createBrowserRouter([
       //   element: <AddCourses></AddCourses>
       // },
       {
-        path:'/dashboard/insaddedcourses',
+        path: '/dashboard/addcourses',
+        element: <AddCourses></AddCourses>
+      },
+      {
+        path: '/dashboard/insaddedcourses',
         element: <InsAddedCourses></InsAddedCourses>
       },
       {
@@ -57,18 +61,71 @@ const router = createBrowserRouter([
     element: <DashboardLayout></DashboardLayout>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
-        {
-          path: 'addcourses',
-          element: <AddCourses></AddCourses>
-        },
-        {
-          path: 'mycourses',
-          element:<MyCourses></MyCourses>
-        }
-      ],
-    },
-  ]);
-     
+      {
+        path: 'addcourses',
+        element: <AddCourses></AddCourses>
+      },
+      {
+        path: "mycourses",
+        element: <MyCourses></MyCourses>
+      },
+      {
+
+      }
+    ],
+  },
+]);
+// {
+//   path: 'userhome',
+//   element: <StudentRoute><UserHome></UserHome></StudentRoute>
+// },
+// {
+//   path: 'myclasses', 
+//   element: <InstructorRoute><MyClasses></MyClasses></InstructorRoute>
+// },
+// {
+//   path: 'manageusers', 
+//   element: <AdminRoute><MangeUsers></MangeUsers></AdminRoute>
+// },
+// {
+//   path: 'addclass', 
+//   element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
+// },
+// {
+//   path: 'myselectedclasses', 
+//   element: <StudentRoute><MySelectedClass></MySelectedClass></StudentRoute>
+// },
+// {
+//   path:'payment',
+//   element: <Payment></Payment>
+// },
+// {
+//   path:'myenrolledclasses',
+//   element: <StudentRoute> <MyEnrolledClasses></MyEnrolledClasses></StudentRoute>
+// },
+// {
+//   path:'paymenthistory',
+//   element: <StudentRoute><PaymentHistory></PaymentHistory></StudentRoute>
+// },
+// {
+//   path: 'manageclasses', 
+//   element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
+// },
+//   ]
+// }
+// ]);
+        // {
+        //   path: '/addcourses',
+        //   element: <AddCourses></AddCourses>
+        // },
+        // {
+        //   path: 'mycourses',
+        //   element:<MyCourses></MyCourses>
+        // }
+  //     ],
+  //   },
+  // ]);
+
 
 
 export default router;

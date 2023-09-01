@@ -1,0 +1,13 @@
+.canvas-container {
+     height: 500px;
+     width: 1000px;
+     /* border: 2px solid #000; */
+     margin-top: 20px;
+     margin-right: 20px;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     cursor: pointer;
+     background: #fff;
+ }
+
+
+

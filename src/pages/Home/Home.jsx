@@ -5,6 +5,7 @@ import Slider from './Slider/Slider'
 import Course from './Course/Course';
 import Gallery from './Gallery/Gallery';
 import FinalGallery from '../../pages/FinalGallery/FinalGallery'
+import Features from './Features/Features';
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
             <Instructor></Instructor>
             <Review></Review>
              <FinalGallery></FinalGallery>
+            <Features></Features>
         </section>
     );
 };
