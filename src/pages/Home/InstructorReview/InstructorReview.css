@@ -1,0 +1,92 @@
+
+
+
+.InstructorPartAll .InstructorCard {
+    padding: 14px 14px;
+    /* border: 1px solid #172554; */
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.InstructorPartAll .InstructorCard .img {
+    width: 100%;
+    height: 218px;
+    overflow: hidden;
+    position: relative;
+    transition: .4s;
+    border-radius: 7px;
+}
+
+.InstructorPartAll .InstructorCard .img img {
+    
+ 
+    transition: .4s;
+    
+}
+.InstructorPartAll .InstructorCard:hover .img img{
+    
+
+    transform: rotate(14deg) scale(1.5);
+}
+
+
+
+.InstructorPartAll .InstructorCard .img .overflow {
+    background-color: #1bab8540;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .4s;
+    transform: scale(0);
+}
+.InstructorPartAll .InstructorCard:hover .img .overflow {
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+
+}
+
+.InstructorPartAll .InstructorCard .information{}
+
+
+.InstructorPartAll .InstructorCard .information h2 {
+    font-size: 17px;
+    font-weight: 500;
+    font-family: fangsong;
+    margin-top: 10px;
+}
+
+
+.InstructorPartAll .buttonPart {
+    padding-top: 22px;
+}
+
+
+.InstructorPartAll .buttonPart .detailsbutton {
+    width: 102px;
+    height: 38px;
+    border: 1px solid #172554;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: auto;
+    border-radius: 6px;
+    color: black;
+    color: black;
+    transition: .4s;
+}
+.InstructorPartAll .buttonPart .detailsbutton:hover{
+    
+    color: white;
+    background-color: black;
+}
+
+.InstructorPartAll .buttonPart .favoritebutton {
+    font-size: 22px;
+    color: #172554;
+    font-weight: 700;
+}
+
+
+

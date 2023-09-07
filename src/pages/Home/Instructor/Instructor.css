@@ -1,0 +1,72 @@
+
+
+
+.MainInstructor {
+    background-color: #17255414;
+    padding: 88px 0;
+}
+
+.MainInstructor .InstructorAllCardItems {
+    padding-top: 48px;
+}
+.MainInstructor .Title {
+    text-align: center;
+    padding-bottom: 14px;
+    position: relative;
+}
+.MainInstructor .Title::after {
+    content: "";
+    width: 50%;
+    border: 1px dotted #172554;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.MainInstructor .Title::before {
+    content: "";
+    width: 50%;
+    border: 1px dotted red;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+
+
+
+.MainInstructor .Title h3 {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.MainInstructor .Title p {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: emoji;
+}
+
+.MainInstructor .allInstructorSee {
+    width: 148px;
+    height: 41px;
+    border-bottom: 3px solid #172554;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: auto;
+    border-radius: 18px;
+    color: black;
+    transition: .4s;
+    margin-top: 38px;
+}
+
+.MainInstructor .allInstructorSee:hover{
+    background-color: #172554;
+    color: white;
+}
+
+
+
+
+
