@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ServiceItems = () => {
     return (
-        <div className='bg-[#eeabbb] py-6'>
+        <div className='bg-gray-600 py-6'> 
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mx-4 sm:mx-8 md:mx-16 lg:mx-24 py-4 sm:py-8 md:py-16 lg:py-20 gap-3'>
                 <div
                     className='shadow-xl h-full w-full md:h-52 md:w-52 px-4 sm:px-10 py-4 sm:py-10 hover:text-blue-600 hover:bg-white hover:rounded-xl border-4 border-t-zinc-200 '>
