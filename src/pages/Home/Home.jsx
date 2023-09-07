@@ -3,8 +3,7 @@ import Instructor from './Instructor/Instructor';
 import Review from './Review/Review';
 import Slider from './Slider/Slider'
 import Features from './Features/Features';
-// import ServiceItems from '../ServiceItems/ServiceItems';
-// import Course from './Course/Course';
+
 
 
 const Home = () => {

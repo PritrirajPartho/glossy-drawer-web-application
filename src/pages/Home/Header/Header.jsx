@@ -83,6 +83,14 @@ const Header = () => {
                             <a className="hover:text-[#e98c5d] ">Contact</a>
                         </li>
                     </Link>
+                    <Link to="/contacts">
+                        <li className="group">
+                            <a className="hover:text-[#e98c5d] ">Contact</a>
+                        </li>
+                    </Link>
+                    <Link to={'/contact'} className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
+                        <li>Contact Us</li>
+                    </Link>   
                 </ul>
             </div>
 
