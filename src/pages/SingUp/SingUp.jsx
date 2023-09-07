@@ -1,9 +1,10 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Google from "../Google/Google";
 import { useContext, useState } from "react";
-import { AuthContext } from "../Provider/AuthProvider";
 import pic1 from '../../assets/images/genrall/cyber1.jpg';
 import { TbFidgetSpinner } from 'react-icons/tb'
+import Swal from 'sweetalert2';
+import useAuth from "../../hooks/useAuth";
 
 const SingUp = () => {
 
@@ -11,11 +12,11 @@ const SingUp = () => {
         loading,
         createUser,
         setLoading,
-    } = useContext(AuthContext)
+        updateUserProfile
+    } = useAuth();
 
     const navigate = useNavigate()
     const location = useLocation()
-
     const from = location.state?.from?.pathname || '/'
 
 
@@ -30,7 +31,6 @@ const SingUp = () => {
     const handlePasswordChange = (event) => {
         setPassword(event.target.value);
     };
-
     const handleConfirmPasswordChange = (event) => {
         setConfirmPassword(event.target.value);
     };
@@ -42,55 +42,69 @@ const SingUp = () => {
         const img = form.img.value;
         const email = form.email.value;
         const password = form.password.value;
+
+        // if (!/(?=.*?[A-Z])/.test(password)) {
+        //     setError('Please add at least one uppercase')
+        //     return
+        // }
         setSuccess('')
         setError('')
-
-
-        if (!/(?=.*?[A-Z])/.test(password)) {
-            setError('Please add at least one uppercase')
-            return
-        }
-
-        console.log(name, img, email, password)
+        //this place to user data go to node => mongodb
         createUser(email, password)
-            .then(result => {
-                const createdUser = result.user;
-                navigate(from, { replace: true })
-                console.log(createdUser);
-                setError('');
+        .then(result => {
+            const loggedUser = result.user;
 
-                event.target.reset();
-                setSuccess('User has created Success')
-            })
-            .catch(error => {
-                console.error(error.message);
+            updateUserProfile(name, img)
+                .then(() => {
+                    const saveUser = { name: name, email: email, role:'student' }
+                    fetch('https://glossy-drawer-web-application-server-wine.vercel.app/users', {
+                        method: 'POST',
+                        headers: {
+                            'content-type': 'application/json'
+                        },
+                        body: JSON.stringify(saveUser)
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            if (data.insertedId) {
+                                Swal.fire({
+                                    position: 'top-end',
+                                    icon: 'success',
+                                    title: 'User created successfully.',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                });
+                                navigate(from, { replace: true });                                }
+                        })
 
-                setError(error.message);
-                event.target.reset();
-            })
+                })
+                .catch(error => console.log(error))
+        })
+        .then(res =>{
+           console.log('done')
+        })
 
+        // if (password !== confirmPassword) {
+        //     setPasswordError('Passwords do not match');
 
-        if (password !== confirmPassword) {
-            setPasswordError('Passwords do not match');
+        // }
+        // else if (password.length < 6) {
+        //     setPasswordError('Password should be at least 6 characters long');
 
-        }
-        else if (password.length < 6) {
-            setPasswordError('Password should be at least 6 characters long');
+        // }
+        // else if (!/(?=.*?[A-Z])/.test(password)) {
+        //     setPasswordError('Please add at least one uppercase');
 
-        }
-        else if (!/(?=.*?[A-Z])/.test(password)) {
-            setPasswordError('Please add at least one uppercase');
+        // }
+        // else if (!/[!@#$%^&*]/.test(password)) {
+        //     setPasswordError('Password should contain at least one special character');
 
-        }
-        else if (!/[!@#$%^&*]/.test(password)) {
-            setPasswordError('Password should contain at least one special character');
-
-        }
-        else {
-            // Password and confirm password are valid, proceed with further actions
-            setPasswordError('');
-            // Additional logic or API calls can be performed here
-        }
+        // }
+        // else {
+        //     // Password and confirm password are valid, proceed with further actions
+        //     setPasswordError('');
+        //     // Additional logic or API calls can be performed here
+        // }
 
     };
 

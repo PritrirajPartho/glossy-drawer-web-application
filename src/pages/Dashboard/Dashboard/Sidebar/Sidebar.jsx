@@ -92,9 +92,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                {/* <!-- Manage Users --> */}
                                 <li>
                                   <NavLink
-                                    to="/dashboard/payment"
+                                    to="/dashboard/manageusers"
                                     className={`sidebar-menu-item ${
-                                      pathname.includes("review") && "bg-slate-300 dark:bg-meta-4"
+                                      pathname.includes("manageusers") && "bg-slate-300 dark:bg-meta-4"
                                     }`}
                                   >
                                     <MdReviews className="w-5 h-5" />
@@ -104,9 +104,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                 {/* <!--Manage Classes --> */}
                                 <li>
                                   <NavLink
-                                    to="/dashboard/payment"
+                                    to="/dashboard/managecourses"
                                     className={`sidebar-menu-item ${
-                                      pathname.includes("review") && "bg-slate-300 dark:bg-meta-4"
+                                      pathname.includes("managecourses") && "bg-slate-300 dark:bg-meta-4"
                                     }`}
                                   >
                                     <MdReviews className="w-5 h-5" />

@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../Provider/AuthProvider';
+import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
 
-    const { user, logOut } = useContext(AuthContext);
+    const { user, logOut } = useAuth;
     const handleLogOut = () => {
         logOut()
             .then()
@@ -73,7 +73,7 @@ const Header = () => {
                         <Link className="mr-8 font-bold sm:hover:bg-slate-800 hover:text-white px-4 py-3">
                             <li>Home</li>
                         </Link>
-                        <Link to={`/canvas`} className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
+                        <Link to={`/draw`} className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
                             <li>Draw</li>
                         </Link>
                         <Link to={'/signup'} className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
@@ -82,8 +82,14 @@ const Header = () => {
                         <Link to={'/instructors'} className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
                             <li>Instructors</li>
                         </Link>
+                        <Link to="/courses" className=" font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
+                            <li>Courses</li>
+                        </Link>
                         <Link to="/dashboard" className=" font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
                             <li>Dashboard</li>
+                        </Link>
+                        <Link to="/contact" className=" font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
+                            <li>Contact</li>
                         </Link>
                     </ul>
                 </div>

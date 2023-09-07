@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { StarIcon } from '@heroicons/react/24/solid'
 import Swal from 'sweetalert2';
-import { AuthContext } from '../../Provider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
 const Courses = ({ detail }) => {
     const { _id, img, name, Details, rating, Level, Instructor, price } = detail
     const { user } = useContext(AuthContext)

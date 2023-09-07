@@ -1,49 +1,49 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import "react-toastify/dist/ReactToastify.css";
-import { AuthContext } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../../providers/AuthProvider";
 
 const AddCourses = () => {
   const { user } = useContext(AuthContext);
 
-  //  const notify = () => toast("Added Successfully");
+  // //  const notify = () => toast("Added Successfully");
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
+  // // const {
+  // //   register,
+  // //   handleSubmit,
+  // //   reset,
+  // //   formState: { errors },
+  // // } = useForm();
 
-  const onSubmit = (data) => {
-    fetch("https://glossy-drawer-web-application-server.vercel.app/newcourses", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        reset();
-        if (result.insertedId) {
-          Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "Item added successfully",
-            showConfirmButton: false,
-            timer: 1500,
-          });
-        }
+  // const onSubmit = (data) => {
+  // //   fetch("http://localhost:5000/newcourses", {
+  // //     method: "POST",
+  // //     headers: {
+  // //       "content-type": "application/json",
+  // //     },
+  // //     body: JSON.stringify(data),
+  // //   })
+  // //     .then((res) => res.json())
+  // //     .then((result) => {
+  // //       reset();
+  // //       if (result.insertedId) {
+  // //         Swal.fire({
+  // //           position: "top-end",
+  // //           icon: "success",
+  // //           title: "Item added successfully",
+  // //           showConfirmButton: false,
+  // //           timer: 1500,
+  // //         });
+  // //       }
 
-        console.log(result);
-      });
-    reset;
-    //     alert('Toy Added');
-    return false;
-  };
+  // //       console.log(result);
+  // //     });
+  // //   reset;
+  // //   //     alert('Toy Added');
+  // //   return false;
+  // // };
 
   return (
     <div>

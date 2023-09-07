@@ -22,7 +22,7 @@ const Review = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("https://glossy-drawer-web-application-server.vercel.app/reviews")
+    fetch("../../../../public/review.json")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);

@@ -11,7 +11,10 @@ import InsAddedCourses from "../pages/Dashboard/Dashboard/InsAddedCourses/InsAdd
 import MyCart from "../pages/Dashboard/Dashboard/MyCart/MyCart";
 import DashboardLayout from "../layout/DashboardLayout";
 import ManageCourses from "../pages/Dashboard/MangeClasses/ManageCourses";
-
+import DrawingCanvas from '../pages/Canvas/DrawingCanvas';
+import MyCoursesCard from "../pages/MyCourses/MyCoursesCard";
+import Contacts from "../pages/Contacts/Contacts";
+import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,25 +38,37 @@ const router = createBrowserRouter([
         element: <MyCourses></MyCourses>,
       },
       {
+        path: "/courses",
+        element: <MyCoursesCard></MyCoursesCard>,
+      },
+      {
         path: "/instructors",
         element: <Instructors></Instructors>,
+      },
+      {
+        path: "/draw",
+        element: <DrawingCanvas></DrawingCanvas>,
+      },
+      {
+        path: "/contact",
+        element: <Contacts>                   </Contacts>,
       },
       // {
       //   path:'/dashboard/addcourses',
       //   element: <AddCourses></AddCourses>
       // },
-      {
-        path: '/dashboard/addcourses',
-        element: <AddCourses></AddCourses>
-      },
-      {
-        path: '/dashboard/insaddedcourses',
-        element: <InsAddedCourses></InsAddedCourses>
-      },
-      {
-        path:'/dashboard/managecourses',
-        element: <ManageCourses></ManageCourses>
-      },
+      // {
+      //   path: '/dashboard/addcourses',
+      //   element: <AddCourses></AddCourses>
+      // },
+      // {
+      //   path: '/dashboard/insaddedcourses',
+      //   element: <InsAddedCourses></InsAddedCourses>
+      // },
+      // {
+      //   path:'/dashboard/managecourses',
+      //   element: <ManageCourses></ManageCourses>
+      // },
     ],
   },
   {
@@ -61,70 +76,26 @@ const router = createBrowserRouter([
     element: <DashboardLayout></DashboardLayout>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
-      {
-        path: 'addcourses',
-        element: <AddCourses></AddCourses>
-      },
+      // {
+      //   path: 'addcourses',
+      //   element: <AddCourses></AddCourses>
+      // },
       {
         path: "mycourses",
         element: <MyCourses></MyCourses>
       },
       {
-
-      }
+        path: "manageusers",
+        element: <ManageUsers></ManageUsers>
+      },
+      {
+        path: "managecourses",
+        element: <ManageCourses></ManageCourses>
+      },
     ],
   },
 ]);
-// {
-//   path: 'userhome',
-//   element: <StudentRoute><UserHome></UserHome></StudentRoute>
-// },
-// {
-//   path: 'myclasses', 
-//   element: <InstructorRoute><MyClasses></MyClasses></InstructorRoute>
-// },
-// {
-//   path: 'manageusers', 
-//   element: <AdminRoute><MangeUsers></MangeUsers></AdminRoute>
-// },
-// {
-//   path: 'addclass', 
-//   element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
-// },
-// {
-//   path: 'myselectedclasses', 
-//   element: <StudentRoute><MySelectedClass></MySelectedClass></StudentRoute>
-// },
-// {
-//   path:'payment',
-//   element: <Payment></Payment>
-// },
-// {
-//   path:'myenrolledclasses',
-//   element: <StudentRoute> <MyEnrolledClasses></MyEnrolledClasses></StudentRoute>
-// },
-// {
-//   path:'paymenthistory',
-//   element: <StudentRoute><PaymentHistory></PaymentHistory></StudentRoute>
-// },
-// {
-//   path: 'manageclasses', 
-//   element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
-// },
-//   ]
-// }
-// ]);
-        // {
-        //   path: '/addcourses',
-        //   element: <AddCourses></AddCourses>
-        // },
-        // {
-        //   path: 'mycourses',
-        //   element:<MyCourses></MyCourses>
-        // }
-  //     ],
-  //   },
-  // ]);
+
 
 
 

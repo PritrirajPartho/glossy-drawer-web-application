@@ -1,13 +1,14 @@
 
 import { GoogleAuthProvider, getAuth, signInWithPopup, signOut } from 'firebase/auth';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import { FcGoogle } from 'react-icons/fc'
 import app from '../../firebase/firebase.config';
+import Swal from 'sweetalert2';
 
 const Google = () => {
-
+    const location = useLocation();
     const [user, setUser] = useState(null);
     const navigate = useNavigate();
     const auth = getAuth(app)
@@ -16,15 +17,30 @@ const Google = () => {
     const handleGoogleSignIn = () => {
 
         signInWithPopup(auth, googleProvider)
-            .then(result => {
-                const loggedInUser = result.user;
-                console.log(loggedInUser);
-                setUser(loggedInUser);
-                navigate('/')
+        .then(result => {
+            const loggedInUser = result.user;
+            console.log(loggedInUser);
+            const savedUser = { name: loggedInUser.displayName, email: loggedInUser.email, role: "student" }
+            fetch('https://glossy-drawer-web-application-server-wine.vercel.app/users', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(savedUser)
             })
-            .catch(error => {
-                console.log(error);
-            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.insertedId) {
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'User created successfully.',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        navigate(from, { replace: true });                                }
+                })
+        })
     }
 
     const handleSignOut = () => {
