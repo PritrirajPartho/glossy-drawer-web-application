@@ -1,12 +1,12 @@
 import React from 'react';
-import user from "../../../assets/drawing.mp4";
+// import user from "../../../assets/drawing.mp4";
 
 
 const Slider = () => {
     return (
         <div className="hero min-h-screen">
             <video className="hero-video h-screen w-full sm:h-screen sm:w-full object-cover sm:object-cover" autoPlay loop muted>
-                <source className="sm:h-[200px] " src={user} type="video/mp4" />
+                <source className="sm:h-[200px] " src="" type="video/mp4" />
             </video>
             <div className="hero-overlay bg-opacity-60 "></div>
             <div className="hero-content text-center text-neutral-content">
