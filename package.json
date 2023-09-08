@@ -23,13 +23,9 @@
     "@testing-library/react": "^14.0.0",
     "aos": "^2.3.4",
     "axios": "^1.5.0",
-<<<<<<< HEAD
-    "firebase": "^10.2.0",
     "font-awesome": "^4.7.0",
-=======
     "emailjs": "^4.0.2",
     "firebase": "^10.3.1",
->>>>>>> c9c9968067bd1b97fc8075fd38d9352b742ed319
     "heroicons": "^2.0.18",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
@@ -37,12 +33,8 @@
     "react": "^18.2.0",
     "react-color": "^2.19.3",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
-    "react-hook-form": "^7.46.0",
-=======
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.45.4",
->>>>>>> c9c9968067bd1b97fc8075fd38d9352b742ed319
     "react-icons": "^4.10.1",
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.14.2",

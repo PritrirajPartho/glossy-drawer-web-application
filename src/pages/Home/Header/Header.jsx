@@ -1,12 +1,12 @@
 
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import useAuth from '../../../hooks/useAuth';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 
 const Header = () => {
 
-    const { user, logOut } = useAuth;
+    const { user, logOut } = useContext(AuthContext);
     const handleLogOut = () => {
         logOut()
             .then()
@@ -28,54 +28,10 @@ const Header = () => {
                 <ul tabIndex={0}
                     className="menu menu-sm dropdown-content z-50 scroll  shadow bg-base-100 text-black rounded-box w-80 h-screen -top-10 -left-5 pt-24">
 
-<<<<<<< HEAD
                     <div className="divider"></div>
                     <Link to="/">
                         <li className="group">
                             <a className="hover:text-[#e98c5d] ">Home</a>
-=======
-                {/* Desktop menu items */}
-                <div className='hidden lg:block ml-[-500px]'>
-                    <ul className="flex justify-center items-center ">
-                        <Link className="mr-8 font-bold sm:hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Home</li>
-                        </Link>
-                        <Link to={`/draw`} className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Draw</li>
-                        </Link>
-                        <Link to={'/signup'} className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Signup</li>
-                        </Link>
-                        <Link to={'/instructors'} className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Instructors</li>
-                        </Link>
-                        <Link to="/courses" className=" font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Courses</li>
-                        </Link>
-                        <Link to="/dashboard" className=" font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Dashboard</li>
-                        </Link>
-                        <Link to="/contact" className=" font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
-                            <li>Contact</li>
-                        </Link>
-                    </ul>
-                </div>
-
-
-
-            <div className="navbar-end  text-white">
-
-                {user ?
-                    <ul className="flex items-center space-x-5 lg:flex">
-                        <li onClick={handleLogOut}>
-                            <Link
-                                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-primary hover:bg-purple-700 focus:shadow-outline focus:outline-none"
-                                aria-label="Sign up"
-                                title="Log Out"
-                            >
-                                LogOut
-                            </Link>
->>>>>>> c9c9968067bd1b97fc8075fd38d9352b742ed319
                         </li>
                     </Link>
                     <Link to={`/canvas`}>
@@ -136,7 +92,6 @@ const Header = () => {
                         <li>Contact Us</li>
                     </Link>   
                     </ul>
-<<<<<<< HEAD
                 </div>
 
             {/* ... Desktop menu items ... */}
@@ -191,18 +146,6 @@ const Header = () => {
                                 </Link>
                             </div>
                         </ul>
-=======
-                    :
-                    <li className="flex items-center space-x-3 ml-64 lg:flex">
-                        <Link
-                            to="/login"
-                            aria-label="Sign in"
-                            title="Sign in"
-                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-primary hover:bg-purple-700 focus:shadow-outline focus:outline-none"
-                        >
-                            LogIn
-                        </Link>
->>>>>>> c9c9968067bd1b97fc8075fd38d9352b742ed319
                     </li>
 
 
