@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+body {
+  font-family: 'Playfair Display', serif;
+}
 /* Sidebar style start*/
 .sidebar-head {
   @apply flex flex-col overflow-y-auto duration-300 ease-linear;
@@ -22,17 +24,17 @@
 
 /* Drop Down style start*/
 
-.dropdown {
+/* .dropdown {
   @apply absolute right-0 mt-4 flex w-60 flex-col rounded-sm border text-black border-stroke bg-white shadow dark:text-white dark:border-strokedark dark:bg-boxDark -translate-y-96 transition-all duration-500 ease-linear;
-}
+} */
 
-.dropdown-content {
+/* .dropdown-content {
   @apply flex flex-col gap-5 border-b border-stroke px-6 py-7 dark:border-strokedark;
-}
+} */
 
-.dropdown-item {
+/* .dropdown-item {
   @apply flex items-center gap-3 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base;
-}
+} */
 /* Drop Down style end*/
 
 /* width  */

@@ -1,5 +1,6 @@
 import React from 'react';
-import user from "../../../assets/user.mp4";
+import user from "../../../assets/drawing.mp4";
+
 
 const Slider = () => {
     return (
@@ -10,15 +11,20 @@ const Slider = () => {
             <div className="hero-overlay bg-opacity-60 "></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md mx-auto px-4 sm:px-6 lg:max-w-4xl lg:px-8">
-                    <h1 className="mb-5 text-2xl sm:text-4xl md:text-5xl font-bold mt-[-200px]">Glossy-Drawer</h1>
+                    <h1 className="mb-5 text-2xl sm:text-4xl md:text-7xl font-bold mt-[-200px]">Pursue Your Passion.
+                    <br />
+                    Create Your Life</h1>
+                   
                     <p className="mb-5 text-sm sm:text-base">
                         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
                         excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
                         a id nisi.
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <button className="bg-blue-900 font-bold text-lg sm:text-xl md:text-2xl pt-3 pb-3">Glossy-Drawer</button>
-                        <button className="border border-white font-bold text-lg sm:text-xl md:text-2xl pt-3 pb-3">Glossy-Drawer</button>
+                    <div className="">
+                        <button
+                            style={{ backgroundImage: " linear-gradient(to right, #de5c70 0%, #e98c5d 51%, #de5c70 100%)" }}
+                            className="font-bold text-lg sm:text-xl md:text-2xl py-4  px-10 rounded-xl hover:bg-[#DE606B]">Start Drawing</button>
+                        
                     </div>
                 </div>
             </div>

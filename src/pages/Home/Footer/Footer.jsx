@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
-        <footer className="bg-blue-950 py-8 mt-80">
+        <footer className="bg-[#2f2b27] py-8 mt-80 text-white ">
             <div className='text-center py-4'>
                 <div className='mb-5'>
 
@@ -13,7 +13,7 @@ const Footer = () => {
                 </div>
                 <div className="join mb-10">
                     <input className="input input-bordered join-item" placeholder="Your Email" />
-                    <button className="btn join-item rounded-full bg-orange-500">Subscribe</button>
+                    <button className="btn join-item rounded-full bg-[#e98c5d]">Subscribe</button>
                 </div>
             </div>
             <div className="container mx-auto px-4">
