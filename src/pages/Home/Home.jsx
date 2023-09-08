@@ -6,7 +6,6 @@ import FinalGallery from '../../pages/FinalGallery/FinalGallery'
 import Features from './Features/Features';
 import Course from '../../pages/Home/Course/Course';
 
-
 const Home = () => {
     return (
         <section>
@@ -14,7 +13,7 @@ const Home = () => {
             <Course></Course>
             <Instructor></Instructor>
             <Review></Review>
-             <FinalGallery></FinalGallery>
+            <FinalGallery></FinalGallery>
             <Features></Features>
         </section>
     );
