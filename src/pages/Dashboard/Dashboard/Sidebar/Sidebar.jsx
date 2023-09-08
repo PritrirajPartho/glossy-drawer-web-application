@@ -8,16 +8,24 @@ import { RxDashboard } from "react-icons/rx";
 import { NavLink, useLocation } from "react-router-dom";
 
 import { useState } from "react";
-import Logo from "../../../../assets/images/logo/logo-icon.svg";
+import Logo from "../../../../assets/images/logo/main-logo.png";
 import User from "./User/User";
+import useAdmin from "../../../../hooks/useAdmin";
+import useInstructor from "../../../../hooks/useInstructor";
 
 
-const isAdmin = true;
-const isInstructor = false;
+// const isAdmin = true;
+// const isInstructor = false;
 
 
 // eslint-disable-next-line react/prop-types
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
+  const [isAdmin] = useAdmin();
+  console.log(isAdmin);
+  const[isInstructor] = useInstructor();
+  console.log(isInstructor)
+
+
   const location = useLocation();
   const { pathname } = location;
   const [isOpen, setOpen] = useState(false);
@@ -32,7 +40,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       <div className="flex items-center justify-between gap-2 px-6 py-6 lg:py-6 ms-6 mb-1">
         <NavLink to="/dashboard">
           <div className="flex items-center gap-4">
-            <img src={Logo} alt="Logo" />
+            <img className="w-10" src={Logo} alt="Logo" />
             <span className="text-xl font-bold">Glossy Drawer</span>
           </div>
         </NavLink>
@@ -157,7 +165,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                           }`}
                                         >
                                           <MdPayment className="w-5 h-5" />
-                                          Payment History
+                                          Payment 
                                         </NavLink>
                                       </li>
                                       {/* <!-- Payment History --> */}
@@ -165,9 +173,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                       {/* <!-- My Cart --> */}
                                       <li>
                                         <NavLink
-                                          to="/dashboard/myCart"
+                                          to="/dashboard/mycart"
                                           className={`sidebar-menu-item ${
-                                            pathname.includes("myCart") && "bg-slate-300 dark:bg-meta-4"
+                                            pathname.includes("mycart") && "bg-slate-300 dark:bg-meta-4"
                                           }`}
                                         >
                                           <BsFillCartFill className="w-5 h-5" />

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
-// import pic from '../../assets/login-password-cyber-security-concept-data-protection-secured-internet-access-cybersecurity_29488-6016.avif'
+import pic from '../../assets/login-password-cyber-security-concept-data-protection-secured-internet-access-cybersecurity_29488-6016.avif'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 import { TbFidgetSpinner } from 'react-icons/tb'
 import { HiEyeOff } from 'react-icons/hi'
 import { HiEye } from 'react-icons/hi'

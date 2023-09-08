@@ -113,7 +113,7 @@ const Header = () => {
                     :
                     <li className="flex items-center space-x-3 ml-64 lg:flex">
                         <Link
-                            to="/logIn"
+                            to="/login"
                             aria-label="Sign in"
                             title="Sign in"
                             className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-primary hover:bg-purple-700 focus:shadow-outline focus:outline-none"

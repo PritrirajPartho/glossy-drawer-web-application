@@ -15,6 +15,7 @@ import DrawingCanvas from '../pages/Canvas/DrawingCanvas';
 import MyCoursesCard from "../pages/MyCourses/MyCoursesCard";
 import Contacts from "../pages/Contacts/Contacts";
 import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
+import Payment from "../pages/Dashboard/Dashboard/Payment/Payment";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/logIn",
+        path: "/login",
         element: <Login></Login>,
       },
       {
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/courses",
-        element: <MyCoursesCard></MyCoursesCard>,
+        element: <MyCourses></MyCourses>,
       },
       {
         path: "/instructors",
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contacts>                   </Contacts>,
+        element: <Contacts></Contacts>,
       },
       // {
       //   path:'/dashboard/addcourses',
@@ -76,13 +77,21 @@ const router = createBrowserRouter([
     element: <DashboardLayout></DashboardLayout>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
-      // {
-      //   path: 'addcourses',
-      //   element: <AddCourses></AddCourses>
-      // },
+      {
+        path: 'addcourses',
+        element: <AddCourses></AddCourses>
+      },
       {
         path: "mycourses",
         element: <MyCourses></MyCourses>
+      },
+      {
+        path: "payment",
+        element: <Payment></Payment>,
+      },
+      {
+        path: "mycart",
+        element: <MyCart></MyCart>,
       },
       {
         path: "manageusers",
