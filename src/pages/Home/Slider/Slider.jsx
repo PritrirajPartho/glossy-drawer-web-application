@@ -1,5 +1,5 @@
 import React from 'react';
-import user from "../../../assets/drawing.mp4";
+import user from "../../../assets/videos/user.mp4";
 
 
 const Slider = () => {
