@@ -91,8 +91,8 @@ const Header = () => {
                     <Link to={'/contact'} className="mr-8 font-bold hover:bg-slate-800 hover:text-white px-4 py-3">
                         <li>Contact Us</li>
                     </Link>   
-                </ul>
-            </div>
+                    </ul>
+                </div>
 
             {/* ... Desktop menu items ... */}
             <div className="navbar-center hidden lg:flex">
