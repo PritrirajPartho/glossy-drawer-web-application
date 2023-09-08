@@ -1,11 +1,11 @@
-*,
-/* *::before,
+/* 
+*::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
-} */
+}
 
 :root {
   --primary: #6a59ff;
@@ -19,21 +19,21 @@ html {
 }
 
 @media (min-width: 1440px) {
-  /* html {
+  html {
     zoom: 1.5;
-  } */
+  }
 }
 
 @media (min-width: 2560px) {
-  /* html {
+  html {
     zoom: 1.7;
-  } */
+  }
 }
 
 @media (min-width: 3860px) {
-  /* html {
+  html {
     zoom: 2.5;
-  } */
+  }
 }
 
 ::-webkit-scrollbar {
@@ -187,4 +187,4 @@ body {
 
 .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
-}
+} */
