@@ -5,6 +5,7 @@ import Slider from './Slider/Slider'
 import FinalGallery from '../../pages/FinalGallery/FinalGallery'
 import Features from './Features/Features';
 
+import Course from './Course/Course';
 
 const Home = () => {
     return (
@@ -13,7 +14,7 @@ const Home = () => {
             <Course></Course>
             <Instructor></Instructor>
             <Review></Review>
-             <FinalGallery></FinalGallery>
+            <FinalGallery></FinalGallery>
             <Features></Features>
         </section>
     );
