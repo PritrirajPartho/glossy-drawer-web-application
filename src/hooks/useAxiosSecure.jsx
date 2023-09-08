@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import useAuth from './useAuth';
+import useAuth from '../hooks/useAuth';
 
 const axiosSecure = axios.create({
-  baseURL: 'http://localhost:5000/', 
+  baseURL: 'https://glossy-drawer-web-application-server-wine.vercel.app/', 
 });
 
 const useAxiosSecure = () => {
