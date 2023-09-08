@@ -116,17 +116,17 @@ const router = createBrowserRouter([
 //   ]
 // }
 // ]);
-        // {
-        //   path: '/addcourses',
-        //   element: <AddCourses></AddCourses>
-        // },
-        // {
-        //   path: 'mycourses',
-        //   element:<MyCourses></MyCourses>
-        // }
-  //     ],
-  //   },
-  // ]);
+// {
+//   path: '/addcourses',
+//   element: <AddCourses></AddCourses>
+// },
+// {
+//   path: 'mycourses',
+//   element:<MyCourses></MyCourses>
+// }
+//     ],
+//   },
+// ]);
 
 
 
