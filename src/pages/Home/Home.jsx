@@ -3,8 +3,9 @@ import Instructor from './Instructor/Instructor';
 import Review from './Review/Review';
 import Slider from './Slider/Slider';
 import Course from './Course/Course';
-import Gallery from './Gallery/Gallery';
 import Features from './Features/Features';
+import Gallery from './Gallery/Gallery';
+
 
 
 const Home = () => {

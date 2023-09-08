@@ -3,6 +3,7 @@ import "./DrawingCanvas.css";
 import { FaEraser, FaPaintBrush, FaDownload } from "react-icons/fa";
 import { GrClear, GrUndo, GrRedo } from "react-icons/gr";
 
+
 const DrawingCanvas = () => {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
@@ -130,19 +131,29 @@ const DrawingCanvas = () => {
         <div className="flex flex-col h-[500px] p-3 my-5 mt-6 bg-slate-800  ">
          <div className="grid grid-cols md:grid-cols-2 gap-5 p-4 ">
          <button
-            title="Draw"
-            className="btn btn-outline btn-accent mx-auto cursor-pointer border-2 hover:w-12 hover:duration-1000"
-            onClick={setToDraw}
-          >
-            <FaPaintBrush></FaPaintBrush>
-          </button>
-          <button
-            title="Erase"
-            className="btn btn-outline btn-error mx-auto cursor-pointer border-2 hover:w-12 hover:duration-1000"
-            onClick={setToErase}
-          >
-            <FaEraser></FaEraser>
-          </button>
+  title="Draw"
+  className={`btn btn-outline mx-auto cursor-pointer border-2 hover:w-12 hover:duration-1000 ${
+    activeButton === "draw" ? "active-button" : ""
+  }`}
+  onClick={() => {
+    setToDraw();
+    setActiveButton("draw");
+  }}
+>
+  <FaPaintBrush></FaPaintBrush>
+</button>
+<button
+  title="Erase"
+  className={`btn btn-outline mx-auto cursor-pointer border-2 hover:w-12 hover:duration-1000 ${
+    activeButton === "erase" ? "active-button" : ""
+  }`}
+  onClick={() => {
+    setToErase();
+    setActiveButton("erase");
+  }}
+>
+  <FaEraser></FaEraser>
+</button>
           <input
             type="color"
             value={currentColor}
@@ -157,20 +168,20 @@ const DrawingCanvas = () => {
           >
             <GrClear></GrClear>
           </button>
-          <a
+          <button
           title="Undo"
           className="btn btn-outline btn-accent mx-auto cursor-pointer border-2 hover:w-12 hover:duration-1000"
           onClick={undo}
         >
           <GrUndo></GrUndo>
-        </a>
-        <a
+        </button>
+        <button
           title="Redo"
           className="btn btn-outline btn-accent mx-auto cursor-pointer border-2 hover:w-12 hover:duration-1000"
           onClick={redo}
         >
           <GrRedo></GrRedo>
-        </a>
+        </button>
          </div>
 
           <div className="brush-width p-1 my-2 btn-outline rounded-full mx-auto hover:btn-info hover:py-2 hover:duration-500">
