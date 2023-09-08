@@ -81,112 +81,105 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
           <div>
             <ul className="mb-6 flex flex-col gap-1.5">
               {/* <!-- Dashboard submenu All--> */}
+              {
+                isAdmin ? <>
+                  {/* <!-- Admin Home --> */}
+                  <li>
+                    <NavLink
+                      to="/dashboard/userHome"
+                      className={`sidebar-menu-item ${pathname.includes("userHome") &&
+                        "bg-slate-300 dark:bg-meta-4"
+                        }`}
+                    >
+                      <AiFillHome className="w-5 h-5" />
+                      Admin Home
+                    </NavLink>
+                  </li>
+                  {/* <!-- Admin Home --> */}
+                  {/* <!-- Manage Users --> */}
+                  <li>
+                    <NavLink
+                      to="/dashboard/payment"
+                      className={`sidebar-menu-item ${pathname.includes("review") && "bg-slate-300 dark:bg-meta-4"
+                        }`}
+                    >
+                      <MdReviews className="w-5 h-5" />
+                      Manage Users
+                    </NavLink>
+                  </li>
+                  {/* <!--Manage Classes --> */}
+                  <li>
+                    <NavLink
+                      to="/dashboard/payment"
+                      className={`sidebar-menu-item ${pathname.includes("review") && "bg-slate-300 dark:bg-meta-4"
+                        }`}
+                    >
+                      <MdReviews className="w-5 h-5" />
+                      Manage Classes
+                    </NavLink>
+                  </li>
+                </>
+                  :
+                  <>
                     {
-                            isAdmin ? <>
-                                {/* <!-- Admin Home --> */}
-                                <li>
-                                  <NavLink
-                                    to="/dashboard/userHome"
-                                    className={`sidebar-menu-item ${
-                                      pathname.includes("userHome") &&
-                                      "bg-slate-300 dark:bg-meta-4"
-                                    }`}
-                                  >
-                                    <AiFillHome className="w-5 h-5" />
-                                    Admin Home
-                                  </NavLink>
-                                </li>
-                               {/* <!-- Admin Home --> */}
-                               {/* <!-- Manage Users --> */}
-                                <li>
-                                  <NavLink
-                                    to="/dashboard/manageusers"
-                                    className={`sidebar-menu-item ${
-                                      pathname.includes("manageusers") && "bg-slate-300 dark:bg-meta-4"
-                                    }`}
-                                  >
-                                    <MdReviews className="w-5 h-5" />
-                                   Manage Users
-                                  </NavLink>
-                                </li>
-                                {/* <!--Manage Classes --> */}
-                                <li>
-                                  <NavLink
-                                    to="/dashboard/managecourses"
-                                    className={`sidebar-menu-item ${
-                                      pathname.includes("managecourses") && "bg-slate-300 dark:bg-meta-4"
-                                    }`}
-                                  >
-                                    <MdReviews className="w-5 h-5" />
-                                   Manage Classes
-                                  </NavLink>
-                                </li>
-                            </>
-                             : 
-                             <>
-                              {
-                                isInstructor?
-                                <>
-                                    {/* <!-- My Booking --> */}
-                                    <li>
-                                      <NavLink
-                                        to="/dashboard/addcourses"
-                                        className={`sidebar-menu-item ${
-                                          pathname.includes("calendar") &&
-                                          "bg-slate-300 dark:bg-meta-4"
-                                        }`}
-                                      >
-                                        <BsBuildingFillAdd className="w-5 h-5" />
-                                        Add courses
-                                      </NavLink>
-                                    </li>
-                                    <li>
-                                      <NavLink
-                                        to="/dashboard/insaddedcourses"
-                                        className={`sidebar-menu-item ${
-                                          pathname.includes("calendar") &&
-                                          "bg-slate-300 dark:bg-meta-4"
-                                        }`}
-                                      >
-                                        <BsBuildingFillAdd className="w-5 h-5" />
-                                        Instructor Courses
-                                      </NavLink>
-                                    </li>
-                                </>
-                                :
-                                <>
-                                    {/* <!-- Payment History --> */}
-                                      <li>
-                                        <NavLink
-                                          to="/dashboard/payment"
-                                          className={`sidebar-menu-item ${
-                                            pathname.includes("payment") &&
-                                            "bg-slate-300 dark:bg-meta-4"
-                                          }`}
-                                        >
-                                          <MdPayment className="w-5 h-5" />
-                                          Payment 
-                                        </NavLink>
-                                      </li>
-                                      {/* <!-- Payment History --> */}
-                                      
-                                      {/* <!-- My Cart --> */}
-                                      <li>
-                                        <NavLink
-                                          to="/dashboard/mycart"
-                                          className={`sidebar-menu-item ${
-                                            pathname.includes("mycart") && "bg-slate-300 dark:bg-meta-4"
-                                          }`}
-                                        >
-                                          <BsFillCartFill className="w-5 h-5" />
-                                          My Cart
-                                        </NavLink>
-                                      </li>
-                                      {/* <!-- My Cart --> */}
-                                </>
-                               }
-                            </>
-                        }
+                      isInstructor ?
+                        <>
+                          {/* <!-- My Booking --> */}
+                          <li>
+                            <NavLink
+                              to="/dashboard/addcourses"
+                              className={`sidebar-menu-item ${pathname.includes("calendar") &&
+                                "bg-slate-300 dark:bg-meta-4"
+                                }`}
+                            >
+                              <BsBuildingFillAdd className="w-5 h-5" />
+                              Add courses
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/dashboard/insaddedcourses"
+                              className={`sidebar-menu-item ${pathname.includes("calendar") &&
+                                "bg-slate-300 dark:bg-meta-4"
+                                }`}
+                            >
+                              <BsBuildingFillAdd className="w-5 h-5" />
+                              Instructor Courses
+                            </NavLink>
+                          </li>
+                        </>
+                        :
+                        <>
+                          {/* <!-- Payment History --> */}
+                          <li>
+                            <NavLink
+                              to="/dashboard/payment"
+                              className={`sidebar-menu-item ${pathname.includes("payment") &&
+                                "bg-slate-300 dark:bg-meta-4"
+                                }`}
+                            >
+                              <MdPayment className="w-5 h-5" />
+                              Payment History
+                            </NavLink>
+                          </li>
+                          {/* <!-- Payment History --> */}
+
+                          {/* <!-- My Cart --> */}
+                          <li>
+                            <NavLink
+                              to="/dashboard/myCart"
+                              className={`sidebar-menu-item ${pathname.includes("myCart") && "bg-slate-300 dark:bg-meta-4"
+                                }`}
+                            >
+                              <BsFillCartFill className="w-5 h-5" />
+                              My Cart
+                            </NavLink>
+                          </li>
+                          {/* <!-- My Cart --> */}
+                        </>
+                    }
+                  </>
+              }
 
               {/* <!-- Others Group --> */}
               <div>

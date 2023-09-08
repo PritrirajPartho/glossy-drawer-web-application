@@ -19,7 +19,7 @@ import { HiArrowLeft, HiArrowNarrowLeft, HiArrowRight} from "react-icons/hi";
 const FinalGallery = () => {
     return (
         <div className='container'>
-            <h2 className='heading'>Digital Art Gallery</h2>
+            <h2 className='text-center'>Digital Art Gallery </h2>
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}

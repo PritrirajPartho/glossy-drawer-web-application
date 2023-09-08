@@ -1,19 +1,4 @@
 /* 
-.swiper-slide img {
-  width: 22rem;
-  height: 22rem;
-  border-radius: 2rem;
-  object-fit: cover;
-}
-.swiper-slide img:hover {
-  width: 29rem;
-  height: 33rem;
-  border-radius: 2rem;
-  object-fit: cover;
-}
-
-
-/* *,
 *::before,
 *::after {
   margin: 0;
@@ -202,4 +187,4 @@ body {
 
 .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
-} */ 
+} */
