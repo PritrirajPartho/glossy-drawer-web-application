@@ -19,10 +19,9 @@ const InstructorReview = ({instructor}) => {
                 <div className="information">
 
                     <h2>name: {name}</h2>
-                    <h2>name: {name}</h2>
-                    <h2>name: {course}</h2>
-                    <h2>name: {email}</h2>
-                    <h2>name: {student}</h2>
+                    <h2>Course: {course}</h2>
+                    <h2>Email: {email}</h2>
+                    <h2>Students: {student}</h2>
 
                 </div>
 
