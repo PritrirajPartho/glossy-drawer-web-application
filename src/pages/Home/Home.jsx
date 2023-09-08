@@ -6,7 +6,6 @@ import Features from './Features/Features';
 import ServiceItems from './ServiceItems/ServiceItems';
 
 
-
 const Home = () => {
     return (
         <section>
@@ -14,7 +13,7 @@ const Home = () => {
             <ServiceItems></ServiceItems>
             <Instructor></Instructor>
             <Review></Review>
-            
+            <FinalGallery></FinalGallery>
             <Features></Features>
         </section>
     );
