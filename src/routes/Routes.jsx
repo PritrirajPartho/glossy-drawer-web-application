@@ -13,6 +13,7 @@ import DashboardLayout from "../layout/DashboardLayout";
 import ManageCourses from "../pages/Dashboard/MangeClasses/ManageCourses";
 import DrawingCanvas from "../pages/Canvas/DrawingCanvas";
 import Contacts from '../../src/pages/Contacts/Contacts';
+import Payment from '../pages/Dashboard/Dashboard/Payment/Payment'
 
 const router = createBrowserRouter([
   {
@@ -31,10 +32,6 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SingUp></SingUp>,
-      },
-      {
-        path: "/mycourses",
-        element: <MyCourses></MyCourses>,
       },
       {
         path: "/courses",
@@ -83,10 +80,10 @@ const router = createBrowserRouter([
         path: "mycart",
         element: <MyCart></MyCart>,
       },
-      {
-        path: "manageusers",
-        element: <ManageUsers></ManageUsers>
-      },
+      // {
+      //   path: "manageusers",
+      //   element: <ManageUsers></ManageUsers>
+      // },
       {
         path: "managecourses",
         element: <ManageCourses></ManageCourses>

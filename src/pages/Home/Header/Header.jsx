@@ -1,7 +1,7 @@
 
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../Provider/AuthProvider';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 
 const Header = () => {
@@ -115,6 +115,11 @@ const Header = () => {
                             <a className="hover:text-[#e98c5d] mr-5">Education</a>
                         </li>
                     </Link>
+                    <Link to={`/courses`}>
+                        <li className="group">
+                            <a className="hover:text-[#e98c5d] mr-5">Courses</a>
+                        </li>
+                    </Link>
                     <Link to={'/instructors'}>
                         <li className="group">
                             <a className="hover:text-[#e98c5d] mr-5">Instructors</a>
@@ -162,20 +167,17 @@ const Header = () => {
                     </Link>
                 </div>
 
-                <Link to="/SignUp">
+                <Link to="/signup">
                     <button className="text-white text-xl font-bold border-2 hover:bg-[#DE606B] border-[#DE606B] px-5 py-2 rounded-2xl mr-1 lg:mr-4">SignUp</button>
                 </Link>
 
 
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar ">
-
                         <div className="w-10 rounded-full  ">
 
-                            <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            <img src={user?.photoURL} />
                         </div>
-
-
                     </label>
                     <ul tabIndex={0}
                         className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
