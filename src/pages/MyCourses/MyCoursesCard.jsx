@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { StarIcon } from '@heroicons/react/24/solid'
-import { AuthContext } from '../Provider/AuthProvider';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../../providers/AuthProvider';
 const MyCoursesCard = ({ detail }) => {
-    const { _id, img, name, Details, rating, Level, Instructor, price } = detail
+    const {id,img, name, Details, rating, Level, Instructor, price } = detail;
 
     const { user } = useContext(AuthContext)
     const navigate = useNavigate()
@@ -100,14 +100,23 @@ const MyCoursesCard = ({ detail }) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="text-center">
-                                    <a
-                                        onClick={() => handleMakeSelected(detail)}
-                                        className="inline-flex mb-10 items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
-                                    >
-                                        Select
-                                    </a>
-                                </div>
+                                <div className="text-center flex gap-20 ml-5">
+
+<Link
+    to={`/courseDetail/${id}`}
+    style={{ backgroundImage: " linear-gradient(to right, #de5c70 0%, #e98c5d 51%, #de5c70 100%)" }}
+    className="inline-flex mb-10 items-center justify-center w-full h-10 px-6  tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto focus:shadow-outline focus:outline-none"
+>
+    Details
+</Link>
+<a
+    onClick={() => handleMakeSelected(detail)}
+    style={{ backgroundImage: " linear-gradient(to right, #de5c70 0%, #e98c5d 51%, #de5c70 100%)" }}
+    className="inline-flex mb-10 items-center justify-center w-full h-10 px-6  tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto focus:shadow-outline focus:outline-none"
+>
+    Select
+</a>
+</div>
                             </div>
                         </div>
                     </a>

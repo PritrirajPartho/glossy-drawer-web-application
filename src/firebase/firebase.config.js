@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCWhF7M5JOx2MbIbsja2m9_-eRXkOW5LQI",
-    authDomain: "web-developers-a3ee1.firebaseapp.com",
-    projectId: "web-developers-a3ee1",
-    storageBucket: "web-developers-a3ee1.appspot.com",
-    messagingSenderId: "484121567317",
-    appId: "1:484121567317:web:2d9588e683a9474f2a74dc"
+  apiKey: "AIzaSyDJY130oDtQ5SNtsj9EMpve6tbPtA38Bzw",
+  authDomain: "glossy-drawer-web.firebaseapp.com",
+  projectId: "glossy-drawer-web",
+  storageBucket: "glossy-drawer-web.appspot.com",
+  messagingSenderId: "1081131507633",
+  appId: "1:1081131507633:web:f79b7bab77ddfd0cd3a790"
 };
 
 // Initialize Firebase

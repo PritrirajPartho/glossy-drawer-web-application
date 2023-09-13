@@ -1,7 +1,7 @@
 
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../Provider/AuthProvider';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 
 const Header = () => {
@@ -112,6 +112,11 @@ const Header = () => {
                     <Link to={`/courses`}>
                         <li className="group">
                             <a className="hover:text-[#e98c5d] text-[18px] mr-5">Courses</a>
+                        </li>
+                    </Link>
+                    <Link to={`/courses`}>
+                        <li className="group">
+                            <a className="hover:text-[#e98c5d] mr-5">Courses</a>
                         </li>
                     </Link>
                     <Link to={'/instructors'}>

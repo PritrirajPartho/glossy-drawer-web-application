@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../../Provider/AuthProvider';
+import { AuthContext } from '../../../../providers/AuthProvider';
 
 const MyCart = () => {
 
@@ -8,7 +8,7 @@ const MyCart = () => {
     const [selected, setSelected] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/addClass/${user?.email}`)
+        fetch(`https://glossy-drawer-web-application-server-wine.vercel.app/addClass/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
