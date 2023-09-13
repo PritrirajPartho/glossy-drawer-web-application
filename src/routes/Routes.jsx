@@ -43,10 +43,7 @@ const router = createBrowserRouter([
         path: "/instructors",
         element: <Instructors></Instructors>,
       },
-      {
-        path: "/faq",
-        element: <FAQ></FAQ>,
-      },
+      
       {
         path: "/canvas",
         element:<DrawingCanvas></DrawingCanvas>,

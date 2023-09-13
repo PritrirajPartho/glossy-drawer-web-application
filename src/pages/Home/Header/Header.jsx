@@ -61,7 +61,7 @@ const Header = () => {
                                 </Link>
 
                                 <li className='hover:bg-[#DE606B]  rounded '><a className='hover:text-white'>Events</a></li>
-                                <Link to="/faq">
+                                <Link to="">
                                     <li className='hover:bg-[#DE606B]  rounded '><a className='hover:text-white'>FAQ</a></li>
                                 </Link>
                                 <Link to="/contact">
