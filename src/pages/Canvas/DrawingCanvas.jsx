@@ -126,12 +126,13 @@ const DrawingCanvas = () => {
 
   return (
     <div className="w-full h-[700px]">
-      <div className="flex justify-center gap-2 h-[700px] bg-[#555] ">
-        <div className="flex flex-col h-[500px] p-3 my-5 mt-6 bg-slate-800  ">
+      <div className="flex justify-center gap-2 sm:h-[300px] md:h-[700px] bg-[#555] ">
+        <div className="flex sm:flex-col sm:h-[200px] md:h-[500px] p-3 my-5 mt-6 bg-slate-800  ">
           <div className="grid grid-cols md:grid-cols-2 gap-5 p-4 ">
+            <div>
             <button
               title="Draw"
-              className={`btn btn-outline mx-auto cursor-pointer border-2 hover:w-12 hover:duration-1000 ${
+              className={`text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500 ${
                 activeButton === "draw" ? "active-button" : ""
               }`}
               onClick={() => {
@@ -139,11 +140,19 @@ const DrawingCanvas = () => {
                 setActiveButton("draw");
               }}
             >
-              <FaPaintBrush></FaPaintBrush>
+              <FaPaintBrush className="text-orange-700 text-xl"></FaPaintBrush>
             </button>
-            <button
+            <span className=" block font-sans italic font-semibold text-orange-700  my-2 ">Draw</span>
+            </div>
+                  
+
+                  
+            
+            
+           <div>
+           <button
               title="Erase"
-              className={`btn btn-outline mx-auto cursor-pointer border-2 hover:w-12 hover:duration-1000 ${
+              className={`text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-block items-center mr-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500 ${
                 activeButton === "erase" ? "active-button" : ""
               }`}
               onClick={() => {
@@ -151,36 +160,54 @@ const DrawingCanvas = () => {
                 setActiveButton("erase");
               }}
             >
-              <FaEraser></FaEraser>
+              <FaEraser className="text-rose-300 text-xl"></FaEraser>
+            
             </button>
-            <input
+            <span className="text-rose-300 block font-sans italic font-semibold my-2">Erase</span>
+           </div>
+          <div>
+          <input
               type="color"
               value={currentColor}
               onChange={(e) => setCurrentColor(e.target.value)}
-              className="w-[50px] h-[50px] mx-auto btn-outline border-2 border-green-400 hover:border-2 hover:border-green-700 hover:duration-1000 "
+              className="w-[40px] h-[30px] p-2.5 mx-auto btn-outline border-2 border-green-400 hover:border-2 hover:border-green-700 hover:duration-1000 "
               title="Pick a Color"
             />
-            <button
+             <span className="text-white block font-sans italic font-semibold my-3">Color</span>
+          </div>
+           <div>
+           <button
               title="Clear Canvas"
-              className="btn btn-outline btn-error text-gray mx-auto cursor-pointer border-2  hover:w-12 hover:duration-1000"
+              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
               onClick={clearCanvas}
             >
-              <GrClear></GrClear>
+              <GrClear className=" text-base"></GrClear>
             </button>
-            <button
+            <span className="text-white block font-sans italic font-semibold my-2">Clear</span>
+           </div>
+          <div>
+          <button
               title="Undo"
-              className="btn btn-outline btn-accent mx-auto cursor-pointer border-2 hover:w-12 hover:duration-1000"
+              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
               onClick={undo}
             >
-              <GrUndo></GrUndo>
+              <GrUndo className="text-orange-200 text-xl"></GrUndo>
             </button>
-            <button
+            <span className="text-orange-200 block font-sans italic font-semibold my-2">Undo</span>
+          </div>
+           <div>
+           <button
               title="Redo"
-              className="btn btn-outline btn-accent mx-auto cursor-pointer border-2 hover:w-12 hover:duration-1000"
+              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
               onClick={redo}
             >
-              <GrRedo></GrRedo>
+              <GrRedo className="text-orange-200 text-xl"></GrRedo>
             </button>
+            <span className="text-orange-200 block font-sans font-semibold italic my-2">Redo</span>
+           </div>
+
+
+
           </div>
 
           <div className="brush-width p-1 my-2 btn-outline rounded-full mx-auto hover:btn-info hover:py-2 hover:duration-500">
@@ -202,6 +229,7 @@ const DrawingCanvas = () => {
             onClick={saveImageToLocal}
           >
             <FaDownload></FaDownload>
+            Download
           </a>
         </div>
         <div className="drawing-board flex-grow-1">
