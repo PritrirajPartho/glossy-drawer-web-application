@@ -13,7 +13,7 @@ import DashboardLayout from "../layout/DashboardLayout";
 import ManageCourses from "../pages/Dashboard/MangeClasses/ManageCourses";
 import DrawingCanvas from "../pages/Canvas/DrawingCanvas";
 import Contacts from '../../src/pages/Contacts/Contacts';
-import FAQ from "../pages/FAQ/FAQ";
+
 import BlogPost from "../pages/BlogPost/BlogPost";
 import Events from "../pages/Events/Events";
 
