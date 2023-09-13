@@ -33,7 +33,7 @@ const Contacts = () => {
     };
 
     return (
-        <section className="py-10 px-3 text-white bg-slate-900" id="contact">
+        <section className="pt-10 px-3 text-white bg-slate-900" id="contact">
             <div className='bg-black bg-opacity-40 rounded-lg text-white h-[360px] md:h-[380px]  '>
 
                 {/* -------------------START-Plans----------- */}
@@ -61,10 +61,10 @@ const Contacts = () => {
 
                 <div className=' flex md:flex-row flex-col gap-6 max-w-5xl bg-gray-800 py-10 md:p-6 p-2 rounded-lg mx-auto'>
                     <form ref={form} onSubmit={sendEmail} className='flex flex-col flex-1 gap-5'>
-                        <input type='text' name='from_name' className="py-3 px-3 text-black bg-gray-300" placeholder='Your Name' />
-                        <input type="email" name="from_email" className="py-3 px-3 text-black bg-gray-300" placeholder="Your Email Address" />
+                        <input type='text' name='from_name' className="py-3 px-3 text-black bg-base-300" placeholder='Your Name' />
+                        <input type="email" name="from_email" className="py-3 px-3 text-black bg-base-300" placeholder="Your Email Address" />
                         <textarea name='message'
-                            className='text-black py-8 px-3 bg-gray-300' placeholder='Your Message' rows={8}></textarea>
+                            className='text-black py-8 px-3 bg-base-300' placeholder='Your Message' rows={5}></textarea>
                         <button style={{ backgroundImage: " linear-gradient(to right, #de5c70 0%, #e98c5d 51%, #de5c70 100%)" }} className='btn btn-lg w-fit p-3 text-white'>Send Message <BsSendXFill /> </button>
                     </form>
                     <div className="flex flex-col gap-7">

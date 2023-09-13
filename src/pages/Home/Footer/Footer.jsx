@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
-        <footer className="bg-[#2f2b27] py-8 mt-80 text-white ">
+        <footer className="bg-[#1D2E42] py-10 text-white ">
             <div className='text-center py-4'>
                 <div className='mb-5'>
 
