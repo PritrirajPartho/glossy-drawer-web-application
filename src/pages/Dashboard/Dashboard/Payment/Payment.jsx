@@ -13,6 +13,10 @@ const Payment = () => {
                     <CheckoutForm></CheckoutForm>
                 </Elements>
             </div>
+            <h1 className='text-center'>OR</h1>
+            <div>
+
+            </div>
         </div>
     );
 };

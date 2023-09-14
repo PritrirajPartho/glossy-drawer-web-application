@@ -16,6 +16,7 @@ import Contacts from '../../src/pages/Contacts/Contacts';
 import Payment from '../pages/Dashboard/Dashboard/Payment/Payment';
 import ManageUsers from '../pages/Dashboard/ManageUsers/ManageUsers';
 import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
+import CourseDetails from "../pages/Home/CourseDetails/CourseDetails";
 
 const router = createBrowserRouter([
   {
@@ -40,16 +41,21 @@ const router = createBrowserRouter([
         element: <MyCourses></MyCourses>,
       },
       {
+        path: "/detail/:id",
+        element: <CourseDetails></CourseDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+      },
+      {
         path: "/instructors",
         element: <Instructors></Instructors>,
       },
       {
         path: "/canvas",
-        element:<DrawingCanvas></DrawingCanvas>,
+        element: <DrawingCanvas></DrawingCanvas>,
       },
       {
         path: "/canvas",
-        element:<DrawingCanvas></DrawingCanvas>,
+        element: <DrawingCanvas></DrawingCanvas>,
       },
       {
         path: "/contact",
