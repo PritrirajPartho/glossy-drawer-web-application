@@ -1,7 +1,7 @@
 import { AiOutlineMenuFold } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-import Logo from "../../../../assets/images/logo/logo-icon.svg";
+import Logo from "../../../../assets/images/logo/main-logo.png";
 import DarkModeSwitcher from "./DarkModeSwitcher";
 import DropdownUser from "./DropdownUser";
 
@@ -12,8 +12,8 @@ const DashboardHeader = ({
   setSidebarOpen,
 }) => {
   return (
-    <header className="sticky top-0 bg-white shadow-lg flex w-full drop-shadow-1 dark:bg-boxDark dark:drop-shadow-none">
-      <div className="flex flex-grow items-center justify-between py-4 px-4 shadow-2 md:px-6 2xl:px-11">
+    <header className="sticky top-0 bg-[#a5f3fc] shadow-lg flex w-full drop-shadow-1 dark:bg-boxDark dark:drop-shadow-none">
+      <div className="flex flex-grow items-center justify-between h-[80px] shadow-2 md:px-6 2xl:px-11">
         <div className="flex items-center gap-2 sm:gap-4 lg:hidden">
           {/* <!-- Hamburger Toggle BTN --> */}
           <button
@@ -36,8 +36,8 @@ const DashboardHeader = ({
 
           <Link className="block flex-shrink-0 lg:hidden" to="/dashboard">
             <div className="flex items-center gap-4">
-              <img src={Logo} alt="Logo" />
-              <span className="text-xl font-bold">Dashboard</span>
+              <img className="w-12" src={Logo} alt="Logo" />
+              <span className="text-xl font-bold">Glossy Drawer</span>
             </div>
           </Link>
         </div>
@@ -45,7 +45,8 @@ const DashboardHeader = ({
         <div className="hidden sm:block">
           <form action="https://formbold.com/s/unique_form_id" method="POST">
             <div className="relative">
-              <button className="absolute top-1/2 left-0 -translate-y-1/2">
+              <input type="text" placeholder="Search Here" className="input input-bordered input-success w-full max-w-xs" />
+              <button className="absolute ms-3 font-extrabold w-[50px] top-1/2 -translate-y-1/2">
                 <svg
                   className="fill-body hover:fill-primary dark:fill-bodyDark dark:hover:fill-primary"
                   width="20"
@@ -68,12 +69,6 @@ const DashboardHeader = ({
                   />
                 </svg>
               </button>
-
-              <input
-                type="text"
-                placeholder="Type to search..."
-                className="w-full text-black bg-transparent pr-4 pl-9 focus:outline-none dark:text-white"
-              />
             </div>
           </form>
         </div>
@@ -83,7 +78,7 @@ const DashboardHeader = ({
           </ul>
 
           {/* <!-- User Area --> */}
-          <DropdownUser/>
+          {/* <DropdownUser/> */}
           {/* <!-- User Area --> */}
         </div>
       </div>

@@ -8,49 +8,49 @@ import { AuthContext } from "../../../../providers/AuthProvider";
 const AddCourses = () => {
   const { user } = useContext(AuthContext);
 
-  // //  const notify = () => toast("Added Successfully");
+   const notify = () => toast("Added Successfully");
 
-  // // const {
-  // //   register,
-  // //   handleSubmit,
-  // //   reset,
-  // //   formState: { errors },
-  // // } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
-  // const onSubmit = (data) => {
-  // //   fetch("http://localhost:5000/newcourses", {
-  // //     method: "POST",
-  // //     headers: {
-  // //       "content-type": "application/json",
-  // //     },
-  // //     body: JSON.stringify(data),
-  // //   })
-  // //     .then((res) => res.json())
-  // //     .then((result) => {
-  // //       reset();
-  // //       if (result.insertedId) {
-  // //         Swal.fire({
-  // //           position: "top-end",
-  // //           icon: "success",
-  // //           title: "Item added successfully",
-  // //           showConfirmButton: false,
-  // //           timer: 1500,
-  // //         });
-  // //       }
+  const onSubmit = (data) => {
+    fetch("http://localhost:5000/newcourses", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        reset();
+        if (result.insertedId) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Item added successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
 
-  // //       console.log(result);
-  // //     });
-  // //   reset;
-  // //   //     alert('Toy Added');
-  // //   return false;
-  // // };
+        console.log(result);
+      });
+    reset;
+        alert('Toy Added');
+    return false;
+  };
 
   return (
     <div>
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1200px] mx-auto ">
         <h1 className="text-3xl text-center my-5 font-bold">Add Course</h1>
 
-        <div className="shadow-xl p-5 my-8">
+        <div className="shadow-xl p-5 my-8 bg-[#f0fdf4]">
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* register your input into the hook by invoking the "register" function */}
             <div className="grid grid-cols md:grid-cols-2 gap-5">

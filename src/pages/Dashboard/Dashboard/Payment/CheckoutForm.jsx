@@ -10,7 +10,7 @@ const CheckoutForm = () => {
         if (!stripe || !elements) {
             return
         }
-        const card = elements.getElement(cardElement)
+        const card = elements.getElement(CardElement)
         if (card === null) {
             return
         }

@@ -13,7 +13,10 @@ import DashboardLayout from "../layout/DashboardLayout";
 import ManageCourses from "../pages/Dashboard/MangeClasses/ManageCourses";
 import DrawingCanvas from "../pages/Canvas/DrawingCanvas";
 import Contacts from '../../src/pages/Contacts/Contacts';
-import Payment from '../pages/Dashboard/Dashboard/Payment/Payment'
+import Payment from '../pages/Dashboard/Dashboard/Payment/Payment';
+import ManageUsers from '../pages/Dashboard/ManageUsers/ManageUsers';
+import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
+import CourseDetails from "../pages/Home/CourseDetails/CourseDetails";
 
 import BlogPost from "../pages/BlogPost/BlogPost";
 import CreatePost from "../pages/BlogPost/CreatePost";
@@ -42,38 +45,27 @@ const router = createBrowserRouter([
         element: <MyCourses></MyCourses>,
       },
       {
+        path: "/detail/:id",
+        element: <CourseDetails></CourseDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+      },
+      {
         path: "/instructors",
         element: <Instructors></Instructors>,
       },
-      
+
       {
         path: "/canvas",
-        element:<DrawingCanvas></DrawingCanvas>,
+        element: <DrawingCanvas></DrawingCanvas>,
       },
       {
         path: "/canvas",
-        element:<DrawingCanvas></DrawingCanvas>,
+        element: <DrawingCanvas></DrawingCanvas>,
       },
       {
         path: "/contact",
         element: <Contacts></Contacts>,
       },
-      {
-        path: "/blogPost",
-        element: <BlogPost></BlogPost>,
-      },
-      {
-        path: "/CreatePost",
-        element: <CreatePost></CreatePost>,
-      },
-      {
-        path: "/event",
-        element: <Events></Events>,
-      },
-      // {
-      //   path:'/dashboard/addcourses',
-      //   element: <AddCourses></AddCourses>
-      // },
     ],
   },
   {
@@ -82,8 +74,16 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
+        path: 'adminhome',
+        element: <AdminHome></AdminHome>
+      },
+      {
         path: 'addcourses',
         element: <AddCourses></AddCourses>
+      },
+      {
+        path: 'insaddcourses',
+        element: <InsAddedCourses></InsAddedCourses>
       },
       {
         path: "mycourses",
@@ -97,10 +97,10 @@ const router = createBrowserRouter([
         path: "mycart",
         element: <MyCart></MyCart>,
       },
-      // {
-      //   path: "manageusers",
-      //   element: <ManageUsers></ManageUsers>
-      // },
+      {
+        path: "manageusers",
+        element: <ManageUsers></ManageUsers>
+      },
       {
         path: "managecourses",
         element: <ManageCourses></ManageCourses>
@@ -108,57 +108,5 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-// {
-//   path: 'userhome',
-//   element: <StudentRoute><UserHome></UserHome></StudentRoute>
-// },
-// {
-//   path: 'myclasses', 
-//   element: <InstructorRoute><MyClasses></MyClasses></InstructorRoute>
-// },
-// {
-//   path: 'manageusers', 
-//   element: <AdminRoute><MangeUsers></MangeUsers></AdminRoute>
-// },
-// {
-//   path: 'addclass', 
-//   element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
-// },
-// {
-//   path: 'myselectedclasses', 
-//   element: <StudentRoute><MySelectedClass></MySelectedClass></StudentRoute>
-// },
-// {
-//   path:'payment',
-//   element: <Payment></Payment>
-// },
-// {
-//   path:'myenrolledclasses',
-//   element: <StudentRoute> <MyEnrolledClasses></MyEnrolledClasses></StudentRoute>
-// },
-// {
-//   path:'paymenthistory',
-//   element: <StudentRoute><PaymentHistory></PaymentHistory></StudentRoute>
-// },
-// {
-//   path: 'manageclasses', 
-//   element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
-// },
-//   ]
-// }
-// ]);
-// {
-//   path: '/addcourses',
-//   element: <AddCourses></AddCourses>
-// },
-// {
-//   path: 'mycourses',
-//   element:<MyCourses></MyCourses>
-// }
-//     ],
-//   },
-// ]);
-
-
 
 export default router;

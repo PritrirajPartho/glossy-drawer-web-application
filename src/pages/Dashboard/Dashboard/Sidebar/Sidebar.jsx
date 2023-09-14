@@ -1,10 +1,11 @@
 import { AiFillHome, AiFillShopping } from "react-icons/ai";
-import { BiMenuAltRight } from "react-icons/bi";
+import { FaBlog } from "react-icons/fa";
 import { BsBuildingFillAdd, BsFillCartFill } from "react-icons/bs";
 import { FiChevronRight } from "react-icons/fi";
-import { GoChevronDown } from "react-icons/go";
-import { MdEmail, MdPayment, MdReviews } from "react-icons/md";
-import { RxDashboard } from "react-icons/rx";
+import { GiTeacher } from "react-icons/gi";
+import { IoMdLogIn } from "react-icons/io";
+import { MdDraw,MdPayment, MdReviews } from "react-icons/md";
+import { SiGnuprivacyguard} from "react-icons/si";
 import { NavLink, useLocation } from "react-router-dom";
 
 import { useState } from "react";
@@ -14,11 +15,10 @@ import useAdmin from "../../../../hooks/useAdmin";
 import useInstructor from "../../../../hooks/useInstructor";
 
 
-// const isAdmin = true;
+// const isAdmin = false;
 // const isInstructor = false;
 
 
-// eslint-disable-next-line react/prop-types
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const [isAdmin] = useAdmin();
   console.log(isAdmin);
@@ -31,7 +31,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const [isOpen, setOpen] = useState(false);
   return (
     <aside
-      className={`absolute left-0 top-0 z-10 flex h-screen w-72 flex-col overflow-y-hidden 
+      className={`bg-[#f0fdf4] absolute left-0 top-0 z-10 flex h-screen w-72 flex-col overflow-y-hidden 
       
       dark:bg-boxDark shadow-lg duration-300 ease-linear  lg:static lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
@@ -86,8 +86,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                   {/* <!-- Admin Home --> */}
                   <li>
                     <NavLink
-                      to="/dashboard/userHome"
-                      className={`sidebar-menu-item ${pathname.includes("userHome") &&
+                      to="/dashboard/adminhome"
+                      className={`sidebar-menu-item ${pathname.includes("adminhome") &&
                         "bg-slate-300 dark:bg-meta-4"
                         }`}
                     >
@@ -99,8 +99,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                   {/* <!-- Manage Users --> */}
                   <li>
                     <NavLink
-                      to="/dashboard/payment"
-                      className={`sidebar-menu-item ${pathname.includes("review") && "bg-slate-300 dark:bg-meta-4"
+                      to="/dashboard/manageusers"
+                      className={`sidebar-menu-item ${pathname.includes("manageusers") && "bg-slate-300 dark:bg-meta-4"
                         }`}
                     >
                       <MdReviews className="w-5 h-5" />
@@ -110,8 +110,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                   {/* <!--Manage Classes --> */}
                   <li>
                     <NavLink
-                      to="/dashboard/payment"
-                      className={`sidebar-menu-item ${pathname.includes("review") && "bg-slate-300 dark:bg-meta-4"
+                      to="/dashboard/managecourses"
+                      className={`sidebar-menu-item ${pathname.includes("managecourses") && "bg-slate-300 dark:bg-meta-4"
                         }`}
                     >
                       <MdReviews className="w-5 h-5" />
@@ -138,12 +138,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                           </li>
                           <li>
                             <NavLink
-                              to="/dashboard/insaddedcourses"
-                              className={`sidebar-menu-item ${pathname.includes("calendar") &&
+                              to="/dashboard/insaddcourses"
+                              className={`sidebar-menu-item ${pathname.includes("insaddcourses") &&
                                 "bg-slate-300 dark:bg-meta-4"
                                 }`}
                             >
-                              <BsBuildingFillAdd className="w-5 h-5" />
+                              <GiTeacher className="w-5 h-5" />
                               Instructor Courses
                             </NavLink>
                           </li>
@@ -208,8 +208,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                       className={`sidebar-menu-item ${pathname.includes("menu") && "bg-slate-300 dark:bg-meta-4"
                         }`}
                     >
-                      <BiMenuAltRight className="w-5 h-5" />
-                      Menu
+                      <FaBlog className="w-5 h-5" />
+                      Blog
                     </NavLink>
                   </li>
                   {/* <!-- Menu Item --> */}
@@ -217,26 +217,39 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                   {/* <!-- Shop Item --> */}
                   <li>
                     <NavLink
-                      to="/order/salad"
+                      to="/canvas"
                       className={`sidebar-menu-item ${pathname.includes("order") && "bg-slate-300 dark:bg-meta-4"
                         }`}
                     >
-                      <AiFillShopping className="w-5 h-5" />
-                      Shop
+                      <MdDraw className="w-5 h-5" />
+                      Draw
                     </NavLink>
                   </li>
                   {/* <!-- Shop Item --> */}
 
+                  {/* <!--Singup option --> */}
+                  <li>
+                    <NavLink
+                      to="/signup"
+                      className={`sidebar-menu-item ${pathname.includes("signup") &&
+                        "bg-slate-300 dark:bg-meta-4"
+                        }`}
+                    >
+                      <SiGnuprivacyguard className="w-5 h-5" />
+                      Signup
+                    </NavLink>
+                  </li>
+                  {/* <!-- signup --> */}
                   {/* <!-- Contact Item --> */}
                   <li>
                     <NavLink
-                      to="/contact"
+                      to="/login"
                       className={`sidebar-menu-item ${pathname.includes("contact") &&
                         "bg-slate-300 dark:bg-meta-4"
                         }`}
                     >
-                      <MdEmail className="w-5 h-5" />
-                      Contact
+                      <IoMdLogIn className="w-5 h-5" />
+                      Login
                     </NavLink>
                   </li>
                   {/* <!-- Contact Item --> */}

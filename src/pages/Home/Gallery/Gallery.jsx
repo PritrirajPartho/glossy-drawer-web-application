@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-import '././style.css';
+import './style.css';
 
 import img2 from "../../../assets/gallery/img2.jpeg"
 import img3 from "../../../assets/gallery/img3.jpeg"

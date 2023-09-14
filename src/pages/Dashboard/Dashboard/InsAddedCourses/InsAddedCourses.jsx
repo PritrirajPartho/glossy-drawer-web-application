@@ -12,7 +12,7 @@ const InsAddedCourses = () => {
      // const { user } = useContext(AuthContext);
    
      useEffect(() => {
-       fetch(`https://glossy-drawer-web-application-server.vercel.app/newcourses`)
+       fetch(`http://localhost:5000/newcourses`)
          .then((res) => res.json())
          .then((data) => {
            console.log(data);
@@ -22,11 +22,11 @@ const InsAddedCourses = () => {
      }, []);
 
      return (
-          <div className="w-full p-4 ">
+          <div className="w-full p-4 bg-[#f0fdf4]">
 
                <h1 className="text-4xl font-semibold text-center my-12">INSTRUCTOR ADDED CLASS</h1>
     
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto ">
             <table className="table table-zebra w-full">
               {/* head */}
               <thead>

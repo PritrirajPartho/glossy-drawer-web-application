@@ -111,7 +111,12 @@ const Header = () => {
 
                     <Link to={`/courses`}>
                         <li className="group">
-                            <a className="hover:text-[#e98c5d] text-[18px] mr-5">Courses</a>
+                            <a className="hover:text-[#e98c5d] mr-5 ">Draw</a>
+                        </li>
+                    </Link>
+                    <Link to={`/dashboard`}>
+                        <li className="group">
+                            <a className="hover:text-[#e98c5d] mr-5">Dashboard</a>
                         </li>
                     </Link>
                     <Link to={`/courses`}>

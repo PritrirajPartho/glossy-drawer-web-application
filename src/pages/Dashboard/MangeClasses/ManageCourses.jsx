@@ -20,7 +20,7 @@ const customStyles = {
 const ManageCourses = () => {
     const[courses, setCourses] = useState([]);
     useEffect(() =>{
-        fetch('https://glossy-drawer-web-application-server-wine.vercel.app/newcourses')
+        fetch('http://localhost:5000/newcourses')
         .then(res => res.json())
         .then(data => setCourses(data))
     },[])
@@ -47,10 +47,10 @@ setIsOpen(false);
 }
 
     return (
-        <section className="overflow-x-auto mt-6">
+        <section className="overflow-x-auto mt-6 bg-[#f0fdf4]">
         <table className="table  w-full">
             {/* head */}
-            <thead className='text-center text-xl bg-blue-600 text-white'>
+            <thead className='text-center text-xl text-boxDark-2'>
                 <tr>
                     <th>Photo</th>
                     <th>Name</th>
