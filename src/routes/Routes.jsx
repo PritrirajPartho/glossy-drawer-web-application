@@ -18,6 +18,10 @@ import ManageUsers from '../pages/Dashboard/ManageUsers/ManageUsers';
 import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
 import CourseDetails from "../pages/Home/CourseDetails/CourseDetails";
 
+import BlogPost from "../pages/BlogPost/BlogPost";
+import CreatePost from "../pages/BlogPost/CreatePost";
+import Events from "../pages/Events/Events";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -49,6 +53,7 @@ const router = createBrowserRouter([
         path: "/instructors",
         element: <Instructors></Instructors>,
       },
+
       {
         path: "/canvas",
         element: <DrawingCanvas></DrawingCanvas>,

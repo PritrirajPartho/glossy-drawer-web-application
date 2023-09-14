@@ -11,8 +11,8 @@ const Home = () => {
     return (
         <section>
             <Slider></Slider>
-            <Course></Course>
             <ServiceItems></ServiceItems>
+            <Course></Course>
             <Instructor></Instructor>
             <Review></Review>
             <Gallery></Gallery>

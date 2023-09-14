@@ -32,7 +32,7 @@ const Review = () => {
 
       <h1 className='text-center text-4xl text-blue-800 mt-10 mb-6'>Review </h1>
 
-      <div className="my-8 bg-auto bg-[url('https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111.jpg')] p-3 rounded shadow">
+      <div className="my-8 bg-fixed bg-[url('https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111.jpg')] p-3 rounded shadow">
 
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
           {reviews.map((review) => (
