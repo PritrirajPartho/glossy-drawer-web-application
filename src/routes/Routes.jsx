@@ -16,6 +16,7 @@ import Contacts from '../../src/pages/Contacts/Contacts';
 import Payment from '../pages/Dashboard/Dashboard/Payment/Payment'
 
 import BlogPost from "../pages/BlogPost/BlogPost";
+import CreatePost from "../pages/BlogPost/CreatePost";
 import Events from "../pages/Events/Events";
 
 const router = createBrowserRouter([
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: "/blogPost",
         element: <BlogPost></BlogPost>,
+      },
+      {
+        path: "/CreatePost",
+        element: <CreatePost></CreatePost>,
       },
       {
         path: "/event",
