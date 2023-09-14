@@ -223,13 +223,15 @@ const DrawingCanvas = () => {
 
           <a
             title="Save"
-            className="btn btn-active btn-accent mt-7"
+            className="font-bold text-lg sm:text-xl md:text-xl py-4 flex items-center gap-5 mt-7 px-10 rounded-xl hover:bg-[#DE606B]"
+            style={{ backgroundImage: " linear-gradient(to right, #de5c70 0%, #e98c5d 51%, #de5c70 100%)" }}
             id="download_image_link"
             href="download_link"
             onClick={saveImageToLocal}
           >
-            <FaDownload></FaDownload>
+            
             Download
+            <FaDownload></FaDownload>
           </a>
         </div>
         <div className="drawing-board flex-grow-1">
