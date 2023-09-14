@@ -56,7 +56,7 @@ const MangeUsers = () => {
 
 
     return (
-        <div className="w-[800px]   ml-60 text-center bg-slate-300">
+        <div className="w-[900px] ms-10 bg-[#f0fdf4] text-center py-10 px-14">
             <Helmet>
                 <title>Glossy Drawer | All users</title>
             </Helmet>
@@ -64,7 +64,7 @@ const MangeUsers = () => {
             <div className="overflow-x-auto text-xl">
                 <table className="table  w-full">
                     {/* head */}
-                    <thead className='bg-purple-400'>
+                    <thead className='text-boxDark text-xl'>
                         <tr>
                             <th>Name</th>
                             <th>Email</th>

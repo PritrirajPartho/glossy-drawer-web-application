@@ -1,0 +1,15 @@
+
+.spslider {
+    background-position: center;
+    background-size: cover;
+    width: 600px;
+    height: 300px;
+  }
+  .spslider:hover {
+    width: 615px;
+    height: 315px;
+    transition: 4s ease;
+  }
+  
+ 
+  

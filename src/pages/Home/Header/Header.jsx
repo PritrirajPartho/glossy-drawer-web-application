@@ -110,9 +110,9 @@ const Header = () => {
                             <a className="hover:text-[#e98c5d] mr-5 ">Draw</a>
                         </li>
                     </Link>
-                    <Link to={`/canvas`}>
+                    <Link to={`/dashboard`}>
                         <li className="group">
-                            <a className="hover:text-[#e98c5d] mr-5">Education</a>
+                            <a className="hover:text-[#e98c5d] mr-5">Dashboard</a>
                         </li>
                     </Link>
                     <Link to={`/courses`}>
