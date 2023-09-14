@@ -15,6 +15,9 @@ import DrawingCanvas from "../pages/Canvas/DrawingCanvas";
 import Contacts from '../../src/pages/Contacts/Contacts';
 import Payment from '../pages/Dashboard/Dashboard/Payment/Payment'
 
+import BlogPost from "../pages/BlogPost/BlogPost";
+import Events from "../pages/Events/Events";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -41,6 +44,7 @@ const router = createBrowserRouter([
         path: "/instructors",
         element: <Instructors></Instructors>,
       },
+      
       {
         path: "/canvas",
         element:<DrawingCanvas></DrawingCanvas>,
@@ -49,10 +53,18 @@ const router = createBrowserRouter([
         path: "/canvas",
         element:<DrawingCanvas></DrawingCanvas>,
       },
-      // {
-      //   path: "/contact",
-      //   element: <Contacts></Contacts>,
-      // },
+      {
+        path: "/contact",
+        element: <Contacts></Contacts>,
+      },
+      {
+        path: "/blogPost",
+        element: <BlogPost></BlogPost>,
+      },
+      {
+        path: "/event",
+        element: <Events></Events>,
+      },
       // {
       //   path:'/dashboard/addcourses',
       //   element: <AddCourses></AddCourses>
