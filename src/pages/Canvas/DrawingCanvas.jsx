@@ -3,7 +3,6 @@ import "./DrawingCanvas.css";
 import { FaEraser, FaPaintBrush, FaDownload } from "react-icons/fa";
 import { GrClear, GrUndo, GrRedo } from "react-icons/gr";
 
-
 const DrawingCanvas = () => {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
@@ -13,6 +12,7 @@ const DrawingCanvas = () => {
   const [brushWidth, setBrushWidth] = useState(5);
   const [canvasStates, setCanvasStates] = useState([]);
   const [currentStateIndex, setCurrentStateIndex] = useState(-1);
+  const [activeButton, setActiveButton] = useState("draw");
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -126,63 +126,89 @@ const DrawingCanvas = () => {
 
   return (
     <div className="w-full h-[700px]">
+      <div className="flex justify-center gap-2 sm:h-[300px] md:h-[700px] bg-[#555] ">
+        <div className="flex sm:flex-col sm:h-[200px] md:h-[500px] p-3 my-5 mt-6 bg-slate-800  ">
+          <div className="grid grid-cols md:grid-cols-2 gap-5 p-4 ">
+            <div>
+            <button
+              title="Draw"
+              className={`text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500 ${
+                activeButton === "draw" ? "active-button" : ""
+              }`}
+              onClick={() => {
+                setToDraw();
+                setActiveButton("draw");
+              }}
+            >
+              <FaPaintBrush className="text-orange-700 text-xl"></FaPaintBrush>
+            </button>
+            <span className=" block font-sans italic font-semibold text-orange-700  my-2 ">Draw</span>
+            </div>
+                  
 
-      <div className="flex justify-center gap-2 h-[700px] bg-[#555] ">
-        <div className="flex flex-col h-[500px] p-3 my-5 mt-6 bg-slate-800  ">
-         <div className="grid grid-cols md:grid-cols-2 gap-5 p-4 ">
-         <button
-  title="Draw"
-  className={`btn btn-outline mx-auto cursor-pointer border-2 hover:w-12 hover:duration-1000 ${
-    activeButton === "draw" ? "active-button" : ""
-  }`}
-  onClick={() => {
-    setToDraw();
-    setActiveButton("draw");
-  }}
->
-  <FaPaintBrush></FaPaintBrush>
-</button>
-<button
-  title="Erase"
-  className={`btn btn-outline mx-auto cursor-pointer border-2 hover:w-12 hover:duration-1000 ${
-    activeButton === "erase" ? "active-button" : ""
-  }`}
-  onClick={() => {
-    setToErase();
-    setActiveButton("erase");
-  }}
->
-  <FaEraser></FaEraser>
-</button>
+                  
+            
+            
+           <div>
+           <button
+              title="Erase"
+              className={`text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-block items-center mr-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500 ${
+                activeButton === "erase" ? "active-button" : ""
+              }`}
+              onClick={() => {
+                setToErase();
+                setActiveButton("erase");
+              }}
+            >
+              <FaEraser className="text-rose-300 text-xl"></FaEraser>
+            
+            </button>
+            <span className="text-rose-300 block font-sans italic font-semibold my-2">Erase</span>
+           </div>
+          <div>
           <input
-            type="color"
-            value={currentColor}
-            onChange={(e) => setCurrentColor(e.target.value)}
-            className="w-[50px] h-[50px] mx-auto btn-outline border-2 border-green-400 hover:border-2 hover:border-green-700 hover:duration-1000 "
-            title="Pick a Color"
-          />
+              type="color"
+              value={currentColor}
+              onChange={(e) => setCurrentColor(e.target.value)}
+              className="w-[40px] h-[30px] p-2.5 mx-auto btn-outline border-2 border-green-400 hover:border-2 hover:border-green-700 hover:duration-1000 "
+              title="Pick a Color"
+            />
+             <span className="text-white block font-sans italic font-semibold my-3">Color</span>
+          </div>
+           <div>
+           <button
+              title="Clear Canvas"
+              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
+              onClick={clearCanvas}
+            >
+              <GrClear className=" text-base"></GrClear>
+            </button>
+            <span className="text-white block font-sans italic font-semibold my-2">Clear</span>
+           </div>
+          <div>
           <button
-            title="Clear Canvas"
-            className="btn btn-outline btn-error text-gray mx-auto cursor-pointer border-2  hover:w-12 hover:duration-1000"
-            onClick={clearCanvas}
-          >
-            <GrClear></GrClear>
-          </button>
-          <button
-          title="Undo"
-          className="btn btn-outline btn-accent mx-auto cursor-pointer border-2 hover:w-12 hover:duration-1000"
-          onClick={undo}
-        >
-          <GrUndo></GrUndo>
-        </button>
-        <button
-          title="Redo"
-          className="btn btn-outline btn-accent mx-auto cursor-pointer border-2 hover:w-12 hover:duration-1000"
-          onClick={redo}
-        >
-          <GrRedo></GrRedo>
-        </button>
-         </div>
+              title="Undo"
+              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
+              onClick={undo}
+            >
+              <GrUndo className="text-orange-200 text-xl"></GrUndo>
+            </button>
+            <span className="text-orange-200 block font-sans italic font-semibold my-2">Undo</span>
+          </div>
+           <div>
+           <button
+              title="Redo"
+              className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
+              onClick={redo}
+            >
+              <GrRedo className="text-orange-200 text-xl"></GrRedo>
+            </button>
+            <span className="text-orange-200 block font-sans font-semibold italic my-2">Redo</span>
+           </div>
+
+
+
+          </div>
 
           <div className="brush-width p-1 my-2 btn-outline rounded-full mx-auto hover:btn-info hover:py-2 hover:duration-500">
             <input
@@ -197,11 +223,14 @@ const DrawingCanvas = () => {
 
           <a
             title="Save"
-            className="btn btn-active btn-accent mt-7"
+            className="font-bold text-lg sm:text-xl md:text-xl py-4 flex items-center gap-5 mt-7 px-10 rounded-xl hover:bg-[#DE606B]"
+            style={{ backgroundImage: " linear-gradient(to right, #de5c70 0%, #e98c5d 51%, #de5c70 100%)" }}
             id="download_image_link"
             href="download_link"
             onClick={saveImageToLocal}
           >
+            
+            Download
             <FaDownload></FaDownload>
           </a>
         </div>

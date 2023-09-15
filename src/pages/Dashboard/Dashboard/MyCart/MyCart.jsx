@@ -49,8 +49,6 @@ const MyCart = () => {
                                 </td>
                             </tr>)
                         }
-
-
                     </tbody>
                 </table>
                 <Link to="/dashboard" className="btn btn-neutral flex justify-center my-12">Go Back to Dashboard</Link>

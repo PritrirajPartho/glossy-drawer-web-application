@@ -1,49 +1,49 @@
 [{
     "id": 1,
-    "name": "Jane Smith",
-    "img": "https://i.ibb.co/6nhMqhm/person-1.jpg",
-    "email": "jane.smith@example.com",
-    "course": "Mastering Charcoal Portraits",
+    "name": "Pritiraj Partho",
+    "img": "https://i.ibb.co/r3Zs9LB/images-2.jpg",
+    "email": "dpartho5616@gmail.com",
+    "course": "Drawing Basics",
     "student": 1500
   },
   {
     "id": 2,
-    "name": "John Doe",
+    "name": "Najmul Sakib",
     "img": "https://i.ibb.co/PMr3Z7r/person-2.jpg",
-    "email": "john.doe@example.com",
-    "course": "Watercolor Landscapes",
+    "email": "najmus169@gmail.com",
+    "course": "Perspective Drawing",
     "student": 1200
   },
   {
     "id": 3,
-    "name": "Emily Johnson",
-    "img": "https://i.ibb.co/y8x3GKn/person-5.jpg",
-    "email": "emily.johnson@example.com",
-    "course": "Ink Sketching Techniques",
+    "name": "Fahimur Rahman",
+    "img": "https://i.ibb.co/Lhkk6fG/images.jpg",
+    "email": "kfrfahim3@gmail.com",
+    "course": "Drawing Nature, Science",
     "student": 800
   },
   {
     "id": 4,
-    "name": "Michael Williams",
-    "img": "https://i.ibb.co/Yc9DtGn/person-6.jpg",
-    "email": "michael.williams@example.com",
+    "name": "Badhon Sarker",
+    "img": "https://i.ibb.co/p2LYFYV/images-1.jpg",
+    "email": "sarkerbadhon01@gmail.com",
     "course": "Digital Art Fundamentals",
     "student": 2500
   },
   {
     "id": 5,
-    "name": "Sophia Lee",
+    "name": "Shipon Deb",
     "img": "https://i.ibb.co/N9kGLy6/person-7.jpg",
-    "email": "sophia.lee@example.com",
-    "course": "Realistic Portrait Drawing",
+    "email": "shipondeb1133@gmail.com",
+    "course": "Art of Caricature",
     "student": 1800
   },
   {
     "id": 6,
-    "name": "David Chen",
-    "img": "https://i.ibb.co/3rr40J4/person-4.jpg",
-    "email": "david.chen@example.com",
-    "course": "Anime and Manga Art",
+    "name": "Ashraful Amin",
+    "img": "https://i.ibb.co/qmm8zsX/download-1.jpg",
+    "email": "ashrafulamin654@gmail.com",
+    "course": "Realistic Drawing",
     "student": 3000
   }
 ]
