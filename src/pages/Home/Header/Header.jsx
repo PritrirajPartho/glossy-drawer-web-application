@@ -40,11 +40,6 @@ const Header = () => {
                             <a className="hover:text-[#e98c5d] ">Home</a>
                         </li>
                     </Link>
-                    <Link to={`/canvas`}>
-                        <li className="group">
-                            <a className="hover:text-[#e98c5d] ">Draw</a>
-                        </li>
-                    </Link>
                     <Link to={'/instructors'}>
                         <li className="group">
                             <a className="hover:text-[#e98c5d] ">Instructors</a>
@@ -91,37 +86,17 @@ const Header = () => {
             <div className="navbar ">
                 <Link to="/">
                     <img className='md:h-12 md:w-12 h-10 w-10 ml-[-60px] md:ml-[10px]' src="https://i.ibb.co/wgCQ68D/paint-icon-0.png" alt="" />
-                    <a href="" className="btn btn-ghost normal-case sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold pr-6 text-white  ">Glossy Drawer</a>
+                    <h4 className='ms-2 text-2xl text-[#DE606B]'>Glossy Drawer</h4>
                 </Link>
-
             </div>
 
             {/* ... Desktop menu items ... */}
             <div className="navbar-center hidden lg:flex">
                 <ul
                     className="menu menu-horizontal px-1 text-xl text-white md:-ml-[600px]">
-
-
                     <Link to="/">
                         <li className="group">
                             <a className="hover:text-[#e98c5d] text-[18px] mr-5">Home</a>
-                        </li>
-                    </Link>
-
-
-                    <Link to={`/courses`}>
-                        <li className="group">
-                            <a className="hover:text-[#e98c5d] mr-5 ">Draw</a>
-                        </li>
-                    </Link>
-                    <Link to={`/dashboard`}>
-                        <li className="group">
-                            <a className="hover:text-[#e98c5d] mr-5">Dashboard</a>
-                        </li>
-                    </Link>
-                    <Link to={`/courses`}>
-                        <li className="group">
-                            <a className="hover:text-[#e98c5d] mr-5">Courses</a>
                         </li>
                     </Link>
                     <Link to={'/instructors'}>
@@ -129,9 +104,11 @@ const Header = () => {
                             <a className="hover:text-[#e98c5d] text-[18px] mr-5">Instructors</a>
                         </li>
                     </Link>
-
-
-
+                    <Link to={`/courses`}>
+                        <li className="group">
+                            <a className="hover:text-[#e98c5d] mr-5">Courses</a>
+                        </li>
+                    </Link>
                     <li className="group relative">
                         <Link onClick={() => setDropdownOpen(!dropdownOpen)}
                             className="hover:text-[#e98c5d] text-[18px] mr-5">
@@ -160,23 +137,22 @@ const Header = () => {
 
                         <ul className="dropdown-content absolute hidden group-hover:block mt-10 py-1 bg-slate-100 text-black shadow-lg rounded-md w-52 px-2 -mr-10 ">
                             <div className="gap-4">
-                                <Link to="/blogPost">
+                                <Link to="/blogpost">
                                     <li className='hover:bg-[#DE606B] rounded   '><a className='hover:text-white text-[18px]'>Blog Post</a></li>
+                                </Link>
+                                <Link to="/createpost">
+                                    <li className='hover:bg-[#DE606B] rounded   '><a className='hover:text-white text-[18px]'>Create Post</a></li>
                                 </Link>
                                 <Link to="/event">
 
                                     <li className='hover:bg-[#DE606B]  rounded '><a className='hover:text-white text-[18px]'>Events</a></li>
                                 </Link>
-
                                 <Link to="/faq">
                                     <li className='hover:bg-[#DE606B]  rounded '><a className='hover:text-white text-[18px]'>FAQ</a></li>
                                 </Link>
                                 <Link to="/contact">
                                     <li className='hover:bg-[#DE606B]  rounded '><a className='hover:text-white text-[18px]'>Contact Us</a></li>
                                 </Link>
-
-
-
                             </div>
 
                         </ul>
@@ -192,8 +168,6 @@ const Header = () => {
                         </> : <></>
 
                     }
-
-
                 </ul>
             </div>
 
@@ -202,7 +176,7 @@ const Header = () => {
 
                 <div className="hidden lg:block">
 
-                    <Link to="">
+                    <Link to="/canvas">
                         <button className="text-white sm:text-base md:text-[18px] lg:text-[18px] xl:text-[18px] font-bold border-2 bg-[#DE606B] border-[#DE606B] px-6 py-2 rounded-[5px] mr-2 lg:mr-4">Create a Design</button>
                     </Link>
                 </div>
@@ -216,12 +190,8 @@ const Header = () => {
                     </>
 
                 }
-
-
-
                 <div className="dropdown dropdown-end">
-
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar  ">
+                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className=" h-10  w-10 rounded-full ">
                             {user ?
                                 <>
@@ -231,8 +201,6 @@ const Header = () => {
                                     <img src="https://i.ibb.co/w64PTYm/116-1160626-facebook-clipart-blank-user-icon-hd-png-download.png" /></>
 
                             }
-
-
                         </div>
                     </label>
                     {/*  */}
@@ -245,7 +213,6 @@ const Header = () => {
                                         <a className="hover:text-[#e98c5d] mr-5">Profile</a>
                                     </li>
                                 </Link>
-
                                 <Link onClick={handleLogOut}>
                                     <li className="group">
                                         <a className="hover:text-[#e98c5d] mr-5">Logout</a>

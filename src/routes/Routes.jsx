@@ -19,6 +19,7 @@ import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
 import CourseDetails from "../pages/Home/CourseDetails/CourseDetails";
 
 import BlogPost from "../pages/BlogPost/BlogPost";
+import FAQ from "../pages/FAQ/FAQ";
 import CreatePost from "../pages/BlogPost/CreatePost";
 import Events from "../pages/Events/Events";
 
@@ -47,7 +48,7 @@ const router = createBrowserRouter([
       {
         path: "/detail/:id",
         element: <CourseDetails></CourseDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+        loader: ({ params }) => fetch(`https://glossy-drawer-web-application-server-wine.vercel.app/courses/${params.id}`)
       },
       {
         path: "/instructors",
@@ -59,12 +60,24 @@ const router = createBrowserRouter([
         element: <DrawingCanvas></DrawingCanvas>,
       },
       {
-        path: "/canvas",
-        element: <DrawingCanvas></DrawingCanvas>,
-      },
-      {
         path: "/contact",
         element: <Contacts></Contacts>,
+      },
+      {
+        path: "/blogpost",
+        element: <BlogPost></BlogPost>,
+      },
+      {
+        path: "/createpost",
+        element: <CreatePost></CreatePost>,
+      },
+      {
+        path: "/event",
+        element: <Events></Events>,
+      },
+      {
+        path: "/faq",
+        element: <FAQ></FAQ>,
       },
     ],
   },

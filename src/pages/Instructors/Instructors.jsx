@@ -4,7 +4,7 @@ import InstructorsShow from './InstructorsShow';
 const Instructors = () => {
     const [instructorss, setInstructorss] = useState([])
     useEffect(() => {
-         fetch('../../../public/instructor.json')
+         fetch('https://glossy-drawer-web-application-server-wine.vercel.app/instructors')
          .then(res => res.json())
          .then(data => setInstructorss(data) )
     }, [])

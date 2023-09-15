@@ -3,20 +3,22 @@ import Instructor from './Instructor/Instructor';
 import Review from './Review/Review';
 import Slider from '../../pages/Home/Slider/Slider'
 import Features from './Features/Features';
-import ServiceItems from '../../pages/ServiceItems/ServiceItems';
+// import ServiceItems from '../../pages/ServiceItems/ServiceItems';
 import Course from '../../../src/pages/Home/Course/Course';
-import Gallery from './Gallery/Gallery';
+import FinalGallery from '../FinalGallery/FinalGallery';
+import SmsImplement from '../SmsImplement/SmsImplement';
 
 const Home = () => {
     return (
         <section>
             <Slider></Slider>
-            <ServiceItems></ServiceItems>
+            {/* <ServiceItems></ServiceItems> */}
             <Course></Course>
-            <Instructor></Instructor>
-            <Review></Review>
-            <Gallery></Gallery>
             <Features></Features>
+            <Instructor></Instructor>
+            <FinalGallery></FinalGallery>
+            <SmsImplement></SmsImplement>
+            <Review></Review>
         </section>
     );
 };
