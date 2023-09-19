@@ -182,7 +182,8 @@ const Header = () => {
                 </div>
                 {user ?
                     <>
-                    </> :
+                    </>
+                     :
                     <>
                         <Link to="/signup">
                             <button className="text-white text-[10px] md:text-[18px] font-bold border-2 hover:bg-[#DE606B] border-[#DE606B] px-3 py-2 md:px-4 rounded-[5px] mr-1 lg:mr-4">SignUp</button>
@@ -191,15 +192,21 @@ const Header = () => {
 
                 }
                 <div className="dropdown dropdown-end">
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                        <div className=" h-10  w-10 rounded-full ">
+                    <label tabIndex={0}>
+                        <div >
                             {user ?
-                                <>
-                                    <img className=" " src={user?.photoURL} />
+                                <> 
+                                    <div className="avatar online">
+                                        <div className="w-12 rounded-full">
+                                            <img src={user?.photoURL} />
+                                        </div>
+                                    </div>
                                 </> :
                                 <>
-                                    <img src="https://i.ibb.co/w64PTYm/116-1160626-facebook-clipart-blank-user-icon-hd-png-download.png" /></>
-
+                                  <Link to={'/login'}>
+                                      
+                                  </Link>
+                                </>
                             }
                         </div>
                     </label>
