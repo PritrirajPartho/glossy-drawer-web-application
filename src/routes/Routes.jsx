@@ -66,6 +66,18 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contacts></Contacts>,
       },
+      {
+        path: "/blogPost",
+        element: <BlogPost></BlogPost>,
+      },
+      {
+        path: "/createPost",
+        element: <CreatePost></CreatePost>,
+      },
+      {
+        path: "/event",
+        element: <Events></Events>,
+      },
     ],
   },
   {

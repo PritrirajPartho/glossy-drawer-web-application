@@ -108,17 +108,7 @@ const Header = () => {
                         </li>
                     </Link>
 
-
-                    <Link to={`/courses`}>
-                        <li className="group">
-                            <a className="hover:text-[#e98c5d] mr-5 ">Draw</a>
-                        </li>
-                    </Link>
-                    <Link to={`/dashboard`}>
-                        <li className="group">
-                            <a className="hover:text-[#e98c5d] mr-5">Dashboard</a>
-                        </li>
-                    </Link>
+                    
                     <Link to={`/courses`}>
                         <li className="group">
                             <a className="hover:text-[#e98c5d] mr-5">Courses</a>
@@ -202,7 +192,7 @@ const Header = () => {
 
                 <div className="hidden lg:block">
 
-                    <Link to="">
+                    <Link to="/canvas">
                         <button className="text-white sm:text-base md:text-[18px] lg:text-[18px] xl:text-[18px] font-bold border-2 bg-[#DE606B] border-[#DE606B] px-6 py-2 rounded-[5px] mr-2 lg:mr-4">Create a Design</button>
                     </Link>
                 </div>

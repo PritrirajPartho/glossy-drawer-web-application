@@ -1,6 +1,6 @@
 import React from 'react';
 import user from "../../../assets/images/user/drawing.mp4";
-
+import { Link } from 'react-router-dom';
 
 const Slider = () => {
     return (
@@ -21,9 +21,10 @@ const Slider = () => {
                         a id nisi.
                     </p>
                     <div className="">
+                        <Link to="/canvas">
                         <button
                             style={{ backgroundImage: " linear-gradient(to right, #de5c70 0%, #e98c5d 51%, #de5c70 100%)" }}
-                            className="font-bold text-lg sm:text-xl md:text-2xl py-4  px-10 rounded-xl hover:bg-[#DE606B]">Start Drawing</button>
+                            className="font-bold text-lg sm:text-xl md:text-2xl py-4  px-10 rounded-xl hover:bg-[#DE606B]">Start Drawing</button></Link>
                         
                     </div>
                 </div>

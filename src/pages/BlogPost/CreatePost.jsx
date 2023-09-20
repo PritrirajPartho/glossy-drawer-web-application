@@ -42,28 +42,38 @@ const CreatePost = () => {
   };
 
   return (
-    <div className="container  p-4">
-      <h1 className="text-3xl font-semibold mb-4">Create Blog Posts</h1>
-      <div className="mb-4 bg-[#DE606B] mr-44 ml-44 p-5">
-       
+    <div className="  p-4 bg-black text-white ">
+      <div className="mb-4 flex flex-col justify-center items-center mx-auto p-5 ">
+      <h1 className="text-3xl font-semibold mb-10 text-center ">Create Blog Posts</h1>
+       <input
+       className="py-3 w-[400px] p-3 rounded"
+        type="text" placeholder="Blog title here"/>
+       <input
+        className="py-3 w-[400px] p-3 rounded bg-white text-black my-5"
+       type="file" placeholder=""/>
+       <input
+        className="py-3 w-[400px] p-3 rounded bg-white text-black mb-5"
+       type="date" placeholder=""/>
         <textarea
+        
           rows="6"
           cols="5"
           placeholder="Write your new blog post here"
           value={newPostText}
            
           onChange={(e) => setNewPostText(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded-md"
+          className="w-[400px] p-2 border border-gray-300 rounded-md"
         />
-      </div>
-      <div className="mb-4 ml-end">
+        <div className="mb-4  ">
         <button
           onClick={handlePostNewBlogPost}
-          className=" px-4  py-2 bg-[#DE606B] text-white rounded-md hover:bg-blue-600 focus:outline-none"
+          className=" px-4  py-2 bg-[#DE606B] text-white rounded-md hover:bg-blue-600 focus:outline-none  mt-10 ml-[330px] "
         >
           Post
         </button>
       </div>
+      </div>
+      
       <div>
         {blogPosts.map((post) => (
           <div key={post.id} className="mb-4 p-4 border border-gray-300 rounded-md">
