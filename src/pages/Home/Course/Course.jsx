@@ -6,7 +6,7 @@ const Course = () => {
 
 
     useEffect(() => {
-        fetch('/public/courses.json')
+        fetch('courses.json')
             .then(res => res.json())
             .then(data => { setData(data) })
     }, [])
