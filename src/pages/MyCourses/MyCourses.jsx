@@ -5,8 +5,6 @@ import MyCoursesCard from './MyCoursesCard';
 const MyCourses = () => {
 
      const [data, setData] = useState([]);
-
-
      useEffect(() => {
          fetch('https://glossy-drawer-web-application-server-wine.vercel.app/courses')
              .then(res => res.json())
