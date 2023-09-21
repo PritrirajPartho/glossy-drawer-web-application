@@ -8,7 +8,7 @@ const MyCart = () => {
     const [selected, setSelected] = useState([])
 
     useEffect(() => {
-        fetch(`https://glossy-drawer-web-application-server-do8z3mu0m-pritrirajpartho.vercel.app/addClass/${user?.email}`)
+        fetch(`https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/addClass/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);

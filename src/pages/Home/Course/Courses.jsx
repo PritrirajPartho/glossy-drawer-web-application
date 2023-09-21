@@ -15,7 +15,7 @@ const Courses = ({ detail }) => {
 
 
 
-            fetch('https://glossy-drawer-web-application-server-do8z3mu0m-pritrirajpartho.vercel.app/addClass', {
+            fetch('https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/addClass', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
