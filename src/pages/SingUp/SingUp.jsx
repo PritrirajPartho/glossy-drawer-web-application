@@ -56,25 +56,8 @@ const SingUp = () => {
 
             updateUserProfile(name, img)
                 .then(() => {
-                    // const saveUser = { name: name, email: email, role:'student' }
-                    const saveUser ={
-                        id:1,
-                        banner:"https://plus.unsplash.com/premium_photo-1682629632657-4ac307921295?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1452&q=80",
-                        photo:"https://i.ibb.co/WPvqdSv/hh.png",
-                        name:name,
-                        totalFrinds:"230",
-                        intro:"A short bio is a short paragraph that serves as a brief professional biography for résumés, company websites, personal branding, and more. These little blurbs sum up your current position, your years of experience in education and the workforce, plus your professional goals.",
-                        Lives:"Enter Your Lives",
-                        relations:"Enter Your Relations",
-                        Jobs:"Enter Your Jobs",
-                        School:"Enter your school Name",
-                        Collage:"Enter Your Collage Name",
-                        Profesonal:"Enter YOur Professional",
-                        Location:"enter your locations",
-                        role:'student',
-                        email: email,
-                    }
-                    fetch('https://glossy-drawer-web-application-server.vercel.app/users', {
+                    const saveUser = { name: name, email: email, role:'student' }
+                    fetch('https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/users', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

@@ -20,7 +20,7 @@ const customStyles = {
 const ManageCourses = () => {
     const[courses, setCourses] = useState([]);
     useEffect(() =>{
-        fetch('https://glossy-drawer-web-application-server.vercel.app/newcourses')
+        fetch('https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/newcourses')
         .then(res => res.json())
         .then(data => setCourses(data))
     },[])
@@ -47,7 +47,7 @@ setIsOpen(false);
 }
 
     return (
-        <section className="overflow-x-auto mt-6 bg-[#f0fdf4]">
+        <section className="overflow-x-auto mt-6 bg-[#f0fdf4] rounded-md">
         <table className="table  w-full">
             {/* head */}
             <thead className='text-center text-xl text-boxDark-2'>
@@ -85,7 +85,7 @@ setIsOpen(false);
                         </td> 
                          <td>
                          <div className='w-full'>
-                                <button onClick={openModal} className='btn btn-primary'>Feedback</button>
+                                <button onClick={openModal} className=' btn btn-sm  text-sm bg-primary  text-white'>Feedback</button>
                                 <Modal
                                     isOpen={modalIsOpen}
                                     onRequestClose={closeModal}

@@ -1,13 +1,14 @@
 import React from 'react';
+import Aos from 'aos';
 
 const InstructorsShow = ({instructor}) => {
     
     const{id,img,name,course, email,student} = instructor;
     
     return (
-        <div>
-        <div>
-          <div>
+      <div>
+        <div data-aos="flip-up">
+          <div className='transition ease-in-out delay-150 hover:border-red-950 border-solid hover:border-dotted  hover:-translate-y-1 hover:scale-110 duration-300 ...'>
             <a
               href=""
               aria-label="View Item"
@@ -17,7 +18,7 @@ const InstructorsShow = ({instructor}) => {
                 <img src={img} className="object-cover w-full h-60" alt="" />
                 <div className="flex-grow border border-t-0 rounded-b">
                   <div className="p-5 ">
-                    <h1 className="mt-6 mb-4 text-red-400 text-center text-2xl font-bold leading-5">{name}</h1>
+                    <h1 className="transition ease-in-out  hover:text-indigo-500   mt-6 mb-4 text-red-400 text-center text-2xl font-bold leading-5">{name}</h1>
                     <div className="text-left text-xl">
                       <p className="font-semibold mb-2">
                         <span className=" font-semibold text-amber-600">

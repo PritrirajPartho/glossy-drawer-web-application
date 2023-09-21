@@ -10,8 +10,17 @@ const MyCoursesCard = ({ detail }) => {
   const navigate = useNavigate();
 
   const handleMakeSelected = () => {
-    if (user) {
-      fetch("https://glossy-drawer-web-application-server.vercel.app/addClass", {
+    if (user && user.email) {
+      const selected = {
+        classI: _id,
+        name,
+        price,
+        seats,
+        email: user.email,
+        img,
+      };
+
+      fetch("https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/addClass", {
         method: "POST",
         headers: {
           'content-type': 'application/json'

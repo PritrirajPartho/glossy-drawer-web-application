@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import useAuth from './useAuth';
 
 const axiosSecure = axios.create({
-  baseURL: 'https://glossy-drawer-web-application-server-wine.vercel.app/', 
+  baseURL: 'https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/', 
 });
 
 const useAxiosSecure = () => {

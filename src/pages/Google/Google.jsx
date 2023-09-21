@@ -16,21 +16,28 @@ const Google = () => {
     const handleGoogleSignIn = () => {
 
         signInWithPopup(auth, googleProvider)
-            .then(result => {
-                const loggedInUser = result.user;
-                console.log(loggedInUser);
-                const currentUser = {
-                    email: loggedInUser.email,
-                    name: loggedInUser.displayName,
-                    img: loggedInUser.photoURL
-                }
-
-                fetch(`http://localhost:5000/users/${loggedInUser.email}`, {
-                    method: 'PUT',
-                    headers: {
-                        'content-type': 'application/json',
-                    },
-                    body: JSON.stringify(currentUser),
+        .then(result => {
+            const loggedInUser = result.user;
+            console.log(loggedInUser);
+            const savedUser = { name: loggedInUser.displayName, email: loggedInUser.email, role: "student" }
+            fetch('https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/users', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(savedUser)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.insertedId) {
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'User created successfully.',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        navigate(from, { replace: true });                                }
                 })
                     .then(res => res.json())
                     .then(data => console.log(data))

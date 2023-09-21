@@ -49,13 +49,9 @@ const router = createBrowserRouter([
         element: <MyCourses></MyCourses>,
       },
       {
-        path: "/payment/success/:tranId",
-        element: <PaymentSuccess></PaymentSuccess>,
-      },
-      {
-        path: "/courses/:id",
+        path: "/detail/:id",
         element: <CourseDetails></CourseDetails>,
-        loader: ({ params }) => fetch(`https://glossy-drawer-web-application-server.vercel.app/courses/${params.id}`)
+        loader: ({ params }) => fetch(`https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/courses/${params.id}`)
       },
       {
         path: "/instructors",
@@ -70,13 +66,12 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contacts></Contacts>,
       },
-     
       {
-        path: "/blogPost",
+        path: "/blogpost",
         element: <BlogPost></BlogPost>,
       },
       {
-        path: "/createPost",
+        path: "/createpost",
         element: <CreatePost></CreatePost>,
       },
       {
