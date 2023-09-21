@@ -225,11 +225,20 @@ const Header = () => {
                         <>
                             <ul tabIndex={0}
                                 className="menu menu-sm dropdown-content mt-3 z-[1] text-black p-2 shadow bg-base-100 rounded-box w-52">
-                                <Link to="">
+                                <Link to="/profile">
                                     <li className="group">
                                         <a className="hover:text-[#e98c5d] mr-5">Profile</a>
                                     </li>
                                 </Link>
+<<<<<<< HEAD
+                                <Link to="/allPost">
+                                    <li className="group">
+                                        <a className="hover:text-[#e98c5d] mr-5">All Post</a>
+                                    </li>
+                                </Link>
+
+=======
+>>>>>>> b661c8f2219a4b137ad6e680eb5fa2306f2e47d6
                                 <Link onClick={handleLogOut}>
                                     <li className="group">
                                         <a className="hover:text-[#e98c5d] mr-5">Logout</a>

@@ -8,6 +8,10 @@ const MyCart = () => {
 
     const [cart, refetch] = useCart();
 
+<<<<<<< HEAD
+    useEffect(() => {
+        fetch(`https://glossy-drawer-web-application-server.vercel.app/addClass/${user?.email}`)
+=======
     const { id } = useParams()
     const handleDelete = users => {
         Swal.fire({
@@ -47,6 +51,7 @@ const MyCart = () => {
             headers: { "content-type": "application/json" },
             body: JSON.stringify(users)
         })
+>>>>>>> b661c8f2219a4b137ad6e680eb5fa2306f2e47d6
             .then((res) => res.json())
             .then((result) => {
                 window.location.replace(result.url)
