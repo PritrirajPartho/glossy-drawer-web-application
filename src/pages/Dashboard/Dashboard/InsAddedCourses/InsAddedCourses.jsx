@@ -12,7 +12,11 @@ const InsAddedCourses = () => {
      // const { user } = useContext(AuthContext);
    
      useEffect(() => {
+<<<<<<< HEAD
        fetch(`https://glossy-drawer-web-application-server.vercel.app/newcourses`)
+=======
+       fetch(`https://glossy-drawer-web-application-server-wine.vercel.app/newcourses`)
+>>>>>>> b661c8f2219a4b137ad6e680eb5fa2306f2e47d6
          .then((res) => res.json())
          .then((data) => {
            console.log(data);

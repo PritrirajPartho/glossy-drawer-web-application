@@ -18,7 +18,11 @@ const AddCourses = () => {
   } = useForm();
 
   const onSubmit = (data) => {
+<<<<<<< HEAD
     fetch("https://glossy-drawer-web-application-server.vercel.app/newcourses", {
+=======
+    fetch("https://glossy-drawer-web-application-server-wine.vercel.app/newcourses", {
+>>>>>>> b661c8f2219a4b137ad6e680eb5fa2306f2e47d6
       method: "POST",
       headers: {
         "content-type": "application/json",
