@@ -99,6 +99,16 @@ const Header = () => {
                             <a className="hover:text-[#e98c5d] text-[18px] mr-5">Home</a>
                         </li>
                     </Link>
+<<<<<<< HEAD
+=======
+
+                    
+                    <Link to={`/courses`}>
+                        <li className="group">
+                            <a className="hover:text-[#e98c5d] mr-5">Courses</a>
+                        </li>
+                    </Link>
+>>>>>>> e1267755b2bd43125204e8c381c503db67fe13c7
                     <Link to={'/instructors'}>
                         <li className="group">
                             <a className="hover:text-[#e98c5d] text-[18px] mr-5">Instructors</a>
