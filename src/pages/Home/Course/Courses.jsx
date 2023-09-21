@@ -1,12 +1,18 @@
 import React, { useContext } from 'react';
 import { StarIcon } from '@heroicons/react/24/solid'
 import Swal from 'sweetalert2';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+=======
+import { Link, useNavigate } from 'react-router-dom';
+
+>>>>>>> 49b47083bbd26e9fa50e42bffac86a01f43e6a16
 import { AuthContext } from '../../../providers/AuthProvider';
 const Courses = ({ detail }) => {
-    const { id, img, name, Details, rating, Level, Instructor, price } = detail
+    const { _id, img, name, Details, rating, Level, Instructor, price } = detail
     const { user } = useContext(AuthContext)
+    const navigate = useNavigate()
     const handleMakeSelected = () => {
 
         if (user && user.email) {
@@ -15,7 +21,11 @@ const Courses = ({ detail }) => {
 
 
 
+<<<<<<< HEAD
             fetch('https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/addClass', {
+=======
+            fetch('http://localhost:5000/addClass', {
+>>>>>>> 49b47083bbd26e9fa50e42bffac86a01f43e6a16
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -24,7 +34,6 @@ const Courses = ({ detail }) => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data)
                     if (data.insertedId) {
                         Swal.fire({
                             position: 'center',
@@ -33,7 +42,7 @@ const Courses = ({ detail }) => {
                             showConfirmButton: false,
                             timer: 1500
                         })
-
+                        navigate('/dashboard/myCart')
                     }
                 })
 
@@ -47,7 +56,7 @@ const Courses = ({ detail }) => {
                 showConfirmButton: false,
                 timer: 1500
             })
-
+            navigate('/login')
         }
     }
 
@@ -59,7 +68,7 @@ const Courses = ({ detail }) => {
                 <a
                     href=""
                     aria-label="View Item"
-                    className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
+                    className="inline-block overflow-hidden duration-300 border hover:bg-emerald-200 transform bg-white rounded shadow-2xl hover:-translate-y-2"
                 >
                     <div className="flex flex-col w-96 h-full">
                         <img
@@ -67,7 +76,7 @@ const Courses = ({ detail }) => {
                             className="object-cover w-96 h-48"
                             alt=""
                         />
-                        <div className="flex-grow border border-t-0 rounded-b">
+                        <div className="flex-grow rounded-b">
                             <div className="p-5">
                                 <h6 className="mb-2 text-xl font-bold leading-5">
                                     {name}
@@ -97,7 +106,11 @@ const Courses = ({ detail }) => {
                             <div className="text-center flex gap-20 ml-5">
 
                                 <Link
+<<<<<<< HEAD
                                     to={`/detail/${id}`}
+=======
+                                    to={`/courses/${_id}`}
+>>>>>>> 49b47083bbd26e9fa50e42bffac86a01f43e6a16
                                     style={{ backgroundImage: " linear-gradient(to right, #de5c70 0%, #e98c5d 51%, #de5c70 100%)" }}
                                     className="inline-flex mb-10 items-center justify-center w-full h-10 px-6  tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto focus:shadow-outline focus:outline-none"
                                 >

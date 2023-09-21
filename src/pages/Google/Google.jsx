@@ -8,7 +8,6 @@ import app from '../../firebase/firebase.config';
 import Swal from 'sweetalert2';
 
 const Google = () => {
-    const location = useLocation();
     const [user, setUser] = useState(null);
     const navigate = useNavigate();
     const auth = getAuth(app)
@@ -40,8 +39,25 @@ const Google = () => {
                         });
                         navigate(from, { replace: true });                                }
                 })
-        })
+                    .then(res => res.json())
+                    .then(data => console.log(data))
+                console.log(loggedInUser);
+                setUser(loggedInUser);
+                navigate('/')
+            })
+            .catch(err => {
+                // alert(err.message)
+                console.log(err);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: err.message,
+                    footer: '<a href="">Why do I have this issue?</a>'
+                })
+
+            })
     }
+
 
     const handleSignOut = () => {
         signOut(auth)

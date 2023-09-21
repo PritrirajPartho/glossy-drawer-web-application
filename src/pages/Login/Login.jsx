@@ -10,7 +10,8 @@ import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
     const [password, setPassword] = useState('');
-    const [showPassword, setShowPassword] = useState(true);
+    const [showPassword, setShowPassword] = useState(true)
+    // const [showPassword, setShowPassword] = useState(true);
 
     const handlePasswordChange = (event) => {
         setPassword(event.target.value);
