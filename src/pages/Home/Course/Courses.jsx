@@ -1,13 +1,8 @@
 import React, { useContext } from 'react';
 import { StarIcon } from '@heroicons/react/24/solid'
 import Swal from 'sweetalert2';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-=======
-import { Link, useNavigate } from 'react-router-dom';
-
->>>>>>> 49b47083bbd26e9fa50e42bffac86a01f43e6a16
 import { AuthContext } from '../../../providers/AuthProvider';
 const Courses = ({ detail }) => {
     const { _id, img, name, Details, rating, Level, Instructor, price } = detail
@@ -21,11 +16,7 @@ const Courses = ({ detail }) => {
 
 
 
-<<<<<<< HEAD
             fetch('https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/addClass', {
-=======
-            fetch('http://localhost:5000/addClass', {
->>>>>>> 49b47083bbd26e9fa50e42bffac86a01f43e6a16
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -106,11 +97,7 @@ const Courses = ({ detail }) => {
                             <div className="text-center flex gap-20 ml-5">
 
                                 <Link
-<<<<<<< HEAD
-                                    to={`/detail/${id}`}
-=======
                                     to={`/courses/${_id}`}
->>>>>>> 49b47083bbd26e9fa50e42bffac86a01f43e6a16
                                     style={{ backgroundImage: " linear-gradient(to right, #de5c70 0%, #e98c5d 51%, #de5c70 100%)" }}
                                     className="inline-flex mb-10 items-center justify-center w-full h-10 px-6  tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto focus:shadow-outline focus:outline-none"
                                 >
