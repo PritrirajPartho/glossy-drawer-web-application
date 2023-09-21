@@ -19,8 +19,10 @@ import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
 import CourseDetails from "../pages/Home/CourseDetails/CourseDetails";
 
 import BlogPost from "../pages/BlogPost/BlogPost";
+import FAQ from "../pages/FAQ/FAQ";
 import CreatePost from "../pages/BlogPost/CreatePost";
 import Events from "../pages/Events/Events";
+import PaymentSuccess from "../pages/PaymentSuccess/PaymentSuccess";
 
 const router = createBrowserRouter([
   {
@@ -45,7 +47,11 @@ const router = createBrowserRouter([
         element: <MyCourses></MyCourses>,
       },
       {
-        path: "/detail/:id",
+        path: "/payment/success/:tranId",
+        element: <PaymentSuccess></PaymentSuccess>,
+      },
+      {
+        path: "/courses/:id",
         element: <CourseDetails></CourseDetails>,
         loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
       },
@@ -59,14 +65,15 @@ const router = createBrowserRouter([
         element: <DrawingCanvas></DrawingCanvas>,
       },
       {
-        path: "/canvas",
-        element: <DrawingCanvas></DrawingCanvas>,
-      },
-      {
         path: "/contact",
         element: <Contacts></Contacts>,
       },
       {
+        path: "/blogpost",
+        element: <BlogPost></BlogPost>,
+      },
+      {
+        path: "/createpost",
         path: "/blogPost",
         element: <BlogPost></BlogPost>,
       },
@@ -77,6 +84,10 @@ const router = createBrowserRouter([
       {
         path: "/event",
         element: <Events></Events>,
+      },
+      {
+        path: "/faq",
+        element: <FAQ></FAQ>,
       },
     ],
   },

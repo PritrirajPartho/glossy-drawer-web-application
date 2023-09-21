@@ -1,9 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
+/* body {
   font-family: 'Playfair Display', serif;
-}
+} */
 /* Sidebar style start*/
 .sidebar-head {
   @apply flex flex-col overflow-y-auto duration-300 ease-linear;
