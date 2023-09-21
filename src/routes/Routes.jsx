@@ -22,6 +22,7 @@ import BlogPost from "../pages/BlogPost/BlogPost";
 import FAQ from "../pages/FAQ/FAQ";
 import CreatePost from "../pages/BlogPost/CreatePost";
 import Events from "../pages/Events/Events";
+import PaymentSuccess from "../pages/PaymentSuccess/PaymentSuccess";
 
 const router = createBrowserRouter([
   {
@@ -46,9 +47,13 @@ const router = createBrowserRouter([
         element: <MyCourses></MyCourses>,
       },
       {
-        path: "/detail/:id",
+        path: "/payment/success/:tranId",
+        element: <PaymentSuccess></PaymentSuccess>,
+      },
+      {
+        path: "/courses/:id",
         element: <CourseDetails></CourseDetails>,
-        loader: ({ params }) => fetch(`https://glossy-drawer-web-application-server-wine.vercel.app/courses/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
       },
       {
         path: "/instructors",
