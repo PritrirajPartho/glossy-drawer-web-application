@@ -16,6 +16,12 @@ import Contacts from '../../src/pages/Contacts/Contacts';
 import Payment from '../pages/Dashboard/Dashboard/Payment/Payment';
 import ManageUsers from '../pages/Dashboard/ManageUsers/ManageUsers';
 import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
+import CourseDetails from "../pages/Home/CourseDetails/CourseDetails";
+
+import BlogPost from "../pages/BlogPost/BlogPost";
+import FAQ from "../pages/FAQ/FAQ";
+import CreatePost from "../pages/BlogPost/CreatePost";
+import Events from "../pages/Events/Events";
 
 const router = createBrowserRouter([
   {
@@ -40,20 +46,38 @@ const router = createBrowserRouter([
         element: <MyCourses></MyCourses>,
       },
       {
+        path: "/detail/:id",
+        element: <CourseDetails></CourseDetails>,
+        loader: ({ params }) => fetch(`https://glossy-drawer-web-application-server-do8z3mu0m-pritrirajpartho.vercel.app/courses/${params.id}`)
+      },
+      {
         path: "/instructors",
         element: <Instructors></Instructors>,
       },
+
       {
         path: "/canvas",
-        element:<DrawingCanvas></DrawingCanvas>,
-      },
-      {
-        path: "/canvas",
-        element:<DrawingCanvas></DrawingCanvas>,
+        element: <DrawingCanvas></DrawingCanvas>,
       },
       {
         path: "/contact",
         element: <Contacts></Contacts>,
+      },
+      {
+        path: "/blogpost",
+        element: <BlogPost></BlogPost>,
+      },
+      {
+        path: "/createpost",
+        element: <CreatePost></CreatePost>,
+      },
+      {
+        path: "/event",
+        element: <Events></Events>,
+      },
+      {
+        path: "/faq",
+        element: <FAQ></FAQ>,
       },
     ],
   },

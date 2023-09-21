@@ -15,7 +15,7 @@ const User = () => {
             <h1>{user?.displayName}</h1>
         </div>
         <div className='text-center  mt-1'>
-            <p>I am a Professional Web developer</p>
+            <p><span className='mr-2  text-red-400'>Email:</span>{user?.email}</p>
         </div>
     </section>
     );

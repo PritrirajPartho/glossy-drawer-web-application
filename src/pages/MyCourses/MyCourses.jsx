@@ -5,10 +5,8 @@ import MyCoursesCard from './MyCoursesCard';
 const MyCourses = () => {
 
      const [data, setData] = useState([]);
-
-
      useEffect(() => {
-         fetch('../../../public/courses.json')
+         fetch('https://glossy-drawer-web-application-server-do8z3mu0m-pritrirajpartho.vercel.app/courses')
              .then(res => res.json())
              .then(data => { setData(data) })
      }, [])

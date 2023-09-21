@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "title": "Art Exhibition",
+      "date": "2023-10-15",
+      "location": "Art Gallery XYZ",
+      "description": "An upcoming art exhibition featuring various artists' works."
+    },
+    {
+      "id": 2,
+      "title": "Drawing Workshop",
+      "date": "2023-11-05",
+      "location": "Community Center",
+      "description": "A workshop for aspiring artists to learn drawing techniques."
+    },
+    {
+      "id": 3,
+      "title": "Gallery Opening",
+      "date": "2023-12-02",
+      "location": "Downtown Art Hub",
+      "description": "The grand opening of a new art gallery in the city."
+    },
+    {
+      "id": 4,
+      "title": "Charity Art Auction",
+      "date": "2023-09-20",
+      "location": "Charity Foundation HQ",
+      "description": "A successful charity art auction for a noble cause."
+    },
+    {
+      "id": 5,
+      "title": "Art Festival 2022",
+      "date": "2022-07-30",
+      "location": "City Park",
+      "description": "Recap of the art festival held in the summer of 2022."
+    },
+    {
+      "id": 6,
+      "title": "Art Festival 2022",
+      "date": "2022-07-30",
+      "location": "City Park",
+      "description": "Recap of the art festival held in the summer of 2022."
+    },
+    {
+      "id": 7,
+      "title": "Art Festival 2022",
+      "date": "2022-07-30",
+      "location": "City Park",
+      "description": "Recap of the art festival held in the summer of 2022."
+    },
+    {
+      "id": 8,
+      "title": "Art Festival 2022",
+      "date": "2022-07-30",
+      "location": "City Park",
+      "description": "Recap of the art festival held in the summer of 2022."
+    },
+    {
+      "id": 9,
+      "title": "Art Festival 2022",
+      "date": "2022-07-30",
+      "location": "City Park",
+      "description": "Recap of the art festival held in the summer of 2022."
+    },
+    {
+      "id": 10,
+      "title": "Art Festival 2022",
+      "date": "2022-07-30",
+      "location": "City Park",
+      "description": "Recap of the art festival held in the summer of 2022."
+    }
+  ]

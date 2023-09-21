@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { StarIcon } from '@heroicons/react/24/solid'
 import Swal from 'sweetalert2';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 const Courses = ({ detail }) => {
@@ -15,7 +15,7 @@ const Courses = ({ detail }) => {
 
 
 
-            fetch('https://glossy-drawer-web-application-server-wine.vercel.app/addClass', {
+            fetch('https://glossy-drawer-web-application-server-do8z3mu0m-pritrirajpartho.vercel.app/addClass', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -97,7 +97,7 @@ const Courses = ({ detail }) => {
                             <div className="text-center flex gap-20 ml-5">
 
                                 <Link
-                                    to={`/courseDetail/${id}`}
+                                    to={`/detail/${id}`}
                                     style={{ backgroundImage: " linear-gradient(to right, #de5c70 0%, #e98c5d 51%, #de5c70 100%)" }}
                                     className="inline-flex mb-10 items-center justify-center w-full h-10 px-6  tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto focus:shadow-outline focus:outline-none"
                                 >

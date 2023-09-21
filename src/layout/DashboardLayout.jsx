@@ -15,7 +15,7 @@ const DashboardLayout = () => {
 
   return (
     <>
-      <div className="bg-[#a5f3fc] text-black dark:bg-boxDark-2 dark:text-bodyDark">
+      <div className="bg-[#fdba74] text-black dark:bg-boxDark-2 dark:text-bodyDark">
         {/* <!-- ===== Page Wrapper Start ===== --> */}
         <div className="flex h-screen overflow-hidden">
           {/* <!-- ===== Sidebar Start ===== --> */}
@@ -28,7 +28,7 @@ const DashboardLayout = () => {
             <DashboardHeader sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
             {/* <!-- ===== Header End ===== --> */}
 
-            {/* <!-- ===== Main Content Start ===== --> */}
+            {/* <!-- ===== Mffain Content Start ===== --> */}
             <main>
               <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
                 <Outlet />
@@ -38,7 +38,7 @@ const DashboardLayout = () => {
           </div>
           {/* <!-- ===== Content Area End ===== --> */}
         </div>
-        {/* <!-- ===== Page Wrapper End ===== --> */}
+        {/* <!-- ===== Page Wrapper Endddddddd ===== ddddd--> */}
       </div>
     </>
   );

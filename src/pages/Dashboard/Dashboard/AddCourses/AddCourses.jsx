@@ -18,7 +18,7 @@ const AddCourses = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/newcourses", {
+    fetch("https://glossy-drawer-web-application-server-do8z3mu0m-pritrirajpartho.vercel.app/newcourses", {
       method: "POST",
       headers: {
         "content-type": "application/json",

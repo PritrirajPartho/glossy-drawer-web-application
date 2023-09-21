@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
-        <footer className="bg-[#2f2b27] py-8 mt-80 text-white ">
+        <footer className="bg-[#1D2E42] py-10 text-white ">
             <div className='text-center py-4'>
                 <div className='mb-5'>
 
@@ -53,8 +53,8 @@ const Footer = () => {
                     </div>
                     <div className='text-left'>
                         <h4 className="text-white font-bold text-xl">Contacts</h4>
-                        <p className="text-gray-400 mt-4">+880 174 567 8910 </p>
-                        <p className="text-gray-400">drawing@gmail.com </p>
+                        <p className="text-gray-400 mt-4">+8801764676589</p>
+                        <p className="text-gray-400">wdevelopers360@gmail.com</p>
                         <p className="text-gray-400 ">Dhaka Building (Ground Floor)</p>
                         <p className="text-gray-400">Dhaka-4000, Bangladesh</p>
 

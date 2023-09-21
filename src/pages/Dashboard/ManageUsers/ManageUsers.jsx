@@ -8,14 +8,14 @@ import useAxiosSecure from '../../../hooks/useAxiosSecure';
 
 const MangeUsers = () => {
     const [axiosSecure] = useAxiosSecure();
-    const { data: users = [], refetch } = useQuery(['allusers'], async () => {
-        const res = await axiosSecure.get('/allusers')
+    const { data: users = [], refetch } = useQuery(['users'], async () => {
+        const res = await axiosSecure.get('/users')
         console.log({res})
         return res.data;
     })
 
     const handleMakeAdmin = user =>{
-        fetch(`https://glossy-drawer-web-application-server-wine.vercel.app/users/admin/${user._id}`, {
+        fetch(`https://glossy-drawer-web-application-server-do8z3mu0m-pritrirajpartho.vercel.app/users/admin/${user._id}`,{
             method: 'PATCH'
         })
         .then(res => res.json())
@@ -35,7 +35,7 @@ const MangeUsers = () => {
     }
 
     const handleMakeInstructor = user => {
-        fetch(`https://glossy-drawer-web-application-server-wine.vercel.app/users/instructor/${user._id}`, {
+        fetch(`https://glossy-drawer-web-application-server-do8z3mu0m-pritrirajpartho.vercel.app/users/instructor/${user._id}`, {
             method: 'PATCH'
         })
         .then(res => res.json())
@@ -56,7 +56,7 @@ const MangeUsers = () => {
 
 
     return (
-        <div className="w-[900px] ms-10 bg-[#f0fdf4] text-center py-10 px-14">
+        <div className="w-[900px] ms-10 bg-[#f0fdf4] text-center py-10 px-14 rounded-md">
             <Helmet>
                 <title>Glossy Drawer | All users</title>
             </Helmet>

@@ -21,7 +21,7 @@ const Google = () => {
             const loggedInUser = result.user;
             console.log(loggedInUser);
             const savedUser = { name: loggedInUser.displayName, email: loggedInUser.email, role: "student" }
-            fetch('https://glossy-drawer-web-application-server-wine.vercel.app/users', {
+            fetch('https://glossy-drawer-web-application-server-do8z3mu0m-pritrirajpartho.vercel.app/users', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

@@ -8,7 +8,7 @@ const MyCart = () => {
     const [selected, setSelected] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/addClass/${user?.email}`)
+        fetch(`https://glossy-drawer-web-application-server-do8z3mu0m-pritrirajpartho.vercel.app/addClass/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
@@ -49,8 +49,6 @@ const MyCart = () => {
                                 </td>
                             </tr>)
                         }
-
-
                     </tbody>
                 </table>
                 <Link to="/dashboard" className="btn btn-neutral flex justify-center my-12">Go Back to Dashboard</Link>

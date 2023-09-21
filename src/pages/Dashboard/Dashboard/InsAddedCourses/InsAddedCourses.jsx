@@ -12,7 +12,7 @@ const InsAddedCourses = () => {
      // const { user } = useContext(AuthContext);
    
      useEffect(() => {
-       fetch(`http://localhost:5000/newcourses`)
+       fetch(`https://glossy-drawer-web-application-server-do8z3mu0m-pritrirajpartho.vercel.app/newcourses`)
          .then((res) => res.json())
          .then((data) => {
            console.log(data);
