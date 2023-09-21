@@ -22,12 +22,9 @@ import BlogPost from "../pages/BlogPost/BlogPost";
 import FAQ from "../pages/FAQ/FAQ";
 import CreatePost from "../pages/BlogPost/CreatePost";
 import Events from "../pages/Events/Events";
-<<<<<<< HEAD
 import Profile from "../pages/Profile/Profile";
 import UserAllPost from "../pages/UserAllPost/UserAllPost";
-=======
 import PaymentSuccess from "../pages/PaymentSuccess/PaymentSuccess";
->>>>>>> b661c8f2219a4b137ad6e680eb5fa2306f2e47d6
 
 const router = createBrowserRouter([
   {
@@ -73,12 +70,8 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contacts></Contacts>,
       },
+     
       {
-        path: "/blogpost",
-        element: <BlogPost></BlogPost>,
-      },
-      {
-        path: "/createpost",
         path: "/blogPost",
         element: <BlogPost></BlogPost>,
       },
@@ -91,17 +84,16 @@ const router = createBrowserRouter([
         element: <Events></Events>,
       },
       {
-<<<<<<< HEAD
         path: "/profile",
         element: <Profile></Profile>,
       },
       {
         path: "/allPost",
         element: <UserAllPost></UserAllPost>,
-=======
+        },
+        {
         path: "/faq",
         element: <FAQ></FAQ>,
->>>>>>> b661c8f2219a4b137ad6e680eb5fa2306f2e47d6
       },
     ],
   },

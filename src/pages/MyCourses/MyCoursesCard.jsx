@@ -3,31 +3,20 @@ import { StarIcon } from "@heroicons/react/24/solid";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../providers/AuthProvider";
+
 const MyCoursesCard = ({ detail }) => {
   const { _id, img, name, Details, rating, Level, Instructor, price } = detail;
-
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleMakeSelected = () => {
-
-<<<<<<< HEAD
+    if (user) {
       fetch("https://glossy-drawer-web-application-server.vercel.app/addClass", {
         method: "POST",
-=======
-    if (user && user.email) {
-      const selected = { classI: _id, name, price, Level, email: user.email, img }
-
-
-
-
-      fetch('http://localhost:5000/addClass', {
-        method: 'POST',
->>>>>>> b661c8f2219a4b137ad6e680eb5fa2306f2e47d6
         headers: {
           'content-type': 'application/json'
         },
-        body: JSON.stringify(selected)
+        body: JSON.stringify(detail) // Pass the 'detail' object as data
       })
         .then(res => res.json())
         .then(data => {
@@ -41,19 +30,16 @@ const MyCoursesCard = ({ detail }) => {
             })
             navigate('/dashboard/myCart')
           }
-        })
-
-    }
-    else {
-
+        });
+    } else {
       Swal.fire({
         position: 'center',
         icon: 'warning',
-        title: 'Plz Login First',
+        title: 'Please Login First',
         showConfirmButton: false,
         timer: 1500
-      })
-      navigate('/login')
+      });
+      navigate('/login');
     }
   }
 

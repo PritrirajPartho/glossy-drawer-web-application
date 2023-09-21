@@ -74,7 +74,7 @@ const SingUp = () => {
                         role:'student',
                         email: email,
                     }
-                    fetch('https://glossy-drawer-web-application-server-wine.vercel.app/users', {
+                    fetch('https://glossy-drawer-web-application-server.vercel.app/users', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

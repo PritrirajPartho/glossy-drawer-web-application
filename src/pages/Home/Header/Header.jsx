@@ -99,8 +99,6 @@ const Header = () => {
                             <a className="hover:text-[#e98c5d] text-[18px] mr-5">Home</a>
                         </li>
                     </Link>
-<<<<<<< HEAD
-=======
 
                     
                     <Link to={`/courses`}>
@@ -108,17 +106,12 @@ const Header = () => {
                             <a className="hover:text-[#e98c5d] mr-5">Courses</a>
                         </li>
                     </Link>
->>>>>>> e1267755b2bd43125204e8c381c503db67fe13c7
                     <Link to={'/instructors'}>
                         <li className="group">
                             <a className="hover:text-[#e98c5d] text-[18px] mr-5">Instructors</a>
                         </li>
                     </Link>
-                    <Link to={`/courses`}>
-                        <li className="group">
-                            <a className="hover:text-[#e98c5d] mr-5">Courses</a>
-                        </li>
-                    </Link>
+                   
                     <li className="group relative">
                         <Link onClick={() => setDropdownOpen(!dropdownOpen)}
                             className="hover:text-[#e98c5d] text-[18px] mr-5">
@@ -230,15 +223,12 @@ const Header = () => {
                                         <a className="hover:text-[#e98c5d] mr-5">Profile</a>
                                     </li>
                                 </Link>
-<<<<<<< HEAD
                                 <Link to="/allPost">
                                     <li className="group">
                                         <a className="hover:text-[#e98c5d] mr-5">All Post</a>
                                     </li>
                                 </Link>
 
-=======
->>>>>>> b661c8f2219a4b137ad6e680eb5fa2306f2e47d6
                                 <Link onClick={handleLogOut}>
                                     <li className="group">
                                         <a className="hover:text-[#e98c5d] mr-5">Logout</a>
