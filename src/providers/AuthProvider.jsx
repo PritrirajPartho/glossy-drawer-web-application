@@ -45,11 +45,7 @@ const AuthProvider = ({ children }) => {
                 console.log('current user', currentUser);
                 // get and set token
                 if(currentUser){
-<<<<<<< HEAD
                     axios.post('https://glossy-drawer-web-application-server.vercel.app/jwt', {email: currentUser.email})
-=======
-                    axios.post('https://glossy-drawer-web-application-server-wine.vercel.app/jwt', {email: currentUser.email})
->>>>>>> b661c8f2219a4b137ad6e680eb5fa2306f2e47d6
                     .then(data =>{
                         // console.log(data.data.token)
                         localStorage.setItem('access-token', data.data.token)
