@@ -21,6 +21,8 @@ import CourseDetails from "../pages/Home/CourseDetails/CourseDetails";
 import BlogPost from "../pages/BlogPost/BlogPost";
 import CreatePost from "../pages/BlogPost/CreatePost";
 import Events from "../pages/Events/Events";
+import Profile from "../pages/Profile/Profile";
+import UserAllPost from "../pages/UserAllPost/UserAllPost";
 
 const router = createBrowserRouter([
   {
@@ -47,7 +49,7 @@ const router = createBrowserRouter([
       {
         path: "/detail/:id",
         element: <CourseDetails></CourseDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+        loader: ({ params }) => fetch(`https://glossy-drawer-web-application-server.vercel.app/courses/${params.id}`)
       },
       {
         path: "/instructors",
@@ -77,6 +79,14 @@ const router = createBrowserRouter([
       {
         path: "/event",
         element: <Events></Events>,
+      },
+      {
+        path: "/profile",
+        element: <Profile></Profile>,
+      },
+      {
+        path: "/allPost",
+        element: <UserAllPost></UserAllPost>,
       },
     ],
   },
