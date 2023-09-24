@@ -12,10 +12,6 @@ const Courses = ({ detail }) => {
 
         if (user && user.email) {
             const selected = { classI: _id, name, price, Level, email: user.email, img }
-
-
-
-
             fetch('http://localhost:5000/addClass', {
                 method: 'POST',
                 headers: {
