@@ -51,7 +51,7 @@ const router = createBrowserRouter([
       {
         path: "/detail/:id",
         element: <CourseDetails></CourseDetails>,
-        loader: ({ params }) => fetch(`https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/courses/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
       },
       {
         path: "/instructors",

@@ -20,7 +20,7 @@ const MyCoursesCard = ({ detail }) => {
         img,
       };
 
-      fetch("https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/addClass", {
+      fetch("http://localhost:5000/addClass", {
         method: "POST",
         headers: {
           'content-type': 'application/json'

@@ -1,7 +1,6 @@
 import { AiFillHome, AiFillShopping } from "react-icons/ai";
 import { FaBlog } from "react-icons/fa";
 import { BsBuildingFillAdd, BsFillCartFill } from "react-icons/bs";
-import { FiChevronRight } from "react-icons/fi";
 import { GiTeacher } from "react-icons/gi";
 import { IoMdLogIn } from "react-icons/io";
 import { MdDraw,MdPayment, MdReviews } from "react-icons/md";
@@ -167,8 +166,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                           {/* <!-- My Cart --> */}
                           <li>
                             <NavLink
-                              to="/dashboard/myCart"
-                              className={`sidebar-menu-item ${pathname.includes("myCart") && "bg-slate-300 dark:bg-meta-4"
+                              to="/dashboard/mycart"
+                              className={`sidebar-menu-item ${pathname.includes("mycart") && "bg-slate-300 dark:bg-meta-4"
                                 }`}
                             >
                               <BsFillCartFill className="w-5 h-5" />
