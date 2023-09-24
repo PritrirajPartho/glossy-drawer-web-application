@@ -57,7 +57,7 @@ const SingUp = () => {
             updateUserProfile(name, img)
                 .then(() => {
                     const saveUser = { name: name, email: email, role:'student' }
-                    fetch('http://localhost:5000/users', {
+                    fetch('https://glossy-drawer-web-application-server-wine.vercel.app/users', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

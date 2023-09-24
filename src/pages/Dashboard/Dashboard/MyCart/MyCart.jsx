@@ -13,7 +13,7 @@ const MyCart = () => {
     useEffect(() => {
         // Fetch data here based on 'id'
         if (id) {
-            fetch(`http://localhost:5000/addClass/${user?.email}`)
+            fetch(`https://glossy-drawer-web-application-server-wine.vercel.app/addClass/${user?.email}`)
                 .then((response) => {
                     // Handle the response
                 })

@@ -12,7 +12,7 @@ const Courses = ({ detail }) => {
 
         if (user && user.email) {
             const selected = { classI: _id, name, price, Level, email: user.email, img }
-            fetch('http://localhost:5000/addClass', {
+            fetch('https://glossy-drawer-web-application-server-wine.vercel.app/addClass', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

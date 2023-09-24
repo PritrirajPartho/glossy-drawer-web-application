@@ -10,7 +10,7 @@ const Profile = () => {
 
     let [profile, setProfile] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/unikUser?email=${user.email}`)
+        fetch(`https://glossy-drawer-web-application-server-wine.vercel.app/unikUser?email=${user.email}`)
             .then(res => res.json())
             .then(data => setProfile(data))
     }, [])

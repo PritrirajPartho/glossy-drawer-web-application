@@ -6,7 +6,7 @@ const MyCourses = () => {
 
      const [data, setData] = useState([]);
      useEffect(() => {
-         fetch('http://localhost:5000/courses')
+         fetch('https://glossy-drawer-web-application-server-wine.vercel.app/courses')
              .then(res => res.json())
              .then(data => { setData(data) })
      }, [])

@@ -23,7 +23,7 @@ const Post = ({ postsAll, photo, name }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/deletePost/${_id}`, {
+                fetch(`https://glossy-drawer-web-application-server-wine.vercel.app/deletePost/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
