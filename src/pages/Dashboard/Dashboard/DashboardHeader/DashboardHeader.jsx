@@ -12,7 +12,7 @@ const DashboardHeader = ({
   setSidebarOpen,
 }) => {
   return (
-    <header className="sticky top-0 bg-[#a5f3fc] shadow-lg flex w-full drop-shadow-1 dark:bg-boxDark dark:drop-shadow-none">
+    <header className="sticky top-0 bg-[#fdba74] shadow-lg flex w-full drop-shadow-1 dark:bg-boxDark dark:drop-shadow-none">
       <div className="flex flex-grow items-center justify-between h-[80px] shadow-2 md:px-6 2xl:px-11">
         <div className="flex items-center gap-2 sm:gap-4 lg:hidden">
           {/* <!-- Hamburger Toggle BTN --> */}
