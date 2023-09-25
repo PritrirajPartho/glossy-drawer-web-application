@@ -20,7 +20,7 @@ const customStyles = {
 const ManageCourses = () => {
     const[courses, setCourses] = useState([]);
     useEffect(() =>{
-        fetch('https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/newcourses')
+        fetch('https://glossy-drawer-web-application-server-wine.vercel.app/newcourses')
         .then(res => res.json())
         .then(data => setCourses(data))
     },[])

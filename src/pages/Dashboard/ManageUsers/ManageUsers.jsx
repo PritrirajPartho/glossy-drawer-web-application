@@ -15,7 +15,7 @@ const MangeUsers = () => {
     })
 
     const handleMakeAdmin = user =>{
-        fetch(`https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/users/admin/${user._id}`,{
+        fetch(`https://glossy-drawer-web-application-server-wine.vercel.app/users/admin/${user._id}`,{
             method: 'PATCH'
         })
         .then(res => res.json())
@@ -35,7 +35,7 @@ const MangeUsers = () => {
     }
 
     const handleMakeInstructor = user => {
-        fetch(`https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/users/instructor/${user._id}`, {
+        fetch(`https://glossy-drawer-web-application-server-wine.vercel.app/users/instructor/${user._id}`, {
             method: 'PATCH'
         })
         .then(res => res.json())

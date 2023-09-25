@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useCart from '../../../../hooks/useCart';
+import { AuthContext } from '../../../../providers/AuthProvider';
 // import { AuthContext } from '../../../providers/AuthProvider'; // Import your AuthContext
 
 const MyCart = () => {
@@ -12,7 +13,7 @@ const MyCart = () => {
     useEffect(() => {
         // Fetch data here based on 'id'
         if (id) {
-            fetch(`https://glossy-drawer-web-application-server-qbxipa0n3-pritrirajpartho.vercel.app/addClass/${user?.email}`)
+            fetch(`https://glossy-drawer-web-application-server-wine.vercel.app/addClass/${user?.email}`)
                 .then((response) => {
                     // Handle the response
                 })
