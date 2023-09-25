@@ -9,9 +9,9 @@ const Dashboard = () => {
     // console.log(isAdmin);
     // const[isInstructor] = useInstructor();
     // console.log(isInstructor)
-    // const isAdmin = true;
+    const isAdmin = false;
     const isInstructor = true;
-    const user = true;
+    // const user = true;
     return (
         <div>
         <div className="drawer lg:drawer-open">
@@ -24,14 +24,14 @@ const Dashboard = () => {
                 <div className="drawer-side -ml-40">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
                     <ul className="menu p-4 w-80 h-full bg-[#e879f9] text-base-content">
-            {/* {
+            {
                 isAdmin && 
                 <>
                                 <li><NavLink to="/"><FaHome></FaHome> Admin Home</NavLink></li>
                                 <li><NavLink to="/dashboard/manageclasses"><FaAddressCard></FaAddressCard> Manage Courses</NavLink></li>
                                 <li><NavLink to="/dashboard/manageusers"><FaUsers></FaUsers> Manage Users</NavLink></li>            
                 </>
-                } */}
+                }
                 { isInstructor && 
                 <>
                                     <li><NavLink to="/instructors"><FaHome></FaHome> Instructor Home</NavLink></li>
@@ -40,7 +40,7 @@ const Dashboard = () => {
                                     <li><NavLink to="/dashboard/myclasses"> <FaBox></FaBox> My Courses</NavLink></li>
                 </>
                 }
-                {!isInstructor && 
+                {/* {!isInstructor && 
                 <>
                                     <li><NavLink to="/dashboard/userhome"><FaHome></FaHome> User Home</NavLink></li>
                                     <li><NavLink to="/dashboard/myenrolledclasses"><FaBookReader></FaBookReader> My Enrolled Courses</NavLink></li>
@@ -49,7 +49,7 @@ const Dashboard = () => {
                                         <NavLink to="/dashboard/myselectedclasses"><FaShoppingCart></FaShoppingCart>My Selected Course</NavLink>
                                     </li>
                 </>
-                }
+                } */}
 
                     {/* {
                             isAdmin ? <>
