@@ -1,0 +1,26 @@
+
+
+
+.PostParent {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.PostParent .PostLikeOptions .TotalLike i {
+    font-size: 14px;
+    background-color: #1a6ed8;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+}
+.PostParent .PostLikeOptions .TotalLike h5 {
+    padding-left: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+
+

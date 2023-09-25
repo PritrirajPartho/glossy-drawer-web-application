@@ -1,7 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
+import useAuth from "../hooks/useAuth";
 import useAxiosSecure from "./useAxiosSecure";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import axiosSecure from 'axios';
 
 const useInstructor = () => {
     const {user, loading} = useContext(AuthContext);

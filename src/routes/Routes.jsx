@@ -22,6 +22,9 @@ import BlogPost from "../pages/BlogPost/BlogPost";
 import FAQ from "../pages/FAQ/FAQ";
 import CreatePost from "../pages/BlogPost/CreatePost";
 import Events from "../pages/Events/Events";
+import Profile from "../pages/Profile/Profile";
+import UserAllPost from "../pages/UserAllPost/UserAllPost";
+import PaymentSuccess from "../pages/PaymentSuccess/PaymentSuccess";
 
 const router = createBrowserRouter([
   {
@@ -76,6 +79,14 @@ const router = createBrowserRouter([
         element: <Events></Events>,
       },
       {
+        path: "/profile",
+        element: <Profile></Profile>,
+      },
+      {
+        path: "/allPost",
+        element: <UserAllPost></UserAllPost>,
+        },
+        {
         path: "/faq",
         element: <FAQ></FAQ>,
       },

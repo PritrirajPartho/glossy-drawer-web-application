@@ -1,0 +1,173 @@
+
+
+.BodyAllParent .IntroBio{
+
+}
+
+.BodyAllParent .IntroBio .Intro {
+    padding: 18px;
+}
+.BodyAllParent .IntroBio .Intro h3 {
+    font-size: 19px;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: black;
+    margin-bottom: 16px;
+}
+.BodyAllParent .IntroBio .Intro h4 {
+    font-size: 17px;
+    font-weight: 400;
+}
+.BodyAllParent .IntroBio .Intro button {
+    text-align: center;
+    background-color: #f0f2f5;
+    width: 100%;
+    color: black;
+    font-size: 17px;
+    padding: 6px 0;
+    border-radius: 8px;
+    margin: 13px 0;
+    font-weight: 800;
+}
+
+.BodyAllParent .AllPost .MindOptions button {
+    width: 100%;
+    background-color: #f0f2f5;
+    border-radius: 30px;
+    text-align: left;
+    padding-left: 18px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #7d7777;
+    margin-left: 18px;
+}
+
+.BodyAllParent .AllPost .PostOptions{}
+
+.BodyAllParent .AllPost .PostOptions .FilterButton button {
+    font-size: 17px;
+    font-weight: 600;
+    background-color: #f0f2f5;
+    padding: 7px 12px;
+    border-radius: 8px;
+}
+
+.BodyAllParent .AllPost .PostOptions .ListBtn .btnOne{
+    font-size: 17px;
+    font-weight: 600;
+    width: 100%;
+    padding-top: 16px;
+    border-bottom: 3px solid #1a6ed8;
+    color: #1a6ed8;
+}
+.BodyAllParent .AllPost .PostOptions .ListBtn .btnTow {
+    font-size: 17px;
+    font-weight: 600;
+    width: 100%;
+    padding-top: 16px;
+    transition: .4s;
+    border-bottom: 3px solid transparent;
+}
+.BodyAllParent .AllPost .PostOptions .ListBtn .btnTow:hover{
+    border-bottom: 3px solid #1a6ed8;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+.alertContainer {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.showAlertJs {
+    top: 50%;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+}
+
+.alertContainer .poup {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+}
+.alertContainer .poup .popInfo {
+}
+.alertContainer .poup .popInfo h6 {
+    padding: 18px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.alertContainer .poup .popInfo form textarea {
+    width: 100%;
+    height: 94px;
+    margin-top: 12px;
+    resize: none;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: emoji;
+}
+.alertContainer .poup .popInfo form textarea:focus{
+    outline: none;
+}
+
+.alertContainer .poup .popInfo form input {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid #cbc9c9;
+    border-radius: 5px;
+}
+.alertContainer .poup .popInfo form .AddPostOptions {
+    border: 1px solid #cbc9c9;
+    margin-top: 10px;
+    padding: 15px 14px;
+    border-radius: 8px;
+}
+.alertContainer .poup .popInfo form .AddPostOptions h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+.alertContainer .poup .popInfo form button {
+    background-color: #1a6ed8;
+    width: 100%;
+    padding: 8px 0px;
+    color: white;
+    font-size: 16px;
+    border-radius: 9px;
+    margin: 16px 0;
+}
+
+
+.removeAlertBtn {
+    border: 2px solid white;
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    border-radius: 50%;
+    line-height: 17px;
+    font-size: 28px;
+}
+
