@@ -41,7 +41,6 @@ const AddCourses = () => {
         console.log(result);
       });
     reset;
-        alert('Toy Added');
     return false;
   };
 
