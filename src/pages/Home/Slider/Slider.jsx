@@ -11,13 +11,13 @@ const Slider = () => {
             <div className="hero-overlay bg-opacity-60 "></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md mx-auto px-4 sm:px-6 lg:max-w-4xl lg:px-8">
-                    <h1 className="mb-5 text-lg sm:text-4xl md:text-5xl font-bold mt-[-200px]">Pursue Your Passion
+                    <h1 className="mb-5 text-2xl sm:text-4xl md:text-5xl font-bold mt-[-200px]">Pursue Your Passion
                     <br />
                     in
                     <br />
                      <span className='text-[#DE606B]'>Glossy Drawer</span>
                     </h1>
-                    <p className="mb-5 text-xl sm:text-base">
+                    <p className="mb-5 text-xl font-semibold text-orange-300 sm:text-base">
                     Get inspired from these simple and easy line drawing ideas and learn how you can get started drawing.
                     </p>
                     <div  className="">

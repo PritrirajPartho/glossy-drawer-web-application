@@ -23,7 +23,7 @@ const Features = () => {
                </div>
 
                <div className='grid grid-cols-2 gap-10'>
-                    <div data-aos="fade-right" data-aos-duration="500">
+                    <div data-aos="fade-right" data-aos-duration="1000">
                          <img className='w-[450px] h-[300px] mx-auto rounded-lg transform
                                 transition duration-500 hover:scale-110' src="https://i.ibb.co/dWnjSgv/sk1.jpg" alt="" />
                          <h1 className='text-3xl my-6'>18 Brushes</h1>

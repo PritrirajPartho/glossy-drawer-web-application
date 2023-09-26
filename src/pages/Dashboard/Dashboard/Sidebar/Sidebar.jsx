@@ -15,7 +15,7 @@ import useInstructor from "../../../../hooks/useInstructor";
 
 
 // const isAdmin = false;
-// const isInstructor = false;
+// const isInstructor = true;
 
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
@@ -81,7 +81,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
             <ul className="mb-6 flex flex-col gap-1.5">
               {/* <!-- Dashboard submenu All--> */}
               {
-                isAdmin ? <>
+                useAdmin ? <>
                   {/* <!-- Admin Home --> */}
                   <li>
                     <NavLink
@@ -121,7 +121,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                   :
                   <>
                     {
-                      isInstructor ?
+                      useInstructor ?
                         <>
                           {/* <!-- My Booking --> */}
                           <li>
