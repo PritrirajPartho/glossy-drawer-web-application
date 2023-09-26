@@ -21,7 +21,7 @@ const UserAllPost = () => {
 
     let [allPost, setPostAll] = useState([])
     useEffect(() => {
-        fetch("https://glossy-drawer-web-application-server.vercel.app/allPost")
+        fetch("https://glossy-drawer-web-application-server-wine.vercel.app/allPost")
             .then(res => res.json())
             .then(data => setPostAll(data))
     }, [])
@@ -41,7 +41,7 @@ const UserAllPost = () => {
         let status = event.target.details.value
         let postData = { image, status, email: user?.email, date: "September 12 at 9:58 pm", photo:user?.photoURL, name:user.displayName}
         // console.log(postData)
-        fetch("https://glossy-drawer-web-application-server.vercel.app/userPost", {
+        fetch("https://glossy-drawer-web-application-server-wine.vercel.app/userPost", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

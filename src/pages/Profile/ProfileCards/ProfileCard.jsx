@@ -50,7 +50,7 @@ const ProfileCard = ({ profileD }) => {
         let allUpData={nameValue,photoValue,TolatFdValue,bannerValue,introValue,JobsValue,profesonalValue,schoolValue,collageValue,LivesValue,relationsValue,LocationValue}
         console.log(allUpData)
 
-        fetch(`https://glossy-drawer-web-application-server.vercel.app/updateUser/${_id}`,{
+        fetch(`https://glossy-drawer-web-application-server-wine.vercel.app/updateUser/${_id}`,{
             method:"PUT",
             headers:{
                 "content-type":"application/json"

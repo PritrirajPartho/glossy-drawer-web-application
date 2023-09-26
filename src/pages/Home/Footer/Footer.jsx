@@ -20,28 +20,26 @@ const Footer = () => {
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                     <div className='text-left '>
                         <h2 className="text-white font-bold text-xl mb-4" >Menu</h2>
-                        <Link>
+                        <Link to={'/'}>
                             <p className="text-gray-400 flex items-center">
-                                Classes</p>
+                                Home</p>
                         </Link>
-                        <Link>
+                        <Link to={'/courses'}>
                             <p className="text-gray-400 flex items-center">
-                                Programs</p>
+                                Courses</p>
                         </Link>
-                        <Link>
+                        <Link to={'/login'}>
                             <p className="text-gray-400 flex items-center">
-                                About us  </p>
+                                Login</p>
                         </Link>
-                        <Link>
+                        <Link to={'/faq'}>
                             <p className="text-gray-400 flex items-center">
-                                Team  </p>
+                                FAQ</p>
                         </Link>
-                        <Link>
+                        <Link to={'/contact'}>
                             <p className="text-gray-400 flex items-center">
-                                Contact  </p>
+                                Contact</p>
                         </Link>
-
-
                     </div>
 
                     <div className='text-left'>

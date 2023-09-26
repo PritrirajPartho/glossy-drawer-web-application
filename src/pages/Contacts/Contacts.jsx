@@ -6,7 +6,7 @@ import { BsSendXFill } from 'react-icons/bs';
 const Contacts = () => {
     const form = useRef();
     const contact_info = [
-        { logo: <FaEnvelope />, text: 'sarkerbadhon01@gmail.com' },
+        { logo: <FaEnvelope />, text: 'wdevelopers360@gmail.com' },
         { logo: <FaWhatsapp />, text: '+880 1874081396' },
         { logo: <FaMapMarkerAlt />, text: 'Dhaka, Bangladesh' }
     ];

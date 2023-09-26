@@ -29,7 +29,7 @@ const ProfileBody = ({ profileD }) => {
     let [post, setPost] = useState([])
 
     useEffect(() => {
-        fetch(`https://glossy-drawer-web-application-server.vercel.app/post?email=${user.email}`)
+        fetch(`https://glossy-drawer-web-application-server-wine.vercel.app/post?email=${user.email}`)
             .then(res => res.json())
             .then(data => setPost(data))
     }, [])
@@ -50,7 +50,7 @@ const ProfileBody = ({ profileD }) => {
         let status=event.target.details.value
         let postData={image,status,email:user?.email,date:"September 12 at 9:58 pm",name,photo}
         // console.log(postData)
-        fetch("https://glossy-drawer-web-application-server.vercel.app/userPost",{
+        fetch("https://glossy-drawer-web-application-server-wine.vercel.app/userPost",{
             method:"POST",
             headers:{
                 "content-type":"application/json"

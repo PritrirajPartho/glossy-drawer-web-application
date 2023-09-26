@@ -34,7 +34,7 @@ const MyCart = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://glossy-drawer-web-application-server.vercel.app/addClass/${users._id}`, {
+                fetch(`https://glossy-drawer-web-application-server-wine.vercel.app/addClass/${users._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -62,7 +62,7 @@ const MyCart = () => {
     const handleSubmit = (users) => {
         users.productId = id;
 
-        fetch("https://glossy-drawer-web-application-server.vercel.app/order", {
+        fetch("https://glossy-drawer-web-application-server-wine.vercel.app/order", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(users)

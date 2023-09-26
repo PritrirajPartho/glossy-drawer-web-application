@@ -2,6 +2,7 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import Logo from '../../../assets/images/logo/main-logo.png'
 
 
 const Header = () => {
@@ -18,7 +19,7 @@ const Header = () => {
 
         <div
 
-            className="navbar shadow-lg bg-[#1D2E42] text-[#FFFFFF] sticky top-0 z-50 transition duration-300 ease-in-out backdrop-invert"
+            className="navbar shadow-lg h-[100px] bg-[#1D2E42] text-[#FFFFFF] sticky top-0 z-50 transition duration-300 ease-in-out backdrop-invert"
             style={{ transition: "all 0.3s ease" }}>
 
             <div className="navbar dropdown lg:hidden ml-[-30px]"
@@ -85,7 +86,7 @@ const Header = () => {
             {/* ... Mobile menu items ... */}
             <div className="navbar ">
                 <Link to="/">
-                    <img className='md:h-12 md:w-12 h-10 w-10 ml-[-60px] md:ml-[10px]' src="https://i.ibb.co/wgCQ68D/paint-icon-0.png" alt="" />
+                    <img className="w-28" src={Logo} alt="Logo" />
                     <h4 className='ms-2 text-2xl text-[#DE606B]'>Glossy Drawer</h4>
                 </Link>
             </div>
